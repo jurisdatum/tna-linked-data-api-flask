@@ -10,8 +10,8 @@
     li { text-wrap-mode: nowrap }
 </style>
 <h1>The Legislation Core Reference</h1>
-<div style="display:flex;justify-content:space-between;">
-    <table style="margin-right:1in">
+<div style="display: flex; justify-content: space-between">
+    <table style="margin-right: 1in">
         <tbody>
             <tr>
                 <th class="label">URI</th>
@@ -69,7 +69,7 @@
                             </tr>
                             <tr>
                                 <th class="label">Original Languages</th>
-                                <td class="value">{{ item.originalLanguages }}</td>
+                                <td class="value">{{ ', '.join(item.originalLanguages) }}</td>
                             </tr>
                             <tr>
                                 <th class="label">Citation</th>
@@ -79,10 +79,12 @@
                                 <th class="label">Full Citation</th>
                                 <td class="value">{{ item.fullCitation }}</td>
                             </tr>
+                            {% if item.commentaryCitation != item.fullCitation %}
                             <tr>
                                 <th class="label">Commentary Citation</th>
                                 <td class="value">{{ item.commentaryCitation }}</td>
                             </tr>
+                            {% endif %}
                         </tbody>
                     </table>
                 </td>
