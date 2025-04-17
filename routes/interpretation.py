@@ -8,7 +8,7 @@ interp_bp = Blueprint('interpretation', __name__)
 @interp_bp.route('/<type>/<int:year>/<int:number>/metadata')
 def interpretation(type, year, number):
     meta = fetch_interpretation(type, year, number)
-    return render_template('interpretation.html', interp=meta)
+    return render_template('pages/interpretation.html', interp=meta)
 
 @interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.rdf')
 def interpretation_rdf_xml(type, year, number):

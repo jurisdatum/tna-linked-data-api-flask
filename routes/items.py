@@ -11,7 +11,7 @@ def items(type, year):
     data = fetch_items(type, year, page)
     title = make_page_title(type, year)
     query_string = '?page=' + page if page else None
-    return render_template('items.html', page=data, title=title, query_string=query_string)
+    return render_template('pages/items.html', page=data, title=title, query_string=query_string)
 
 
 @items_bp.route('/<type>/<int:year>/metadata/data.rdf')
