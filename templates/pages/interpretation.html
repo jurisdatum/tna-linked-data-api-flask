@@ -1,17 +1,8 @@
 {% extends 'frame.html' %}
 {% block content %}
-<style>
-    h1 { padding-top: 1em }
-    table { width: unset }
-    th { text-wrap-mode: nowrap }
-    th, td { vertical-align: top }
-    .nested > table { border: thin dotted grey }
-    ul { list-style: none; padding-left: 0 }
-    li { text-wrap-mode: nowrap }
-</style>
-<h1>The Legislation Core Reference</h1>
-<div style="display: flex; justify-content: space-between">
-    <table style="margin-right: 1in">
+{{ super() }}
+<div>
+    <table>
         <tbody>
             <tr>
                 <th class="label">URI</th>
@@ -41,75 +32,19 @@
                 <td class="value">{{ interp.current }}</td>
             </tr>
             {% endif %}
-            {% set item = interp.item %}
             <tr>
                 <th class="label">Item</th>
-                <td class="value nested">
+                <td class="value">
                     <table>
-                        <tbody>
-                            <tr>
-                                <th class="label">URI</th>
-                                <td class="value">{{ item.uri }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Type</th>
-                                <td class="value">{{ item.type }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Year</th>
-                                <td class="value">{{ item.year }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Number</th>
-                                <td class="value">{{ item.number }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Title</th>
-                                <td class="value">{{ item.title }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Original Languages</th>
-                                <td class="value">{{ ', '.join(item.originalLanguages) }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Citation</th>
-                                <td class="value">{{ item.citation }}</td>
-                            </tr>
-                            <tr>
-                                <th class="label">Full Citation</th>
-                                <td class="value">{{ item.fullCitation }}</td>
-                            </tr>
-                            {% if item.commentaryCitation != item.fullCitation %}
-                            <tr>
-                                <th class="label">Commentary Citation</th>
-                                <td class="value">{{ item.commentaryCitation }}</td>
-                            </tr>
-                            {% endif %}
-                        </tbody>
+                        {% set item = interp.item %}
+                        {% include 'components/item.html' %}
                     </table>
                 </td>
             </tr>
         </tbody>
     </table>
     <nav>
-        <h3>Data Formats</h3>
-        <ul>
-            <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdf" type="application/rdf+xml">RDF/XML</a>
-            </li>
-            <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdfjson" type="application/json">RDF/JSON</a>
-            </li>
-            <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.ttl" type="text/turtle">Turtle</a>
-            </li>
-            <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json" type="application/json">Simple JSON</a>
-            </li>
-            <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.xml" type="application/xml">Simple XML</a>
-            </li>
-        </ul>
+        {% include 'components/formats.html' %}
     </nav>    
 </div>
 {% endblock %}

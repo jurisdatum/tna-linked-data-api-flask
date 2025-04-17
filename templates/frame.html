@@ -103,7 +103,19 @@
 							class="bbr"></span></button></div>
 				<div class="advSearch"><a href="/search">Advanced Search</a></div>
 			</form>
-			{% block content %}{% endblock %}
+			<main>
+				{% block content %}
+				<style>
+					h1 { padding-top: 1em }
+					main > div { display: flex; justify-content: space-between }
+					main > div > table { margin-right: 1in }
+					table { width: unset; border-collapse: collapse }
+					th { text-wrap-mode: nowrap }
+					th, td { vertical-align: top }
+				</style>
+				<h1>The Legislation Core Reference</h1>
+				{% endblock %}
+			</main>
 		</div>
 		<div id="footerNav">
 			<ul>

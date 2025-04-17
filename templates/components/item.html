@@ -1,0 +1,40 @@
+<tbody class"item" style="border: thin dotted grey">
+    <tr>
+        <th class="label">URI</th>
+        <td class="value">{{ item.uri }}</td>
+    </tr>
+    <tr>
+        <th class="label">Type</th>
+        <td class="value">{{ item.type }}</td>
+    </tr>
+    <tr>
+        <th class="label">Year</th>
+        <td class="value">{{ item.year }}</td>
+    </tr>
+    <tr>
+        <th class="label">Number</th>
+        <td class="value">{{ item.number }}</td>
+    </tr>
+    <tr>
+        <th class="label">Title</th>
+        <td class="value">{{ item.title }}</td>
+    </tr>
+    <tr>
+        <th class="label">Original Languages</th>
+        <td class="value">{{ ', '.join(item.originalLanguages) }}</td>
+    </tr>
+    <tr>
+        <th class="label">Citation</th>
+        <td class="value">{{ item.citation }}</td>
+    </tr>
+    <tr>
+        <th class="label">Full Citation</th>
+        <td class="value">{{ item.fullCitation }}</td>
+    </tr>
+    {% if item.commentaryCitation != item.fullCitation %}
+    <tr>
+        <th class="label">Commentary Citation</th>
+        <td class="value">{{ item.commentaryCitation }}</td>
+    </tr>
+    {% endif %}
+</tbody>
