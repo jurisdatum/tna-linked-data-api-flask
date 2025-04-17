@@ -43,7 +43,41 @@ def items_data(type, year, format):
 #
 
 plural_type_labels = {
-    'ukpga': 'UK Public General Acts'
+    'ukpga': 'UK Public General Acts',
+    'ukla': 'UK Local Acts',
+    'ukppa': 'UK Private and Personal Acts',
+    'asp': 'Acts of the Scottish Parliament',
+    'nia': 'Acts of the Northern Ireland Assembly',
+    'aosp': 'Acts of the Old Scottish Parliament',
+    'aep': 'Acts of the English Parliament',
+    'aip': 'Acts of the Old Irish Parliament',
+    'apgb': 'Acts of the Parliament of Great Britain',
+    'gbla': 'Local Acts of the Parliament of Great Britain',
+    'gbppa': '???',  # ToDo
+    'anaw': 'Acts of the National Assembly for Wales',
+    'asc': 'Acts of Senedd Cymru',
+    'mwa': 'Measures of the National Assembly for Wales',
+    'ukcm': 'Church Measures',
+    'mnia': 'Measures of the Northern Ireland Assembly',
+    'apni': 'Acts of the Northern Ireland Parliament',
+    'uksi': 'UK Statutory Instruments',
+    'ukmd': 'UK Ministerial Directions',
+    'ukmo': 'UK Ministerial Orders',
+    'uksro': 'UK Statutory Rules and Orders',
+    'wsi': 'Wales Statutory Instruments',
+    'ssi': 'Scottish Statutory Instruments',
+    'nisi': 'Northern Ireland Orders in Council',
+    'nisr': 'Northern Ireland Statutory Rules',
+    'ukci': 'Church Instruments',
+    'nisro': 'Northern Ireland Statutory Rules and Orders',
+
+    'ukdsi': 'UK Draft Statutory Instruments',
+    'sdsi': 'Scottish Draft Statutory Instruments',
+    'nidsr': 'Northern Ireland Draft Statutory Rules',
+
+    'eur': 'Regulations originating from the EU',
+    'eudn': 'Decisions originating from the EU',
+    'eudr': 'Directives originating from the EU'
 }
 
 def make_page_title(type, year):
