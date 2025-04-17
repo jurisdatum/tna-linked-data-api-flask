@@ -1,9 +1,9 @@
-{% extends 'frame.html' %}
+{% extends 'pages/core.html' %}
 {% block content %}
-{{ super() }}
+<h2>{{ interp.shortTitle }}</h2>
 <div>
     <table>
-        <tbody>
+        <tbody class="interpretation">
             <tr>
                 <th class="label">URI</th>
                 <td class="value">{{ interp.uri }}</td>

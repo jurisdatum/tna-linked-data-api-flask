@@ -1,0 +1,17 @@
+{% extends 'frame.html' %}
+{% block main %}
+<main>
+    <style>
+        h1 { padding-top: 1em }
+        h2 { padding-bottom: 1em }
+        main > div { display: flex; justify-content: space-between }
+        main > div > table { margin-right: 1in }
+        table { width: unset; border-collapse: collapse }
+        tbody.item { border: thin dotted grey }
+        th { text-wrap-mode: nowrap }
+        th, td { vertical-align: top }
+    </style>
+    <h1>The Legislation Core Reference</h1>
+    {% block content %}{% endblock %}
+</main>
+{% endblock %}

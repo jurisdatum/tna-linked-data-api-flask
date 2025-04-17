@@ -1,0 +1,18 @@
+{% extends 'frame.html' %}
+{% block main %}
+<main id="error">
+    <div id="title">
+        <h1 id="pageTitle">Page Not Found</h1>
+    </div>
+    <div id="content">
+        <p class="first">The page you requested could not be found.
+        <p>Please check for any of the following if you see this page after a search:</p>
+        <ul>
+            <li>Spelling mistakes in the search phrase</li>
+            <li>Invalid parameter entered e.g 19988 instead of 1998 for a year</li>
+        </ul>
+        </p>
+        <p>Alternatively, the referrer may have passed an invalid URI to this site.</p>
+    </div>
+</main>
+{% endblock %}
