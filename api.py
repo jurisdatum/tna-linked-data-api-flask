@@ -23,8 +23,10 @@ def fetch_items(type, year, page: Optional[str]) -> dict:
         url += '?page=' + page
     return get_json(url)
 
-def fetch_items_format(type, year, accept) -> str:
+def fetch_items_format(type, year, page: Optional[str], accept) -> str:
     url = '/ld/items/' + type + '/' + str(year)
+    if (page):
+        url += '?page=' + page
     return get(url, accept).text
 
 

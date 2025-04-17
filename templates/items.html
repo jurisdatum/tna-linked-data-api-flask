@@ -10,9 +10,9 @@
     li { text-wrap-mode: nowrap }
 </style>
 <h1>The Legislation Core Reference</h1>
+<h2>{{ title }}</h2>
 <div style="display: flex; justify-content: space-between">
     <table style="margin-right: 1in; border-collapse: collapse">
-        <caption>{{ title }}</caption>
         {% for item in page['items'] %}
         <tbody style="border: thin dotted grey">
             <tr>
@@ -61,19 +61,19 @@
         <h3>Data Formats</h3>
         <ul>
             <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdf" type="application/rdf+xml">RDF/XML</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdf{{ query_string }}" type="application/rdf+xml">RDF/XML</a>
             </li>
             <li>
-                <a href="./data.rdfjson" type="application/json">RDF/JSON</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdfjson{{ query_string }}" type="application/json">RDF/JSON</a>
             </li>
             <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.ttl" type="text/turtle">Turtle</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.ttl{{ query_string }}" type="text/turtle">Turtle</a>
             </li>
             <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json" type="application/json">Simple JSON</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json{{ query_string }}" type="application/json">Simple JSON</a>
             </li>
             <li>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.xml" type="application/xml">Simple XML</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.xml{{ query_string }}" type="application/xml">Simple XML</a>
             </li>
         </ul>
         <p></p>

@@ -98,7 +98,7 @@
                 <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdf" type="application/rdf+xml">RDF/XML</a>
             </li>
             <li>
-                <a href="./data.rdfjson" type="application/json">RDF/JSON</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdfjson" type="application/json">RDF/JSON</a>
             </li>
             <li>
                 <a href="{{ request.host_url.rstrip('/') + request.path }}/data.ttl" type="text/turtle">Turtle</a>

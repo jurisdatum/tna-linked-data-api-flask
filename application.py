@@ -21,6 +21,14 @@ def interpretation(type, year, number):
 def interpretation_rdf_xml(type, year, number):
     return data(type, year, number, 'application/rdf+xml')
 
+@app.route('/<type>/<int:year>/<int:number>/metadata/data.rdfjson')
+def interpretation_rdf_json(type, year, number):
+    return data(type, year, number, 'application/rdf+json')
+
+@app.route('/<type>/<int:year>/<int:number>/metadata/data.ttl')
+def interpretation_turtle(type, year, number):
+    return data(type, year, number, 'text/turtle')
+
 @app.route('/<type>/<int:year>/<int:number>/metadata/data.json')
 def interpretation_json(type, year, number):
     return data(type, year, number, 'application/json')
@@ -28,10 +36,6 @@ def interpretation_json(type, year, number):
 @app.route('/<type>/<int:year>/<int:number>/metadata/data.xml')
 def interpretation_xml(type, year, number):
     return data(type, year, number, 'application/xml')
-
-@app.route('/<type>/<int:year>/<int:number>/metadata/data.ttl')
-def interpretation_turtle(type, year, number):
-    return data(type, year, number, 'text/turtle')
 
 def data(type, year, number, format):
     data = fetch_interpretation_format(type, year, number, format)
