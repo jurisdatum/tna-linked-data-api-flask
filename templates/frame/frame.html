@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="https://www.legislation.gov.uk/">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.1, user-scalable=1" />
+	<title>The Legislation Core Reference</title>
+	<link rel="icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/images/chrome/apple-touch-icons/apple-touch-icon.png" />
+	<link rel="stylesheet" href="/styles/screen.css" type="text/css" />
+	<link rel="stylesheet" href="/styles/website.css" type="text/css" />
+	<link rel="stylesheet" href="/styles/print.css" type="text/css" media="print" />
+</head>
+<body>
+	<ul id="top" class="accessibleLinks">
+		<li><a href="#pageTitle">Skip to main content</a></li>
+		<li><a href="#primaryNav">Skip to navigation</a></li>
+	</ul>
+	<div id="layout1">
+		{% if get_locale() == 'cy' %}
+			{% include 'frame/header_cy.html' %}
+		{% else %}
+			{% include 'frame/header.html' %}
+		{% endif %}
+		<div id="background"></div>
+		<div id="layout2">
+			{% if get_locale() == 'cy' %}
+				{% include 'frame/search_bar_cy.html' %}
+			{% else %}
+				{% include 'frame/search_bar.html' %}
+			{% endif %}
+			{% block main %}{% endblock %}
+		</div>
+		{% if get_locale() == 'cy' %}
+			{% include 'frame/footer_cy.html' %}
+		{% else %}
+			{% include 'frame/footer.html' %}
+		{% endif %}
+	</body>
+</html>

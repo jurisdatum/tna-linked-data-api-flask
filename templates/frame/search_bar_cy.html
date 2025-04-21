@@ -1,0 +1,64 @@
+<form id="contentSearch" method="get" action="/cy/search" class="contentSearch">
+    <h2>Chwilio Deddfwriaeth</h2>
+    <div class="title"><label for="title">Teitl: <em>(neu eiriau allweddol yn y teitl)</em></label><input
+            type="text" id="title" name="title" /></div>
+    <div class="year cy"><label for="year">Blwyddyn:</label><input type="text" id="year" name="year" />
+    </div>
+    <div class="number"><label for="number">Rhif:</label><input type="text" id="number" name="number" />
+    </div>
+    <div class="type"><label for="type">Math:</label><select name="type" id="type">
+            <option value="primary+secondary" selected="selected">Pob Deddfwriaeth y Deyrnas Unedig (ac
+                eithrio yn deillio o’r UE)</option>
+            <option disabled="disabled">--------------------------------------------</option>
+            <option value="all">Pob Legislation (including originating from the EU)</option>
+            <option disabled="disabled">--------------------------------------------</option>
+            <option value="primary">Pob deddfwriaeth sylfaenol</option>
+            <option value="ukpga">    Deddfau Cyhoeddus Cyffredinol y Deyrnas Unedig</option>
+            <option value="ukla">    Deddfau Lleol y Deyrnas Unedig</option>
+            <option value="ukppa">    Deddfau Preifat a Phersonol y DU</option>
+            <option value="asp">    Deddfau Senedd yr Alban</option>
+            <option value="asc">    Deddfau Senedd Cymru</option>
+            <option value="anaw">    Deddfau Cynulliad Cenedlaethol Cymru</option>
+            <option value="mwa">    Mesurau Cynulliad Cenedlaethol Cymru</option>
+            <option value="ukcm">    Mesurau Eglwysig</option>
+            <option value="nia">    Deddfau Cynulliad Gogledd Iwerddon</option>
+            <option value="aosp">    Deddfau Hen Senedd yr Alban</option>
+            <option value="aep">    Deddfau Senedd Lloegr</option>
+            <option value="aip">    Deddfau Hen Senedd Iwerddon</option>
+            <option value="apgb">    Deddfau Senedd Prydain Fawr</option>
+            <option value="gbla">    Deddfau Lleol Senedd Prydain Fawr</option>
+            <option value="gbppa">    Deddfau Preifat a Phersonol Senedd Prydain Fawr</option>
+            <option value="nisi">    Gorchmynion yn y Cyngor Gogledd Iwerddon</option>
+            <option value="mnia">    Mesurau Cynulliad Gogledd Iwerddon</option>
+            <option value="apni">    Deddfau Senedd Gogledd Iwerddon</option>
+            <option disabled="disabled">--------------------------------------------</option>
+            <option value="secondary">Pob is-ddeddfwriaeth</option>
+            <option value="uksi">    Offerynnau Statudol y Deyrnas Unedig</option>
+            <option value="wsi">    Offerynnau Statudol Cymru</option>
+            <option value="ssi">    Offerynnau Statudol yr Alban</option>
+            <option value="nisr">    Rheolau Statudol Gogledd Iwerddon</option>
+            <option value="ukci">    Offerynnau Eglwysig</option>
+            <option value="ukmd">    Cyfarwyddiadau Gweinidogol y Deyrnas Unedig</option>
+            <option value="ukmo">    Gorchmynion Gweinidogol y Deyrnas Unedig</option>
+            <option value="uksro">    Rheolau a Gorchmynion Statudol y Deyrnas Unedig</option>
+            <option value="nisro">    Rheolau a Gorchmynion Statudol Gogledd Iwerddon</option>
+            <option disabled="disabled">--------------------------------------------</option>
+            <option value="eu-origin">Yr holl Ddeddfwriaeth sy’n deillio o’r UE</option>
+            <option value="eur">    Rheoliadau yn deillio o’r UE</option>
+            <option value="eudn">    Penderfyniadau yn deillio o’r UE</option>
+            <option value="eudr">    Cyfarwyddebau yn deillio o’r UE</option>
+            <option value="eut">    Cytuniadau’r Undeb Ewropeaidd</option>
+            <option disabled="disabled">--------------------------------------------</option>
+            <option value="draft">Pob Deddfwriaeth Ddrafft</option>
+            <option value="ukdsi">    Offerynnau Statudol Drafft y Deyrnas Unedig</option>
+            <option value="sdsi">    Offerynnau Statudol Drafft yr Alban</option>
+            <option value="nidsr">    Rheolau Statudol Drafft Gogledd Iwerddon</option>
+            <option disabled="disabled">--------------------------------------------</option>
+            <option value="ukia">Pob Asesiad Effaith</option>
+            <option value="ukia">    Asesiadau Effaith y Deyrnas Unedig</option>
+        </select></div>
+    <div class="submit"><button type="submit" id="contentSearchSubmit" class="userFunctionalElement"><span
+                class="btl"></span><span class="btr"></span>Chwilio<span class="bbl"></span><span
+                class="bbr"></span></button></div>
+    <div class="advSearch"><a href="/cy/search">Chwiliad Uwch</a></div>
+</form>

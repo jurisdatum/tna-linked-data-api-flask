@@ -1,5 +1,5 @@
 
-from flask import Blueprint, Response, render_template, request
+from flask import Blueprint, Response, render_template
 
 from api import fetch_interpretation, fetch_interpretation_format
 
@@ -7,8 +7,8 @@ interp_bp = Blueprint('interpretation', __name__)
 
 @interp_bp.route('/<type>/<int:year>/<int:number>/metadata')
 def interpretation(type, year, number):
-    meta = fetch_interpretation(type, year, number)
-    return render_template('pages/interpretation.html', interp=meta)
+    interp = fetch_interpretation(type, year, number)
+    return render_template('pages/interpretation.html', interp=interp)
 
 @interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.rdf')
 def interpretation_rdf_xml(type, year, number):
