@@ -1,0 +1,96 @@
+# Welsh translations for Linked Data API.
+# (C) Crown copyright 2025
+# This file is distributed under the Open Government Licence v3.0
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  LGU2\n"
+"Report-Msgid-Bugs-To: jim@jurisdatum.com\n"
+"POT-Creation-Date: 2025-04-22 11:27-0400\n"
+"PO-Revision-Date: 2025-04-21 16:25-0400\n"
+"Last-Translator: Jim Mangiafico <jim@jurisdatum.com>\n"
+"Language: cy\n"
+"Language-Team: cy <LL@li.org>\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 1 : n==2 ? 2 : n==3 ? 3 : n==6 ?"
+" 4 : 0);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/components/formats.html:6
+msgid "Data Formats"
+msgstr "Fformatau Data"
+
+#: templates/components/formats.html:18 templates/components/formats.html:21
+msgid "Simple"
+msgstr "Syml"
+
+#: templates/components/item.html:7
+msgid "Type"
+msgstr "Math"
+
+#: templates/components/item.html:11
+msgid "Year"
+msgstr "Blwyddyn"
+
+#: templates/components/item.html:15
+msgid "Number"
+msgstr "Rhif"
+
+#: templates/components/item.html:19
+msgid "Title"
+msgstr "Teitl"
+
+#: templates/components/item.html:23
+msgid "Original Languages"
+msgstr "Ieithoedd Gwreiddiol"
+
+#: templates/components/item.html:27
+msgid "Citation"
+msgstr "Dyfynnu"
+
+#: templates/components/item.html:31
+msgid "Full Citation"
+msgstr "Dyfyniadau Llawn"
+
+#: templates/components/item.html:36
+msgid "Commentary Citation"
+msgstr "Dyfynnu Sylwebaeth"
+
+#: templates/pages/core.html:14
+msgid "The Legislation Core Reference"
+msgstr "Cyfeirnod Craidd y Ddeddfwriaeth"
+
+#: templates/pages/interpretation.html:12
+msgid "Short Title"
+msgstr "Teitl Byr"
+
+#: templates/pages/interpretation.html:16
+msgid "Long Title"
+msgstr "Teitl Hir"
+
+#: templates/pages/interpretation.html:20
+msgid "Language"
+msgstr "Iaith"
+
+#: templates/pages/interpretation.html:25
+msgid "Original"
+msgstr "Gwreiddiol"
+
+#: templates/pages/interpretation.html:31
+msgid "Current"
+msgstr "Cyfredol"
+
+#: templates/pages/interpretation.html:36
+msgid "Item"
+msgstr "Eitem"
+
+#: templates/pages/items.html:17
+msgid "prev"
+msgstr "blaenorol"
+
+#: templates/pages/items.html:25
+msgid "next"
+msgstr "nesaf"
+

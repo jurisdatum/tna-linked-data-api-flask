@@ -4,36 +4,36 @@
         <td class="value">{{ item.uri }}</td>
     </tr>
     <tr>
-        <th class="label">Type</th>
+        <th class="label">{{ _('Type') }}</th>
         <td class="value">{{ item.type }}</td>
     </tr>
     <tr>
-        <th class="label">Year</th>
+        <th class="label">{{ _('Year') }}</th>
         <td class="value">{{ item.year }}</td>
     </tr>
     <tr>
-        <th class="label">Number</th>
+        <th class="label">{{ _('Number') }}</th>
         <td class="value">{{ item.number }}</td>
     </tr>
     <tr>
-        <th class="label">Title</th>
+        <th class="label">{{ _('Title') }}</th>
         <td class="value">{{ item.title }}</td>
     </tr>
     <tr>
-        <th class="label">Original Languages</th>
+        <th class="label">{{ _('Original Languages') }}</th>
         <td class="value">{{ ', '.join(item.originalLanguages) }}</td>
     </tr>
     <tr>
-        <th class="label">Citation</th>
+        <th class="label">{{ _('Citation') }}</th>
         <td class="value">{{ item.citation }}</td>
     </tr>
     <tr>
-        <th class="label">Full Citation</th>
+        <th class="label">{{ _('Full Citation') }}</th>
         <td class="value">{{ item.fullCitation }}</td>
     </tr>
     {% if item.commentaryCitation != item.fullCitation %}
     <tr>
-        <th class="label">Commentary Citation</th>
+        <th class="label">{{ _('Commentary Citation') }}</th>
         <td class="value">{{ item.commentaryCitation }}</td>
     </tr>
     {% endif %}

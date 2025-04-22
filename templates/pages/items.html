@@ -14,7 +14,7 @@
         <div>
             {% if page.meta.page > 1 %}
             <span>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}?page={{ page.meta.page - 1 }}">&lsaquo; prev</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}?page={{ page.meta.page - 1 }}">&lsaquo; {{ _('prev') }}</a>
             </span>
             {% endif %}
             {% if page.meta.page > 1 and page['items']|length == page.meta.pageSize %}
@@ -22,7 +22,7 @@
             {% endif %}
             {% if page['items']|length == page.meta.pageSize %}
             <span>
-                <a href="{{ request.host_url.rstrip('/') + request.path }}?page={{ page.meta.page + 1 }}">next &rsaquo;</a>
+                <a href="{{ request.host_url.rstrip('/') + request.path }}?page={{ page.meta.page + 1 }}">{{ _('next') }} &rsaquo;</a>
             </span>
             {% endif %}
         </div>

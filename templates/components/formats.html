@@ -3,7 +3,7 @@
     ul { list-style: none; padding-left: 0 }
     li { text-wrap-mode: nowrap }
 </style>
-<h3>Data Formats</h3>
+<h3>{{ _('Data Formats') }}</h3>
 <ul>
     <li>
         <a href="{{ request.host_url.rstrip('/') + request.path }}/data.rdf{{ query_string }}" type="application/rdf+xml">RDF/XML</a>
@@ -15,9 +15,9 @@
         <a href="{{ request.host_url.rstrip('/') + request.path }}/data.ttl{{ query_string }}" type="text/turtle">Turtle</a>
     </li>
     <li>
-        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json{{ query_string }}" type="application/json">Simple JSON</a>
+        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json{{ query_string }}" type="application/json">{{ _('Simple') }} JSON</a>
     </li>
     <li>
-        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.xml{{ query_string }}" type="application/xml">Simple XML</a>
+        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.xml{{ query_string }}" type="application/xml">{{ _('Simple') }} XML</a>
     </li>
 </ul>

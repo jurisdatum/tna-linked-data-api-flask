@@ -1,0 +1,95 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-04-22 11:27-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/components/formats.html:6
+msgid "Data Formats"
+msgstr ""
+
+#: templates/components/formats.html:18 templates/components/formats.html:21
+msgid "Simple"
+msgstr ""
+
+#: templates/components/item.html:7
+msgid "Type"
+msgstr ""
+
+#: templates/components/item.html:11
+msgid "Year"
+msgstr ""
+
+#: templates/components/item.html:15
+msgid "Number"
+msgstr ""
+
+#: templates/components/item.html:19
+msgid "Title"
+msgstr ""
+
+#: templates/components/item.html:23
+msgid "Original Languages"
+msgstr ""
+
+#: templates/components/item.html:27
+msgid "Citation"
+msgstr ""
+
+#: templates/components/item.html:31
+msgid "Full Citation"
+msgstr ""
+
+#: templates/components/item.html:36
+msgid "Commentary Citation"
+msgstr ""
+
+#: templates/pages/core.html:14
+msgid "The Legislation Core Reference"
+msgstr ""
+
+#: templates/pages/interpretation.html:12
+msgid "Short Title"
+msgstr ""
+
+#: templates/pages/interpretation.html:16
+msgid "Long Title"
+msgstr ""
+
+#: templates/pages/interpretation.html:20
+msgid "Language"
+msgstr ""
+
+#: templates/pages/interpretation.html:25
+msgid "Original"
+msgstr ""
+
+#: templates/pages/interpretation.html:31
+msgid "Current"
+msgstr ""
+
+#: templates/pages/interpretation.html:36
+msgid "Item"
+msgstr ""
+
+#: templates/pages/items.html:17
+msgid "prev"
+msgstr ""
+
+#: templates/pages/items.html:25
+msgid "next"
+msgstr ""
+
