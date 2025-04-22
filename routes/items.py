@@ -1,6 +1,8 @@
 
 from flask import Blueprint, Response, render_template, request
 
+from flask_babel import lazy_gettext as _
+
 from api import fetch_items, fetch_items_format
 from routes.interpretation import get_mimetype
 
@@ -25,42 +27,42 @@ def items_data(type, year, fmt):
 #
 
 plural_type_labels = {
-    'ukpga': 'UK Public General Acts',
-    'ukla': 'UK Local Acts',
-    'ukppa': 'UK Private and Personal Acts',
-    'asp': 'Acts of the Scottish Parliament',
-    'nia': 'Acts of the Northern Ireland Assembly',
-    'aosp': 'Acts of the Old Scottish Parliament',
-    'aep': 'Acts of the English Parliament',
-    'aip': 'Acts of the Old Irish Parliament',
-    'apgb': 'Acts of the Parliament of Great Britain',
-    'gbla': 'Local Acts of the Parliament of Great Britain',
-    'gbppa': '???',  # ToDo
-    'anaw': 'Acts of the National Assembly for Wales',
-    'asc': 'Acts of Senedd Cymru',
-    'mwa': 'Measures of the National Assembly for Wales',
-    'ukcm': 'Church Measures',
-    'mnia': 'Measures of the Northern Ireland Assembly',
-    'apni': 'Acts of the Northern Ireland Parliament',
-    'uksi': 'UK Statutory Instruments',
-    'ukmd': 'UK Ministerial Directions',
-    'ukmo': 'UK Ministerial Orders',
-    'uksro': 'UK Statutory Rules and Orders',
-    'wsi': 'Wales Statutory Instruments',
-    'ssi': 'Scottish Statutory Instruments',
-    'nisi': 'Northern Ireland Orders in Council',
-    'nisr': 'Northern Ireland Statutory Rules',
-    'ukci': 'Church Instruments',
-    'nisro': 'Northern Ireland Statutory Rules and Orders',
+    'ukpga': _('UK Public General Acts'),
+    'ukla': _('UK Local Acts'),
+    'ukppa': _('UK Private and Personal Acts'),
+    'asp': _('Acts of the Scottish Parliament'),
+    'nia': _('Acts of the Northern Ireland Assembly'),
+    'aosp': _('Acts of the Old Scottish Parliament'),
+    'aep': _('Acts of the English Parliament'),
+    'aip': _('Acts of the Old Irish Parliament'),
+    'apgb': _('Acts of the Parliament of Great Britain'),
+    'gbla': _('Local Acts of the Parliament of Great Britain'),
+    'gbppa': _('???'),  # ToDo
+    'anaw': _('Acts of the National Assembly for Wales'),
+    'asc': _('Acts of Senedd Cymru'),
+    'mwa': _('Measures of the National Assembly for Wales'),
+    'ukcm': _('Church Measures'),
+    'mnia': _('Measures of the Northern Ireland Assembly'),
+    'apni': _('Acts of the Northern Ireland Parliament'),
+    'uksi': _('UK Statutory Instruments'),
+    'ukmd': _('UK Ministerial Directions'),
+    'ukmo': _('UK Ministerial Orders'),
+    'uksro': _('UK Statutory Rules and Orders'),
+    'wsi': _('Wales Statutory Instruments'),
+    'ssi': _('Scottish Statutory Instruments'),
+    'nisi': _('Northern Ireland Orders in Council'),
+    'nisr': _('Northern Ireland Statutory Rules'),
+    'ukci': _('Church Instruments'),
+    'nisro': _('Northern Ireland Statutory Rules and Orders'),
 
-    'ukdsi': 'UK Draft Statutory Instruments',
-    'sdsi': 'Scottish Draft Statutory Instruments',
-    'nidsr': 'Northern Ireland Draft Statutory Rules',
+    'ukdsi': _('UK Draft Statutory Instruments'),
+    'sdsi': _('Scottish Draft Statutory Instruments'),
+    'nidsr': _('Northern Ireland Draft Statutory Rules'),
 
-    'eur': 'Regulations originating from the EU',
-    'eudn': 'Decisions originating from the EU',
-    'eudr': 'Directives originating from the EU'
+    'eur': _('Regulations originating from the EU'),
+    'eudn': _('Decisions originating from the EU'),
+    'eudr': _('Directives originating from the EU'),
 }
 
 def make_page_title(type, year):
-    return plural_type_labels[type] + ' from ' + str(year)
+    return plural_type_labels[type] + ' ' + _('from') + ' ' + str(year)

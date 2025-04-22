@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  LGU2\n"
 "Report-Msgid-Bugs-To: jim@jurisdatum.com\n"
-"POT-Creation-Date: 2025-04-22 13:23-0400\n"
+"POT-Creation-Date: 2025-04-22 14:10-0400\n"
 "PO-Revision-Date: 2025-04-21 16:25-0400\n"
 "Last-Translator: Jim Mangiafico <jim@jurisdatum.com>\n"
 "Language: cy\n"
@@ -18,9 +18,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
+#: routes/items.py:30
+msgid "UK Public General Acts"
+msgstr "Deddfau Cyhoeddus Cyffredinol y Deyrnas Unedig"
+
+#: routes/items.py:31
+msgid "UK Local Acts"
+msgstr "Deddfau Lleol y Deyrnas Unedig"
+
+#: routes/items.py:32
+msgid "UK Private and Personal Acts"
+msgstr "Deddfau Preifat a Phersonol y DU"
+
+#: routes/items.py:33
+msgid "Acts of the Scottish Parliament"
+msgstr "Deddfau Senedd yr Alban"
+
+#: routes/items.py:34
+msgid "Acts of the Northern Ireland Assembly"
+msgstr "Deddfau Cynulliad Gogledd Iwerddon"
+
+#: routes/items.py:35
+msgid "Acts of the Old Scottish Parliament"
+msgstr "Deddfau Hen Senedd yr Alban"
+
+#: routes/items.py:36
+msgid "Acts of the English Parliament"
+msgstr "Deddfau Senedd Lloegr"
+
+#: routes/items.py:37
+msgid "Acts of the Old Irish Parliament"
+msgstr "Deddfau Hen Senedd Iwerddon"
+
+#: routes/items.py:38
+msgid "Acts of the Parliament of Great Britain"
+msgstr "Deddfau Senedd Prydain Fawr"
+
+#: routes/items.py:39
+msgid "Local Acts of the Parliament of Great Britain"
+msgstr "Deddfau Lleol Senedd Prydain Fawr"
+
+#: routes/items.py:40
+msgid "???"
+msgstr ""
+
+#: routes/items.py:41
+msgid "Acts of the National Assembly for Wales"
+msgstr "Deddfau Cynulliad Cenedlaethol Cymru"
+
+#: routes/items.py:42
+msgid "Acts of Senedd Cymru"
+msgstr "Deddfau Senedd Cymru"
+
+#: routes/items.py:43
+msgid "Measures of the National Assembly for Wales"
+msgstr "Mesurau Cynulliad Cenedlaethol Cymru"
+
+#: routes/items.py:44
+msgid "Church Measures"
+msgstr "Mesurau Eglwysig"
+
+#: routes/items.py:45
+msgid "Measures of the Northern Ireland Assembly"
+msgstr "Mesurau Cynulliad Gogledd Iwerddon"
+
+#: routes/items.py:46
+msgid "Acts of the Northern Ireland Parliament"
+msgstr "Deddfau Senedd Gogledd Iwerddon"
+
+#: routes/items.py:47
+msgid "UK Statutory Instruments"
+msgstr "Offerynnau Statudol y Deyrnas Unedig"
+
+#: routes/items.py:48
+msgid "UK Ministerial Directions"
+msgstr "Cyfarwyddiadau Gweinidogol y Deyrnas Unedig"
+
+#: routes/items.py:49
+msgid "UK Ministerial Orders"
+msgstr "Gorchmynion Gweinidogol y Deyrnas Unedig"
+
+#: routes/items.py:50
+msgid "UK Statutory Rules and Orders"
+msgstr "Rheolau a Gorchmynion Statudol y Deyrnas Unedig"
+
+#: routes/items.py:51
+msgid "Wales Statutory Instruments"
+msgstr "Offerynnau Statudol Cymru"
+
+#: routes/items.py:52
+msgid "Scottish Statutory Instruments"
+msgstr "Offerynnau Statudol yr Alban"
+
+#: routes/items.py:53
+msgid "Northern Ireland Orders in Council"
+msgstr "Gorchmynion yn y Cyngor Gogledd Iwerddon"
+
+#: routes/items.py:54
+msgid "Northern Ireland Statutory Rules"
+msgstr "Rheolau Statudol Gogledd Iwerddon"
+
+#: routes/items.py:55
+msgid "Church Instruments"
+msgstr "Offerynnau Eglwysig"
+
+#: routes/items.py:56
+msgid "Northern Ireland Statutory Rules and Orders"
+msgstr "Rheolau a Gorchmynion Statudol Gogledd Iwerddon"
+
+#: routes/items.py:58
+msgid "UK Draft Statutory Instruments"
+msgstr "Offerynnau Statudol Drafft y Deyrnas Unedig"
+
+#: routes/items.py:59
+msgid "Scottish Draft Statutory Instruments"
+msgstr "Offerynnau Statudol Drafft yr Alban"
+
+#: routes/items.py:60
+msgid "Northern Ireland Draft Statutory Rules"
+msgstr "Rheolau Statudol Drafft Gogledd Iwerddon"
+
+#: routes/items.py:62
+msgid "Regulations originating from the EU"
+msgstr "Rheoliadau yn deillio o’r UE"
+
+#: routes/items.py:63
+msgid "Decisions originating from the EU"
+msgstr "Penderfyniadau yn deillio o’r UE"
+
+#: routes/items.py:64
+msgid "Directives originating from the EU"
+msgstr "Cyfarwyddebau yn deillio o’r UE"
+
+#: routes/items.py:68
+msgid "from"
+msgstr "rhag"
+
 #: templates/components/formats.html:6
 msgid "Data Formats"
-msgstr "Fformatau Data"
+msgstr "Fformatiau Data"
 
 #: templates/components/formats.html:18 templates/components/formats.html:21
 msgid "Simple"
@@ -48,15 +184,15 @@ msgstr "Ieithoedd Gwreiddiol"
 
 #: templates/components/item.html:27
 msgid "Citation"
-msgstr "Dyfynnu"
+msgstr "Dyfyniad"
 
 #: templates/components/item.html:31
 msgid "Full Citation"
-msgstr "Dyfyniadau Llawn"
+msgstr "Dyfyniad Llawn"
 
 #: templates/components/item.html:36
 msgid "Commentary Citation"
-msgstr "Dyfynnu Sylwebaeth"
+msgstr "Dyfyniad Sylwebaeth"
 
 #: templates/pages/core.html:14
 msgid "The Legislation Core Reference"
