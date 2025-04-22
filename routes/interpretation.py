@@ -5,33 +5,26 @@ from api import fetch_interpretation, fetch_interpretation_format
 
 interp_bp = Blueprint('interpretation', __name__)
 
-@interp_bp.route('/<type>/<int:year>/<int:number>/metadata')
-def interpretation(type, year, number):
-    interp = fetch_interpretation(type, year, number)
+@interp_bp.route('/<doc_type>/<int:year>/<int:number>/metadata', defaults={'version': None})
+@interp_bp.route('/<doc_type>/<int:year>/<int:number>/<version>/metadata')
+def interpretation(doc_type, year, number, version):
+    interp = fetch_interpretation(doc_type, year, number, version)
     return render_template('pages/interpretation.html', interp=interp)
 
-@interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.rdf')
-def interpretation_rdf_xml(type, year, number):
-    return data(type, year, number, 'application/rdf+xml')
 
-@interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.rdfjson')
-def interpretation_rdf_json(type, year, number):
-    return data(type, year, number, 'application/rdf+json')
+def get_mimetype(fmt):
+    return {
+        'rdf': 'application/rdf+xml',
+        'rdfjson': 'application/rdf+json',
+        'ttl': 'text/turtle',
+        'json': 'application/json',
+        'xml': 'application/xml',
+    }.get(fmt)
 
-@interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.ttl')
-def interpretation_turtle(type, year, number):
-    return data(type, year, number, 'text/turtle')
 
-@interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.json')
-def interpretation_json(type, year, number):
-    return data(type, year, number, 'application/json')
-
-@interp_bp.route('/<type>/<int:year>/<int:number>/metadata/data.xml')
-def interpretation_xml(type, year, number):
-    return data(type, year, number, 'application/xml')
-
-def data(type, year, number, format):
-    data = fetch_interpretation_format(type, year, number, format)
-    resp = Response(data)
-    resp.mimetype = format
-    return resp
+@interp_bp.route('/<doc_type>/<int:year>/<int:number>/metadata/data.<fmt:fmt>', defaults={'version': None})
+@interp_bp.route('/<doc_type>/<int:year>/<int:number>/<version>/metadata/data.<fmt:fmt>')
+def interpretation_data(doc_type, year, number, version, fmt):
+    mime = get_mimetype(fmt)
+    data = fetch_interpretation_format(doc_type, year, number, version, mime)
+    return Response(data, mimetype=mime)

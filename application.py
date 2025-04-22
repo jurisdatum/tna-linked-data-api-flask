@@ -2,12 +2,21 @@
 from flask import Flask, render_template, request
 from flask_babel import Babel
 
+from werkzeug.routing import BaseConverter
+
 from routes.items import items_bp
 from routes.interpretation import interp_bp
 
+
+class FormatConverter(BaseConverter):
+    regex = 'json|xml|ttl|rdf|rdfjson'
+
+
 app = Flask(__name__)
+app.url_map.converters['fmt'] = FormatConverter
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'cy']
+
 
 def get_locale():
     parts = request.path.strip('/').split('/')
