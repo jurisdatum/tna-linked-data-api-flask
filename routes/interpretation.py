@@ -9,7 +9,8 @@ interp_bp = Blueprint('interpretation', __name__)
 @interp_bp.route('/<doc_type>/<int:year>/<int:number>/<version>/metadata')
 def interpretation(doc_type, year, number, version):
     interp = fetch_interpretation(doc_type, year, number, version)
-    return render_template('pages/interpretation.html', interp=interp)
+    title = title = interp.get('shortTitle', interp.get('orderTitle'))
+    return render_template('pages/interpretation.html', interp=interp, title=title)
 
 
 def get_mimetype(fmt):

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  LGU2\n"
 "Report-Msgid-Bugs-To: jim@jurisdatum.com\n"
-"POT-Creation-Date: 2025-04-22 11:27-0400\n"
+"POT-Creation-Date: 2025-04-22 13:23-0400\n"
 "PO-Revision-Date: 2025-04-21 16:25-0400\n"
 "Last-Translator: Jim Mangiafico <jim@jurisdatum.com>\n"
 "Language: cy\n"
@@ -62,27 +62,31 @@ msgstr "Dyfynnu Sylwebaeth"
 msgid "The Legislation Core Reference"
 msgstr "Cyfeirnod Craidd y Ddeddfwriaeth"
 
-#: templates/pages/interpretation.html:12
+#: templates/pages/interpretation.html:13
 msgid "Short Title"
 msgstr "Teitl Byr"
 
-#: templates/pages/interpretation.html:16
+#: templates/pages/interpretation.html:19
 msgid "Long Title"
 msgstr "Teitl Hir"
 
-#: templates/pages/interpretation.html:20
+#: templates/pages/interpretation.html:25
+msgid "Order Title"
+msgstr "Teitl Gorchymyn"
+
+#: templates/pages/interpretation.html:30
 msgid "Language"
 msgstr "Iaith"
 
-#: templates/pages/interpretation.html:25
+#: templates/pages/interpretation.html:35
 msgid "Original"
 msgstr "Gwreiddiol"
 
-#: templates/pages/interpretation.html:31
+#: templates/pages/interpretation.html:41
 msgid "Current"
 msgstr "Cyfredol"
 
-#: templates/pages/interpretation.html:36
+#: templates/pages/interpretation.html:46
 msgid "Item"
 msgstr "Eitem"
 

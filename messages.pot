@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-22 11:27-0400\n"
+"POT-Creation-Date: 2025-04-22 13:23-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,27 +61,31 @@ msgstr ""
 msgid "The Legislation Core Reference"
 msgstr ""
 
-#: templates/pages/interpretation.html:12
+#: templates/pages/interpretation.html:13
 msgid "Short Title"
 msgstr ""
 
-#: templates/pages/interpretation.html:16
+#: templates/pages/interpretation.html:19
 msgid "Long Title"
 msgstr ""
 
-#: templates/pages/interpretation.html:20
+#: templates/pages/interpretation.html:25
+msgid "Order Title"
+msgstr ""
+
+#: templates/pages/interpretation.html:30
 msgid "Language"
 msgstr ""
 
-#: templates/pages/interpretation.html:25
+#: templates/pages/interpretation.html:35
 msgid "Original"
 msgstr ""
 
-#: templates/pages/interpretation.html:31
+#: templates/pages/interpretation.html:41
 msgid "Current"
 msgstr ""
 
-#: templates/pages/interpretation.html:36
+#: templates/pages/interpretation.html:46
 msgid "Item"
 msgstr ""
 
