@@ -1,7 +1,7 @@
 
 from flask import Blueprint, Response, render_template
 
-from api import fetch_interpretation, fetch_interpretation_format
+from api.interpretation import fetch_interpretation, fetch_interpretation_format
 
 interp_bp = Blueprint('interpretation', __name__)
 

@@ -3,7 +3,7 @@ from flask import Blueprint, Response, render_template, request
 
 from flask_babel import lazy_gettext as _
 
-from api import fetch_items, fetch_items_format
+from api.items import fetch_items, fetch_items_format
 from routes.interpretation import get_mimetype
 
 items_bp = Blueprint('items', __name__)
@@ -24,7 +24,7 @@ def items_data(type, year, fmt):
     data = fetch_items_format(type, year, page, mime)
     return Response(data, mimetype=mime)
 
-#
+# labels
 
 plural_type_labels = {
     'ukpga': _('UK Public General Acts'),
