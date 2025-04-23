@@ -44,6 +44,7 @@ _MIME_TYPES = {
     'ttl':     'text/turtle',
     'json':    'application/json',
     'xml':     'application/xml',
+    'jsonld':  'application/ld+json'
 }
 def get_mimetype(fmt):
     return _MIME_TYPES.get(fmt)

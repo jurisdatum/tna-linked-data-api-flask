@@ -9,7 +9,7 @@ from routes.interpretation import interp_bp
 
 
 class FormatConverter(BaseConverter):
-    regex = 'json|xml|ttl|rdf|rdfjson'
+    regex = 'json|xml|ttl|rdf|rdfjson|jsonld'
 
 
 app = Flask(__name__)

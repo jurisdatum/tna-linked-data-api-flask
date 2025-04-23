@@ -15,9 +15,12 @@
         <a href="{{ request.host_url.rstrip('/') + request.path }}/data.ttl{{ query_string }}" type="text/turtle">Turtle</a>
     </li>
     <li>
-        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json{{ query_string }}" type="application/json">{{ _('Simple') }} JSON</a>
+        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.jsonld{{ query_string }}" type="application/ld+json">JSON-LD</a>
     </li>
     <li>
         <a href="{{ request.host_url.rstrip('/') + request.path }}/data.xml{{ query_string }}" type="application/xml">{{ _('Simple') }} XML</a>
+    </li>
+    <li>
+        <a href="{{ request.host_url.rstrip('/') + request.path }}/data.json{{ query_string }}" type="application/json">{{ _('Simple') }} JSON</a>
     </li>
 </ul>
