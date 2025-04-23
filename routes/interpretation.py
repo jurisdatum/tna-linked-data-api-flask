@@ -20,7 +20,7 @@ def interpretation_by_regnal_year(doc_type, reign, session, number, version):
 
 def _interpretation_by_either(doc_type, year, number, version):
     interp = fetch_interpretation(doc_type, year, number, version)
-    title = interp.get('shortTitle', interp.get('orderTitle'))
+    title = interp.get('shortTitle', interp.get('orderTitle', interp.get('longTitle')))
     return render_template('pages/interpretation.html', interp=interp, title=title)
 
 # data
