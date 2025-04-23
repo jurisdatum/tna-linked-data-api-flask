@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-22 14:10-0400\n"
+"POT-Creation-Date: 2025-04-23 11:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,31 +165,35 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: templates/components/item.html:11
+#: templates/components/item.html:12
+msgid "Session"
+msgstr ""
+
+#: templates/components/item.html:17
 msgid "Year"
 msgstr ""
 
-#: templates/components/item.html:15
+#: templates/components/item.html:21
 msgid "Number"
 msgstr ""
 
-#: templates/components/item.html:19
+#: templates/components/item.html:25
 msgid "Title"
 msgstr ""
 
-#: templates/components/item.html:23
+#: templates/components/item.html:29
 msgid "Original Languages"
 msgstr ""
 
-#: templates/components/item.html:27
+#: templates/components/item.html:33
 msgid "Citation"
 msgstr ""
 
-#: templates/components/item.html:31
+#: templates/components/item.html:37
 msgid "Full Citation"
 msgstr ""
 
-#: templates/components/item.html:36
+#: templates/components/item.html:42
 msgid "Commentary Citation"
 msgstr ""
 

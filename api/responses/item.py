@@ -5,6 +5,7 @@ class Item(TypedDict):
     uri: str
     type: str
     year: int
+    session: NotRequired[str]
     number: int
     title: str
     welshTitle: NotRequired[str]

@@ -7,6 +7,12 @@
         <th class="label">{{ _('Type') }}</th>
         <td class="value">{{ item.type }}</td>
     </tr>
+    {% if item.session %}
+    <tr>
+        <th class="label">{{ _('Session') }}</th>
+        <td class="value">{{ item.session }}</td>
+    </tr>
+    {% endif %}
     <tr>
         <th class="label">{{ _('Year') }}</th>
         <td class="value">{{ item.year }}</td>
