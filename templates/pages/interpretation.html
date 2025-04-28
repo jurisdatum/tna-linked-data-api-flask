@@ -5,46 +5,46 @@
     <table>
         <tbody class="interpretation">
             <tr>
-                <th class="label">URI</th>
-                <td class="value">{{ interp.uri }}</td>
+                <th>URI</th>
+                <td>{{ interp.uri }}</td>
             </tr>
             {% if interp.shortTitle %}
             <tr>
-                <th class="label">{{ _('Short Title') }}</th>
-                <td class="value">{{ interp.shortTitle }}</td>
+                <th>{{ _('Short Title') }}</th>
+                <td>{{ interp.shortTitle }}</td>
             </tr>
             {% endif %}
             {% if interp.longTitle %}
             <tr>
-                <th class="label">{{ _('Long Title') }}</th>
-                <td class="value">{{ interp.longTitle }}</td>
+                <th>{{ _('Long Title') }}</th>
+                <td>{{ interp.longTitle }}</td>
             </tr>
             {% endif %}
             {% if interp.orderTitle %}
             <tr>
-                <th class="label">{{ _('Order Title') }}</th>
-                <td class="value">{{ interp.orderTitle }}</td>
+                <th>{{ _('Order Title') }}</th>
+                <td>{{ interp.orderTitle }}</td>
             </tr>
             {% endif %}
             <tr>
-                <th class="label">{{ _('Language') }}</th>
-                <td class="value">{{ interp.language }}</td>
+                <th>{{ _('Language') }}</th>
+                <td>{{ interp.language }}</td>
             </tr>
             {% if interp.original %}
             <tr>
-                <th class="label">{{ _('Original') }}</th>
-                <td class="value">{{ interp.original }}</td>
+                <th>{{ _('Original') }}</th>
+                <td>{{ interp.original }}</td>
             </tr>
             {% endif %}
             {% if interp.current %}
             <tr>
-                <th class="label">{{ _('Current') }}</th>
-                <td class="value">{{ interp.current }}</td>
+                <th>{{ _('Current') }}</th>
+                <td>{{ interp.current }}</td>
             </tr>
             {% endif %}
             <tr>
-                <th class="label">{{ _('Item') }}</th>
-                <td class="value">
+                <th>{{ _('Item') }}</th>
+                <td>
                     <table>
                         {% set item = interp.item %}
                         {% include 'components/item.html' %}

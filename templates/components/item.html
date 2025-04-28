@@ -1,48 +1,48 @@
 <tbody class="item">
     <tr>
-        <th class="label">URI</th>
-        <td class="value">{{ item.uri }}</td>
+        <th>URI</th>
+        <td>{{ item.uri }}</td>
     </tr>
     <tr>
-        <th class="label">{{ _('Type') }}</th>
-        <td class="value">
+        <th>{{ _('Type') }}</th>
+        <td>
             <a href="{{ request.host_url }}def/legislation/{{ item.type }}">{{ item.type }}</a>
         </td>
     </tr>
     {% if item.session %}
     <tr>
-        <th class="label">{{ _('Session') }}</th>
-        <td class="value">{{ item.session }}</td>
+        <th>{{ _('Session') }}</th>
+        <td>{{ item.session }}</td>
     </tr>
     {% endif %}
     <tr>
-        <th class="label">{{ _('Year') }}</th>
-        <td class="value">{{ item.year }}</td>
+        <th>{{ _('Year') }}</th>
+        <td>{{ item.year }}</td>
     </tr>
     <tr>
-        <th class="label">{{ _('Number') }}</th>
-        <td class="value">{{ item.number }}</td>
+        <th>{{ _('Number') }}</th>
+        <td>{{ item.number }}</td>
     </tr>
     <tr>
-        <th class="label">{{ _('Title') }}</th>
-        <td class="value">{{ item.title }}</td>
+        <th>{{ _('Title') }}</th>
+        <td>{{ item.title }}</td>
     </tr>
     <tr>
-        <th class="label">{{ _('Original Languages') }}</th>
-        <td class="value">{{ ', '.join(item.originalLanguages) }}</td>
+        <th>{{ _('Original Languages') }}</th>
+        <td>{{ ', '.join(item.originalLanguages) }}</td>
     </tr>
     <tr>
-        <th class="label">{{ _('Citation') }}</th>
-        <td class="value">{{ item.citation }}</td>
+        <th>{{ _('Citation') }}</th>
+        <td>{{ item.citation }}</td>
     </tr>
     <tr>
-        <th class="label">{{ _('Full Citation') }}</th>
-        <td class="value">{{ item.fullCitation }}</td>
+        <th>{{ _('Full Citation') }}</th>
+        <td>{{ item.fullCitation }}</td>
     </tr>
     {% if item.commentaryCitation != item.fullCitation %}
     <tr>
-        <th class="label">{{ _('Commentary Citation') }}</th>
-        <td class="value">{{ item.commentaryCitation }}</td>
+        <th>{{ _('Commentary Citation') }}</th>
+        <td>{{ item.commentaryCitation }}</td>
     </tr>
     {% endif %}
 </tbody>
