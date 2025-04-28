@@ -6,6 +6,7 @@ from werkzeug.routing import BaseConverter
 
 from routes.items import items_bp
 from routes.interpretation import interp_bp
+from routes.clazz import class_bp
 
 
 class FormatConverter(BaseConverter):
@@ -32,8 +33,10 @@ def inject_get_locale():
 
 app.register_blueprint(items_bp)
 app.register_blueprint(interp_bp)
+app.register_blueprint(class_bp)
 app.register_blueprint(items_bp, name_prefix='welsh_', url_prefix='/cy')
 app.register_blueprint(interp_bp, name_prefix='welsh_', url_prefix='/cy')
+app.register_blueprint(class_bp, name_prefix='welsh_', url_prefix='/cy')
 
 @app.errorhandler(404)
 def not_found(error):

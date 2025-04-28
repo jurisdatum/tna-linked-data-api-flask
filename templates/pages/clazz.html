@@ -1,0 +1,36 @@
+{% extends 'pages/core.html' %}
+{% block content %}
+<h2>{{ clazz.label }}</h2>
+<div>
+    <table>
+        <tbody class="clazz">
+            {% for key, value in clazz.items() %}
+            {% if key == 'uri' %}
+            <tr>
+                <th>URI</th>
+                <td>{{ value }}</td>
+            </tr>
+            {% elif key == 'subClassOf' %}
+            <tr>
+                <th>{{ key }}</th>
+                <td>
+                    {% for parent in value -%}
+                    {% if not loop.first %}, {% endif -%}
+                    <a href="{{ request.host_url }}def/legislation/{{ parent }}">{{ parent }}</a>
+                    {%- endfor %}
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <th>{{ key }}</th>
+                <td>{{ value }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <nav>
+        {% include 'components/formats.html' %}
+    </nav>
+</div>
+{% endblock %}

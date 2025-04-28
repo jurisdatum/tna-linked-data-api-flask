@@ -5,7 +5,9 @@
     </tr>
     <tr>
         <th class="label">{{ _('Type') }}</th>
-        <td class="value">{{ item.type }}</td>
+        <td class="value">
+            <a href="{{ request.host_url }}def/legislation/{{ item.type }}">{{ item.type }}</a>
+        </td>
     </tr>
     {% if item.session %}
     <tr>
