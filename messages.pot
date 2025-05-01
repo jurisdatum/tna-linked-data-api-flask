@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-23 11:28-0400\n"
+"POT-Creation-Date: 2025-04-28 13:40-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: translations_extra.py:5
+msgid "comment"
+msgstr ""
+
+#: translations_extra.py:6
+msgid "label"
+msgstr ""
+
+#: translations_extra.py:7
+msgid "acronym"
+msgstr ""
 
 #: routes/items.py:30
 msgid "UK Public General Acts"
@@ -157,7 +169,7 @@ msgstr ""
 msgid "Data Formats"
 msgstr ""
 
-#: templates/components/formats.html:18 templates/components/formats.html:21
+#: templates/components/formats.html:21 templates/components/formats.html:24
 msgid "Simple"
 msgstr ""
 
@@ -165,35 +177,35 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: templates/components/item.html:12
+#: templates/components/item.html:14
 msgid "Session"
 msgstr ""
 
-#: templates/components/item.html:17
+#: templates/components/item.html:19
 msgid "Year"
 msgstr ""
 
-#: templates/components/item.html:21
+#: templates/components/item.html:23
 msgid "Number"
 msgstr ""
 
-#: templates/components/item.html:25
+#: templates/components/item.html:27
 msgid "Title"
 msgstr ""
 
-#: templates/components/item.html:29
+#: templates/components/item.html:31
 msgid "Original Languages"
 msgstr ""
 
-#: templates/components/item.html:33
+#: templates/components/item.html:35
 msgid "Citation"
 msgstr ""
 
-#: templates/components/item.html:37
+#: templates/components/item.html:39
 msgid "Full Citation"
 msgstr ""
 
-#: templates/components/item.html:42
+#: templates/components/item.html:44
 msgid "Commentary Citation"
 msgstr ""
 

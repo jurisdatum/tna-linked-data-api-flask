@@ -4,9 +4,9 @@ from flask import Blueprint, Response, render_template
 from api.clazz import fetch_class, fetch_class_format
 from routes.interpretation import get_mimetype
 
-class_bp = Blueprint('clazz', __name__)
+class_bp = Blueprint('class', __name__)
 
-@class_bp.route('/def/legislation/<name>')
+@class_bp.route('/def/legislation/<name>', endpoint='class')
 def clazz(name):
     data = fetch_class(name)
     return render_template('pages/clazz.html', clazz=data)

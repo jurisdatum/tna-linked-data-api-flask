@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  LGU2\n"
 "Report-Msgid-Bugs-To: jim@jurisdatum.com\n"
-"POT-Creation-Date: 2025-04-23 11:28-0400\n"
+"POT-Creation-Date: 2025-04-28 13:40-0400\n"
 "PO-Revision-Date: 2025-04-21 16:25-0400\n"
 "Last-Translator: Jim Mangiafico <jim@jurisdatum.com>\n"
 "Language: cy\n"
@@ -17,6 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: translations_extra.py:5
+msgid "comment"
+msgstr "sylw"
+
+#: translations_extra.py:6
+msgid "label"
+msgstr "label"
+
+#: translations_extra.py:7
+msgid "acronym"
+msgstr "acronym"
 
 #: routes/items.py:30
 msgid "UK Public General Acts"
@@ -158,7 +170,7 @@ msgstr "rhag"
 msgid "Data Formats"
 msgstr "Fformatiau Data"
 
-#: templates/components/formats.html:18 templates/components/formats.html:21
+#: templates/components/formats.html:21 templates/components/formats.html:24
 msgid "Simple"
 msgstr "Syml"
 
@@ -166,35 +178,35 @@ msgstr "Syml"
 msgid "Type"
 msgstr "Math"
 
-#: templates/components/item.html:12
+#: templates/components/item.html:14
 msgid "Session"
 msgstr "Sesiwn"
 
-#: templates/components/item.html:17
+#: templates/components/item.html:19
 msgid "Year"
 msgstr "Blwyddyn"
 
-#: templates/components/item.html:21
+#: templates/components/item.html:23
 msgid "Number"
 msgstr "Rhif"
 
-#: templates/components/item.html:25
+#: templates/components/item.html:27
 msgid "Title"
 msgstr "Teitl"
 
-#: templates/components/item.html:29
+#: templates/components/item.html:31
 msgid "Original Languages"
 msgstr "Ieithoedd Gwreiddiol"
 
-#: templates/components/item.html:33
+#: templates/components/item.html:35
 msgid "Citation"
 msgstr "Dyfyniad"
 
-#: templates/components/item.html:37
+#: templates/components/item.html:39
 msgid "Full Citation"
 msgstr "Dyfyniad Llawn"
 
-#: templates/components/item.html:42
+#: templates/components/item.html:44
 msgid "Commentary Citation"
 msgstr "Dyfyniad Sylwebaeth"
 

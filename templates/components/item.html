@@ -6,7 +6,7 @@
     <tr>
         <th>{{ _('Type') }}</th>
         <td>
-            <a href="{{ request.host_url }}def/legislation/{{ item.type }}">{{ item.type }}</a>
+            <a href="{{ url_for('class.class', name=item.type) }}">{{ item.type }}</a>
         </td>
     </tr>
     {% if item.session %}

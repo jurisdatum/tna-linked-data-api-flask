@@ -16,13 +16,13 @@
                 <td>
                     {% for parent in value -%}
                     {% if not loop.first %}, {% endif -%}
-                    <a href="{{ request.host_url }}def/legislation/{{ parent }}">{{ parent }}</a>
+                    <a href="{{ url_for('class.class', name=parent) }}">{{ parent }}</a>
                     {%- endfor %}
                 </td>
             </tr>
             {% else %}
             <tr>
-                <th>{{ key }}</th>
+                <th>{{ _(key) }}</th>
                 <td>{{ value }}</td>
             </tr>
             {% endif %}
