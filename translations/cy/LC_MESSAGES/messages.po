@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  LGU2\n"
 "Report-Msgid-Bugs-To: jim@jurisdatum.com\n"
-"POT-Creation-Date: 2025-04-28 13:40-0400\n"
+"POT-Creation-Date: 2025-05-02 16:26-0400\n"
 "PO-Revision-Date: 2025-04-21 16:25-0400\n"
 "Last-Translator: Jim Mangiafico <jim@jurisdatum.com>\n"
 "Language: cy\n"
@@ -191,24 +191,56 @@ msgid "Number"
 msgstr "Rhif"
 
 #: templates/components/item.html:27
+msgid "English Title"
+msgstr "Teitl Saesneg"
+
+#: templates/components/item.html:27
 msgid "Title"
 msgstr "Teitl"
 
-#: templates/components/item.html:31
+#: templates/components/item.html:32
+msgid "Welsh Title"
+msgstr "Teitl Cymraeg"
+
+#: templates/components/item.html:37
 msgid "Original Languages"
 msgstr "Ieithoedd Gwreiddiol"
 
-#: templates/components/item.html:35
+#: templates/components/item.html:41
+msgid "English Citation"
+msgstr "Dyfyniad Saesneg"
+
+#: templates/components/item.html:41
 msgid "Citation"
 msgstr "Dyfyniad"
 
-#: templates/components/item.html:39
+#: templates/components/item.html:46
+msgid "Welsh Citation"
+msgstr "Dyfyniad Cymraeg"
+
+#: templates/components/item.html:51
+msgid "English Full Citation"
+msgstr "Dyfyniad Llawn Saesneg"
+
+#: templates/components/item.html:51
 msgid "Full Citation"
 msgstr "Dyfyniad Llawn"
 
-#: templates/components/item.html:44
+#: templates/components/item.html:56
+msgid "Welsh Full Citation"
+msgstr "Dyfyniad Llawn Cymraeg"
+
+#: templates/components/item.html:62
+msgid "English Commentary Citation"
+msgstr "Dyfyniad Sylwebaeth Saesneg"
+
+#: templates/components/item.html:62
 msgid "Commentary Citation"
 msgstr "Dyfyniad Sylwebaeth"
+
+#: templates/components/item.html:68
+msgid "Welsh Commentary Citation"
+msgstr "Dyfyniad Sylwebaeth Cymraeg"
 
 #: templates/pages/core.html:14
 msgid "The Legislation Core Reference"

@@ -24,25 +24,49 @@
         <td>{{ item.number }}</td>
     </tr>
     <tr>
-        <th>{{ _('Title') }}</th>
+        <th>{{ _('English Title') if item.welshTitle else _('Title') }}</th>
         <td>{{ item.title }}</td>
     </tr>
+    {% if item.welshTitle %}
+    <tr>
+        <th>{{ _('Welsh Title') }}</th>
+        <td>{{ item.welshTitle }}</td>
+    </tr>
+    {% endif %}
     <tr>
         <th>{{ _('Original Languages') }}</th>
         <td>{{ ', '.join(item.originalLanguages) }}</td>
     </tr>
     <tr>
-        <th>{{ _('Citation') }}</th>
+        <th>{{ _('English Citation') if item.welshCitation else _('Citation') }}</th>
         <td>{{ item.citation }}</td>
     </tr>
+    {% if item.welshCitation %}
     <tr>
-        <th>{{ _('Full Citation') }}</th>
+        <th>{{ _('Welsh Citation') }}</th>
+        <td>{{ item.welshCitation }}</td>
+    </tr>
+    {% endif %}
+    <tr>
+        <th>{{ _('English Full Citation') if item.welshFullCitation else _('Full Citation') }}</th>
         <td>{{ item.fullCitation }}</td>
     </tr>
+    {% if item.welshFullCitation %}
+    <tr>
+        <th>{{ _('Welsh Full Citation') }}</th>
+        <td>{{ item.welshFullCitation }}</td>
+    </tr>
+    {% endif %}
     {% if item.commentaryCitation != item.fullCitation %}
     <tr>
-        <th>{{ _('Commentary Citation') }}</th>
+        <th>{{ _('English Commentary Citation') if item.welshCommentaryCitation else _('Commentary Citation') }}</th>
         <td>{{ item.commentaryCitation }}</td>
+    </tr>
+    {% endif %}
+    {% if item.welshCommentaryCitation and item.welshCommentaryCitation != item.welshFullCitation %}
+    <tr>
+        <th>{{ _('Welsh Commentary Citation') }}</th>
+        <td>{{ item.welshCommentaryCitation }}</td>
     </tr>
     {% endif %}
 </tbody>

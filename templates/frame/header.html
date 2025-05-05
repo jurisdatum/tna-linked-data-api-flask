@@ -3,7 +3,7 @@
             href="http://www.nationalarchives.gov.uk"><span class="backgroundImage"></span><span
                 class="accessibleText">http://www.nationalarchives.gov.uk</span></a></span>
     <ul id="secondaryNav">
-        <li><a class="langaugeSwitch" href="/cy{{ request.path }}">Cymraeg</a></li>
+        <li><a class="langaugeSwitch" href="{{ request.host_url + 'cy' + request.path }}">Cymraeg</a></li>
     </ul>
 </div>
 <div id="primaryNav">

@@ -13,7 +13,7 @@ def items(type, year):
     page = request.args.get('page')
     data = fetch_items(type, year, page)
     title = make_page_title(type, year)
-    query_string = '?page=' + page if page else None
+    query_string = '?page=' + page if page else ''
     return render_template('pages/items.html', page=data, title=title, query_string=query_string)
 
 

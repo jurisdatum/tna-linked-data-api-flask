@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-28 13:40-0400\n"
+"POT-Creation-Date: 2025-05-02 16:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -190,23 +190,55 @@ msgid "Number"
 msgstr ""
 
 #: templates/components/item.html:27
+msgid "English Title"
+msgstr ""
+
+#: templates/components/item.html:27
 msgid "Title"
 msgstr ""
 
-#: templates/components/item.html:31
+#: templates/components/item.html:32
+msgid "Welsh Title"
+msgstr ""
+
+#: templates/components/item.html:37
 msgid "Original Languages"
 msgstr ""
 
-#: templates/components/item.html:35
+#: templates/components/item.html:41
+msgid "English Citation"
+msgstr ""
+
+#: templates/components/item.html:41
 msgid "Citation"
 msgstr ""
 
-#: templates/components/item.html:39
+#: templates/components/item.html:46
+msgid "Welsh Citation"
+msgstr ""
+
+#: templates/components/item.html:51
+msgid "English Full Citation"
+msgstr ""
+
+#: templates/components/item.html:51
 msgid "Full Citation"
 msgstr ""
 
-#: templates/components/item.html:44
+#: templates/components/item.html:56
+msgid "Welsh Full Citation"
+msgstr ""
+
+#: templates/components/item.html:62
+msgid "English Commentary Citation"
+msgstr ""
+
+#: templates/components/item.html:62
 msgid "Commentary Citation"
+msgstr ""
+
+#: templates/components/item.html:68
+msgid "Welsh Commentary Citation"
 msgstr ""
 
 #: templates/pages/core.html:14

@@ -10,11 +10,11 @@ def make_interpretation_url(type, year, number, version: Optional[str]) -> str:
     return url
 
 
-def fetch_interpretation(type, year, number, version: Optional[str]) -> dict:
+def fetch_interpretation(type, year, number, version: Optional[str], welsh: bool = False) -> dict:
     url = make_interpretation_url(type, year, number, version)
-    return get_json(url)
+    return get_json(url, welsh)
 
 
-def fetch_interpretation_format(type, year, number, version: Optional[str], accept) -> str:
+def fetch_interpretation_format(type, year, number, version: Optional[str], accept, welsh: bool = False) -> str:
     url = make_interpretation_url(type, year, number, version)
-    return get(url, accept).text
+    return get(url, accept, welsh).text
