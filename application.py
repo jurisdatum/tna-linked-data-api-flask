@@ -14,9 +14,14 @@ class FormatConverter(BaseConverter):
 
 
 app = Flask(__name__)
-app.url_map.converters['fmt'] = FormatConverter
+
+app.config.from_object('config')
+app.config.from_prefixed_env(prefix='LGU2')  # allow override via env
+
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'cy']
+
+app.url_map.converters['fmt'] = FormatConverter
 
 
 def get_locale():

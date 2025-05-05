@@ -1,11 +1,12 @@
 
 import requests
 
-_base_url = 'http://localhost:8080'
+from flask import current_app
 
 
 def get(endpoint: str, accept: str, welsh: bool = False) -> requests.Response:
-    url = _base_url + endpoint
+    base_url = current_app.config['API_BASE_URL']
+    url = base_url + endpoint
     headers = { 'Accept': accept }
     if welsh:
         headers['Accept-Language'] = 'cy'
