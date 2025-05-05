@@ -31,6 +31,9 @@ babel = Babel(app, locale_selector=get_locale)
 def inject_get_locale():
     return dict(get_locale=get_locale)
 
+app.add_url_rule('/id/<path:rest>', redirect_to='/<rest>', endpoint='strip_id')
+app.add_url_rule('/cy/id/<path:rest>', redirect_to='/cy/<rest>', endpoint='strip_id_cy')
+
 app.register_blueprint(items_bp)
 app.register_blueprint(interp_bp)
 app.register_blueprint(class_bp)
