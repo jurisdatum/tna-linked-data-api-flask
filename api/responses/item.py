@@ -16,4 +16,6 @@ class Item(TypedDict):
     welshFullCitation: NotRequired[str]
     welshCommentaryCitation: NotRequired[str]
     originalLanguages: List[str]
+    parent: NotRequired[str]
+    children: NotRequired[List[str]]
     interpretations: NotRequired[List[str]]

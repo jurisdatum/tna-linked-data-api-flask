@@ -19,10 +19,12 @@
         <th>{{ _('Year') }}</th>
         <td>{{ item.year }}</td>
     </tr>
+    {% if item.number %}
     <tr>
         <th>{{ _('Number') }}</th>
         <td>{{ item.number }}</td>
     </tr>
+    {% endif %}
     <tr>
         <th>{{ _('English Title') if item.welshTitle else _('Title') }}</th>
         <td>{{ item.title }}</td>

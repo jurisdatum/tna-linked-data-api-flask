@@ -10,7 +10,7 @@
             </tr>
             {% if interp.shortTitle %}
             <tr>
-                <th>{{ _('Short Title') }}</th>
+                <th>{{ _('Title') }}</th>
                 <td>{{ interp.shortTitle }}</td>
             </tr>
             {% endif %}
@@ -40,6 +40,28 @@
             <tr>
                 <th>{{ _('Current') }}</th>
                 <td>{{ interp.current }}</td>
+            </tr>
+            {% endif %}
+            {% if interp.parent %}
+            <tr>
+                <th>{{ _('Parent') }}</th>
+                <td>
+                    <a href="{{ interp.parent }}">{{ interp.parent }}</a>
+                </td>
+            </tr>
+            {% endif %}
+            {% if interp.children %}
+            <tr>
+                <th>{{ _('Children') }}</th>
+                <td>
+                    <ul>
+                        {% for child in interp.children %}
+                        <li>
+                            <a href="{{ child }}">{{ child }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </td>
             </tr>
             {% endif %}
             <tr>

@@ -9,9 +9,11 @@ from routes.interpretation import interp_bp
 from routes.clazz import class_bp
 
 
+class VersionConverter(BaseConverter):
+    regex = 'enacted|made|created|adopted|current'
+
 class FormatConverter(BaseConverter):
     regex = 'json|xml|ttl|rdf|rdfjson|jsonld'
-
 
 app = Flask(__name__)
 
@@ -21,6 +23,7 @@ app.config.from_prefixed_env(prefix='LGU2')  # allow override via env
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'cy']
 
+app.url_map.converters['ver'] = VersionConverter
 app.url_map.converters['fmt'] = FormatConverter
 
 
@@ -39,12 +42,12 @@ def inject_get_locale():
 app.add_url_rule('/id/<path:rest>', redirect_to='/<rest>', endpoint='strip_id')
 app.add_url_rule('/cy/id/<path:rest>', redirect_to='/cy/<rest>', endpoint='strip_id_cy')
 
-app.register_blueprint(items_bp)
-app.register_blueprint(interp_bp)
-app.register_blueprint(class_bp)
+app.register_blueprint(class_bp, name_prefix='welsh_', url_prefix='/cy')
 app.register_blueprint(items_bp, name_prefix='welsh_', url_prefix='/cy')
 app.register_blueprint(interp_bp, name_prefix='welsh_', url_prefix='/cy')
-app.register_blueprint(class_bp, name_prefix='welsh_', url_prefix='/cy')
+app.register_blueprint(class_bp)
+app.register_blueprint(items_bp)
+app.register_blueprint(interp_bp)
 
 @app.errorhandler(404)
 def not_found(error):
