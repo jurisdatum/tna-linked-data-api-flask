@@ -1,5 +1,5 @@
 
-from typing import List, NotRequired, TypedDict
+from typing import List, NotRequired, Optional, TypedDict
 
 class Item(TypedDict):
     uri: str
@@ -19,3 +19,15 @@ class Item(TypedDict):
     parent: NotRequired[str]
     children: NotRequired[List[str]]
     interpretations: NotRequired[List[str]]
+
+
+class Meta:
+    type: str
+    year: Optional[int]
+    page: int
+    pageSize: int
+
+
+class PageOfItems(TypedDict):
+    meta: Meta
+    items: List[Item]

@@ -3,8 +3,10 @@ from typing import Optional
 
 from api.api import get, get_json
 
-def make_items_url(type, year, page: Optional[str]) -> str:
-    url = '/ld/items/' + type + '/' + str(year)
+def make_items_url(type, year: Optional[int], page: Optional[str]) -> str:
+    url = f'/ld/items/{type}'
+    if (year):
+        url += '/' + str(year)
     if (page):
         url += '?page=' + page
     return url

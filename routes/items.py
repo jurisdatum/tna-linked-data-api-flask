@@ -8,6 +8,7 @@ from routes.interpretation import get_mimetype
 
 items_bp = Blueprint('items', __name__)
 
+@items_bp.route('/<type>/metadata', defaults={'year': None})
 @items_bp.route('/<type>/<int:year>/metadata')
 def items(type, year):
     page = request.args.get('page')
@@ -17,6 +18,7 @@ def items(type, year):
     return render_template('pages/items.html', page=data, title=title, query_string=query_string)
 
 
+@items_bp.route('/<type>/metadata/data.<fmt:fmt>', defaults={'year': None})
 @items_bp.route('/<type>/<int:year>/metadata/data.<fmt:fmt>')
 def items_data(type, year, fmt):
     page = request.args.get('page')
@@ -65,4 +67,6 @@ plural_type_labels = {
 }
 
 def make_page_title(type, year):
+    if not year:
+        return plural_type_labels[type]
     return plural_type_labels[type] + ' ' + _('from') + ' ' + str(year)
