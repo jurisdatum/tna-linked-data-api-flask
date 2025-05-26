@@ -7,6 +7,7 @@ from werkzeug.routing import BaseConverter
 from routes.items import items_bp
 from routes.interpretation import interp_bp
 from routes.clazz import class_bp
+from routes.defra import defra_bp
 
 
 class VersionConverter(BaseConverter):
@@ -45,6 +46,7 @@ app.add_url_rule('/cy/id/<path:rest>', redirect_to='/cy/<rest>', endpoint='strip
 app.register_blueprint(class_bp, name_prefix='welsh_', url_prefix='/cy')
 app.register_blueprint(items_bp, name_prefix='welsh_', url_prefix='/cy')
 app.register_blueprint(interp_bp, name_prefix='welsh_', url_prefix='/cy')
+app.register_blueprint(defra_bp)
 app.register_blueprint(class_bp)
 app.register_blueprint(items_bp)
 app.register_blueprint(interp_bp)
