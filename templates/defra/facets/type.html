@@ -1,0 +1,33 @@
+<div class="section" id="facet_type">
+    <div class="title">
+        <h3>Legislation by Type</h3>
+    </div>
+    {% if data['query']['type'] is none %}
+    <div id="openingfacet_type" class="content pagination">
+        <ul class="page type" style="display: block;">
+            {% for count in data['counts']['byType'] %}
+            {% include 'defra/facets/labeled_count.html' %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <div id="openingfacet_type" class="content">
+        <ul>
+            <li class="returnLink">
+                <a href="{{ data['cancel_links']['type'] }}">
+                    <span class="accessibleText">Browse by </span>
+                    <span>Any type</span>
+                </a>
+            </li>
+            <li>
+                <span class="userFunctionalElement disabled">
+                    <div class="label">
+                        <span>{{ data['counts']['byType'][0]['label'] }}</span>
+                        <span>({{ data['counts']['byType'][0]['count'] }})</span>
+                    </div>
+                </span>
+            </li>
+        </ul>
+    </div>
+    {% endif %}
+</div>

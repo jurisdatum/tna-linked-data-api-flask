@@ -23,10 +23,11 @@ def defra_lists():
     allowed_keys = set(sig.parameters.keys())
     filtered_args = { key: request.args[key] for key in request.args if key in allowed_keys }
     data = fetch(**filtered_args)
-    enhange_status_counts(data)
+    enhance_status_counts(data)
     data['grouped'] = {
         'byYear': enhance_year_counts(data)
     }
+    enhance_type_counts(data)
     data['cancel_links'] = make_cancel_links(data)
     pager = pagination_data(
         current = data['query']['page'],
@@ -38,13 +39,13 @@ def defra_lists():
     return render_template('defra/main.html', data=data, pager=pager)
 
 
-def enhange_status_counts(data):
+def enhance_status_counts(data):
     base = 'http://localhost:5000/defralex/lists?'
     other_params = prune_params(data['query'], 'status')
     if other_params:
         base += urlencode(other_params) + '&'
     for count in  data['counts']['byStatus']:
-        count['link'] = base + 'status=' + str(count['id'])
+        count['link'] = base + 'status=' + count['id']
 
 
 def enhance_year_counts(data):
@@ -57,10 +58,24 @@ def enhance_year_counts(data):
     return [list(batch) for batch in batched(data['counts']['byYear'], 12)]
 
 
+def enhance_type_counts(data):
+    add_links_to_counts(data, 'type', 'byType')
+
+
+def add_links_to_counts(data, queryParam, countsKey):
+    base = 'http://localhost:5000/defralex/lists?'
+    other_params = prune_params(data['query'], queryParam)
+    if other_params:
+        base += urlencode(other_params) + '&'
+    for count in  data['counts'][countsKey]:
+        count['link'] = base + queryParam + '=' + count['id']
+
+
 def make_cancel_links(data):
     return {
         'status': make_cancel_link(data['query'], 'status'),
-        'year': make_cancel_link(data['query'], 'year')
+        'year': make_cancel_link(data['query'], 'year'),
+        'type': make_cancel_link(data['query'], 'type')
     }
 
 def make_cancel_link(query, key):
