@@ -1,0 +1,28 @@
+<div class="prevNext">
+    <div class="defra-pagination">
+        <ul>
+            {% if pager.has_prev %}
+            <li>
+                <a href="{{ pager.prev_url }}">&lsaquo; Prev</a>
+            </li>
+            {% endif %}
+            {% for p in pager.pages %}
+            {% if p.is_current %}
+            <li class="active">
+                <a href=''>{{ p.num }}</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{{ p.url }}">{{ p.num }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% if pager.has_next %}
+            <li>
+                <a href="{{ pager.next_url }}">Next &rsaquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+<div class="clear"></div>

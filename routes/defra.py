@@ -6,6 +6,7 @@ from urllib.parse import urlencode
 from flask import Blueprint, render_template, request
 
 from api.defra import fetch
+from routes.defra_pagination import pages_needed, pagination_data
 
 
 defra_bp = Blueprint('defra', __name__)
@@ -33,8 +34,14 @@ def defra_lists():
         'byYear': enhance_year_counts(data)
     }
     data['cancel_links'] = make_cancel_links(data)
-    return render_template('defra/main.html', data=data)
-
+    pager = pagination_data(
+        current = data['query']['page'],
+        total = pages_needed(data['counts']['total'], data['query']['pageSize']),
+        base_endpoint = 'http://localhost:5000/defralex/lists',
+        extra_params = prune_params(data['query'], 'page'),
+        window = 2
+    )
+    return render_template('defra/main.html', data=data, pager=pager)
 
 
 def enhange_status_counts(data):
@@ -72,6 +79,5 @@ def make_cancel_link(query, key):
 
 def prune_params(query, key):
     params = { k: v for k, v in query.items() if k != key and v is not None }
-    params = { k: v for k, v in params.items() if k != 'page' or v != 1 }
-    params = { k: v for k, v in params.items() if k != 'pageSize' }
+    params = { k: v for k, v in params.items() if k != 'page' and k != 'pageSize' }
     return params
