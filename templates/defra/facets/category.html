@@ -1,11 +1,11 @@
-<div class="section" id="facet_type">
+<div class="section" id="facet_chapter">
     <div class="title">
-        <h3>Legislation by Type</h3>
+        <h3>Legislation by Category</h3>
     </div>
-    {% if data['query']['type'] is none %}
+    {% if data['query']['chapter'] is none %}
     <div id="openingfacet_type" class="content">
         <ul class="page type" style="display: block;">
-            {% for count in data['counts']['byType'] %}
+            {% for count in data['counts']['byChapter'] %}
             {% include 'defra/facets/labeled_count.html' %}
             {% endfor %}
         </ul>
@@ -14,14 +14,14 @@
     <div id="openingfacet_type" class="content">
         <ul>
             <li class="returnLink">
-                <a href="{{ data['cancel_links']['type'] }}">
+                <a href="{{ data['cancel_links']['chapter'] }}">
                     <span class="accessibleText">Browse by </span>
-                    <span>Any type</span>
+                    <span>Any category</span>
                 </a>
             </li>
             <li>
                 <span class="userFunctionalElement disabled">
-                    <div class="label">{{ data['counts']['byType'][0]['label'] }}</div>
+                    <div class="label">{{ data['counts']['byChapter'][0]['label'] }}</div>
                 </span>
             </li>
         </ul>

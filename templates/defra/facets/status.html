@@ -3,7 +3,7 @@
         <h3>Legislation by Status</h3>
     </div>
         {% if data['query']['status'] is none %}
-        <div id="openingfacet_status" class="content pagination">
+        <div id="openingfacet_status" class="content">
             <ul class="page status" style="display: block;">
                 {% for count in data['counts']['byStatus'] %}
                 <li>
@@ -18,17 +18,17 @@
         {% else %}
         <div id="openingfacet_status" class="content">
             <ul>
-            <li class="returnLink">
-                <a href="{{ data['cancel_links']['status'] }}">
-                    <span class="accessibleText">Browse by </span>
-                    <span>Any status<span>
-                </a>
-            </li>
-            <li>
-                <span class="userFunctionalElement disabled">
-                    <div class="label">{{ data['counts']['byStatus'][0]['label'] }} ({{ data['counts']['byStatus'][0]['count'] }})</div>
-                </span>
-            </li>
+                <li class="returnLink">
+                    <a href="{{ data['cancel_links']['status'] }}">
+                        <span class="accessibleText">Browse by </span>
+                        <span>Any status<span>
+                    </a>
+                </li>
+                <li>
+                    <span class="userFunctionalElement disabled">
+                        <div class="label">{{ data['counts']['byStatus'][0]['label'] }}</div>
+                    </span>
+                </li>
             </ul>
         </div>
         {% endif %}
