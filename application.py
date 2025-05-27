@@ -1,4 +1,6 @@
 
+from datetime import date
+
 from flask import Flask, render_template, request, url_for as flask_url_for
 from flask_babel import Babel
 
@@ -58,6 +60,11 @@ def not_found(error):
 @app.errorhandler(500)
 def server_error(error):
     return render_template('404.html'), 500
+
+
+@app.template_filter("ukdate")
+def ukdate(value: date | None, fmt: str = '%d/%m/%Y') -> str:
+    return value.strftime(fmt) if value else ''
 
 
 @app.context_processor

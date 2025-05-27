@@ -3,7 +3,7 @@ import inspect
 from itertools import batched
 from urllib.parse import urlencode
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, redirect, render_template, request
 
 from api.defra import fetch
 from routes.defra_pagination import pages_needed, pagination_data
@@ -14,13 +14,7 @@ defra_bp = Blueprint('defra', __name__)
 
 @defra_bp.route('/defralex')
 def defra():
-    data = fetch()
-    enhange_status_counts(data)
-    data['grouped'] = {
-        'byYear': enhance_year_counts(data)
-    }
-    data['cancel_links'] = make_cancel_links(data)
-    return render_template('defra/main.html', data=data)
+    return redirect('/defralex/lists')
 
 
 @defra_bp.route('/defralex/lists')

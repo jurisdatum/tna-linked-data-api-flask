@@ -16,7 +16,7 @@
                 </td>
                 <td>{{ item['year'] }}/{{ item['number'] }}</td>
                 <td>{{ item['type'] }}</td>
-                <td></td>
+                <td>{{ item['review']|ukdate }}</td>
             </tr>
             {% endfor %}
         </tbody>
