@@ -48,50 +48,8 @@
 		<div id="tools">
 			<h2 class="accessibleText">Narrow results by:</h2>
 
-						<div class="section" id="facet_status">
-				<div class="title">
-					<h3>Legislation by Status</h3>
-					<!--<a title="Help" class="helpItemToMidRight help-icon" href="#browseHelpstatus"><img src="/sites/all/themes/vsrs/images/chrome/helpIcon.gif" alt=" Help about what version" /></a>
-					<div id="browseHelpstatus" class="help">
-						<span class="icon"></span>
-						<div class="content">
-							<a href="#" class="close"><img alt="Close" src="/sites/all/themes/vsrs/images/chrome/closeIcon.gif" /></a>
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-						</div>
-					</div>-->
-				</div>
-										<div id="openingfacet_status" class="content pagination">
-                            <ul class="page status" style="display: block;">
-                                                          
 
-                      <li><div class="label"><a href="/defralex/lists?inforce=true">In Force</a> (2566)</div> </li>
-                    
-                      <!--  add sub item for Implicitily Repealed -->
-                      
-                      <!-- add sub item for mech law -->
-
-                                                  <li class="sub-item"><div class="label"><a href="/defralex/lists?inforce=true&mechanicallaw=!http://defra-lex.legislation.gov.uk/id/mechanicallaw/revocationOrder">Excluding Revocation Order</a> (2522)</div> </li>
-                                                        <li class="sub-item"><div class="label"><a href="/defralex/lists?inforce=true&mechanicallaw=!http://defra-lex.legislation.gov.uk/id/mechanicallaw/commencementOrder">Excluding Commencement Orders</a> (2445)</div> </li>
-                                                  
-
-
-                    
-                                                            
-
-                      <li><div class="label"><a href="/defralex/lists?inforce=false">Not In Force</a> (681)</div> </li>
-                    
-                      <!--  add sub item for Implicitily Repealed -->
-                      
-                      <!-- add sub item for mech law -->
-
-                      
-
-
-                    
-                                  </ul>         
-                        </div>
-								</div>
-
+              {% include 'defra/facets/status.html' %}
 
               {% include 'defra/facets/year.html' %}
 
