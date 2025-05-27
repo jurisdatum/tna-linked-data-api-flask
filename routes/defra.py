@@ -29,6 +29,7 @@ def defra_lists():
     }
     enhance_type_counts(data)
     enhance_chapter_counts(data)
+    enhance_extent_counts(data)
     data['cancel_links'] = make_cancel_links(data)
     pager = pagination_data(
         current = data['query']['page'],
@@ -67,6 +68,10 @@ def enhance_chapter_counts(data):
     add_links_to_counts(data, 'chapter', 'byChapter')
 
 
+def enhance_extent_counts(data):
+    add_links_to_counts(data, 'extent', 'byExtent')
+
+
 def add_links_to_counts(data, queryParam, countsKey):
     base = request.base_url + '?'
     other_params = prune_params(data['query'], queryParam)
@@ -81,7 +86,8 @@ def make_cancel_links(data):
         'status': make_cancel_link(data['query'], 'status'),
         'year': make_cancel_link(data['query'], 'year'),
         'type': make_cancel_link(data['query'], 'type'),
-        'chapter': make_cancel_link(data['query'], 'chapter')
+        'chapter': make_cancel_link(data['query'], 'chapter'),
+        'extent': make_cancel_link(data['query'], 'extent')
     }
 
 def make_cancel_link(query, key):

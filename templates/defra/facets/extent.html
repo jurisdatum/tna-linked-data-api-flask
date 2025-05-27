@@ -1,0 +1,42 @@
+<div class="section" id="facet_extent">
+    <div class="title">
+        <h3>Contains Law For</h3>
+    </div>
+    {% if data['query']['extent'] is none %}
+    <div id="openingfacet_extent" class="content">
+        <ul class="page extent" style="display: block;">
+            {% for count in data['counts']['byExtent'] %}
+            <li>
+                <div class="label">
+                    <span class="LegExtentRestriction">
+                        <span class="btr"></span>
+                        <div class="link">
+                            <a href="{{ count['link'] }}">{{ count['label'] }}</a>
+                        </div>
+                        <span class="bbl"></span>
+                        <span class="bbr"></span>
+                    </span>
+                    <span>({{ count['count'] }})</span>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <div id="openingfacet_extent" class="content">
+        <ul>
+            <li class="returnLink">
+                <a href="{{ data['cancel_links']['extent'] }}">
+                    <span class="accessibleText">Browse by </span>
+                    <span>Any extent</span>
+                </a>
+            </li>
+            <li>
+                <span class="userFunctionalElement disabled">
+                    <div class="label">{{ data['counts']['byExtent'][0]['label'] }}</div>
+                </span>
+            </li>
+        </ul>
+    </div>
+    {% endif %}
+</div>
