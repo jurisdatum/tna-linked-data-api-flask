@@ -32,7 +32,7 @@ def defra_lists():
     pager = pagination_data(
         current = data['query']['page'],
         total = pages_needed(data['counts']['total'], data['query']['pageSize']),
-        base_endpoint = 'http://localhost:5000/defralex/lists',
+        base_endpoint = request.base_url,
         extra_params = prune_params(data['query'], 'page'),
         window = 2
     )
@@ -40,7 +40,7 @@ def defra_lists():
 
 
 def enhance_status_counts(data):
-    base = 'http://localhost:5000/defralex/lists?'
+    base = request.base_url + '?'
     other_params = prune_params(data['query'], 'status')
     if other_params:
         base += urlencode(other_params) + '&'
@@ -49,7 +49,7 @@ def enhance_status_counts(data):
 
 
 def enhance_year_counts(data):
-    base = 'http://localhost:5000/defralex/lists?'
+    base = request.base_url + '?'
     other_params = prune_params(data['query'], 'year')
     if other_params:
         base += urlencode(other_params) + '&'
@@ -63,7 +63,7 @@ def enhance_type_counts(data):
 
 
 def add_links_to_counts(data, queryParam, countsKey):
-    base = 'http://localhost:5000/defralex/lists?'
+    base = request.base_url + '?'
     other_params = prune_params(data['query'], queryParam)
     if other_params:
         base += urlencode(other_params) + '&'
@@ -79,7 +79,7 @@ def make_cancel_links(data):
     }
 
 def make_cancel_link(query, key):
-    base = 'http://localhost:5000/defralex/lists'
+    base = request.base_url
     params = prune_params(query, key)
     if not params:
         return base
