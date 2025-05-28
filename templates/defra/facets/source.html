@@ -1,0 +1,26 @@
+<div class="section" id="facet_source">
+    <div class="title">
+        <h3>Legislation by Source</h3>
+    </div>
+    <div id="openingfacet_source" class="content">
+        <ul class="page source" style="display: block;">
+            {% if data['query']['source'] is none %}
+            {% for count in data['counts']['bySource'] %}
+            {% include 'defra/facets/labeled_count.html' %}
+            {% endfor %}
+            {% else %}
+            <li class="returnLink">
+                <a href="{{ data['cancel_links']['source'] }}">
+                    <span class="accessibleText">Browse by </span>
+                    <span>Any source</span>
+                </a>
+            </li>
+            <li>
+                <span class="userFunctionalElement disabled">
+                    <div class="label">{{ data['counts']['bySource'][0]['label'] }}</div>
+                </span>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

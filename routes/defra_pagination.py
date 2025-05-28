@@ -12,7 +12,7 @@ def pages_needed(total_items, per_page):
     return (total_items + per_page - 1) // per_page   # or # -(-total_items // per_page),
 
 
-def pagination_data(*, current, total, base_endpoint, extra_params=None, window=2):
+def pagination_data(*, current, total, base_endpoint, extra_params=None, window=4):
 
     first = max(1, current - window)
     last  = min(total, current + window)

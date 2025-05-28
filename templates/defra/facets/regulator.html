@@ -1,0 +1,26 @@
+<div class="section" id="facet_regulator">
+    <div class="title">
+        <h3>Legislation by Defra Regulator</h3>
+    </div>
+    <div id="openingfacet_regulator" class="content">
+        <ul class="page regulator" style="display: block;">
+            {% if data['query']['regulator'] is none %}
+            {% for count in data['counts']['byRegulator'] %}
+            {% include 'defra/facets/labeled_count.html' %}
+            {% endfor %}
+            {% else %}
+            <li class="returnLink">
+                <a href="{{ data['cancel_links']['regulator'] }}">
+                    <span class="accessibleText">Browse by </span>
+                    <span>Any regulator</span>
+                </a>
+            </li>
+            <li>
+                <span class="userFunctionalElement disabled">
+                    <div class="label">{{ data['counts']['byRegulator'][0]['label'] }}</div>
+                </span>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

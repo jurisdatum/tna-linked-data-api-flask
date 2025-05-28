@@ -30,13 +30,16 @@ def defra_lists():
     enhance_type_counts(data)
     enhance_chapter_counts(data)
     enhance_extent_counts(data)
+    enhance_source_counts(data)
+    enhance_regulator_counts(data)
+    enhance_subject_counts(data)
     data['cancel_links'] = make_cancel_links(data)
     pager = pagination_data(
         current = data['query']['page'],
         total = pages_needed(data['counts']['total'], data['query']['pageSize']),
         base_endpoint = request.base_url,
         extra_params = prune_params(data['query'], 'page'),
-        window = 2
+        window = 4
     )
     return render_template('defra/main.html', data=data, pager=pager)
 
@@ -72,6 +75,18 @@ def enhance_extent_counts(data):
     add_links_to_counts(data, 'extent', 'byExtent')
 
 
+def enhance_source_counts(data):
+    add_links_to_counts(data, 'source', 'bySource')
+
+
+def enhance_regulator_counts(data):
+    add_links_to_counts(data, 'regulator', 'byRegulator')
+
+
+def enhance_subject_counts(data):
+    add_links_to_counts(data, 'subject', 'bySubject')
+
+
 def add_links_to_counts(data, queryParam, countsKey):
     base = request.base_url + '?'
     other_params = prune_params(data['query'], queryParam)
@@ -87,7 +102,10 @@ def make_cancel_links(data):
         'year': make_cancel_link(data['query'], 'year'),
         'type': make_cancel_link(data['query'], 'type'),
         'chapter': make_cancel_link(data['query'], 'chapter'),
-        'extent': make_cancel_link(data['query'], 'extent')
+        'extent': make_cancel_link(data['query'], 'extent'),
+        'source': make_cancel_link(data['query'], 'source'),
+        'regulator': make_cancel_link(data['query'], 'regulator'),
+        'subject': make_cancel_link(data['query'], 'subject')
     }
 
 def make_cancel_link(query, key):
