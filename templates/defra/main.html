@@ -1,86 +1,51 @@
 {% extends 'defra/frame.html' %}
 {% block main %}
-			<div id="main-wrapper">
-					<div id="main"
-						class="clearfix with-navigation">
-						
-                        <div id="titleBar">
-                        	<div id="defraBannerLogo">
-                        		<img src="/sites/all/themes/vsrs/images/defra.png"/>
-                        	</div>
-                        	<div id="defraBannerText">
-								<p>Welcome to DefraLex, the online portal to Defra legislation.</p>
-								<p>Here you can view the in-force legislation that is managed by Defra, and organise it by a number of criteria, including jurisdiction, date, or subject, helping you find the document you need quickly.</p>
-								<p>Use the search facets down the left-hand side to refine your results and for selected legislation use the "more resources" tab to find associated documents, such as impacts assessments and consultation summaries.</p>
-                        	</div>
-                        </div>
-                        <!--
-						<div id="titleBar">
-						                                                                                                            <h1 class="pageTitle" id="heading">
-                                                            DefraLex                                                        </h1>
-
-                                                    
-							<div id="userDetails">
+<div id="main-wrapper">
+	<div id="main" class="clearfix with-navigation">
+		<div id="titleBar">
+			<div id="defraBannerLogo">
+				<img src="/sites/all/themes/vsrs/images/defra.png" />
+			</div>
+			<div id="defraBannerText">
+				<p>Welcome to DefraLex, the online portal to Defra legislation.</p>
+				<p>Here you can view the in-force legislation that is managed by Defra, and organise it by a number of
+					criteria, including jurisdiction, date, or subject, helping you find the document you need quickly.
+				</p>
+				<p>Use the search facets down the left-hand side to refine your results and for selected legislation use
+					the "more resources" tab to find associated documents, such as impacts assessments and consultation
+					summaries.</p>
+			</div>
+		</div>
+		<div id="breadcrumb"> </div>
+		<div id="content" class="column">
+			<div class="section">
+				<div class="region region-content">
+					<div id="block-system-main" class="block block-system first last odd">
+						<div class="content">
+							<div class="defra-list contentSurround">
+								<div class="defra-contents contentInner">
+									<span class="icon"></span>
+									<div id="tools">
+										<h2 class="accessibleText">Narrow results by:</h2>
+										{% include 'defra/facets/status.html' %}
+										{% include 'defra/facets/year.html' %}
+										{% include 'defra/facets/type.html' %}
+										{% include 'defra/facets/category.html' %}
+										{% include 'defra/facets/extent.html' %}
+										{% include 'defra/facets/source.html' %}
+										{% include 'defra/facets/regulator.html' %}
+										{% include 'defra/facets/subject.html' %}
+										{% include 'defra/facets/review.html' %}
+									</div>
+									{% include 'defra/results.html' %}
+									{% include 'defra/pagination.html' %}
+								</div>
 							</div>
 						</div>
-						-->
-                        <div id="breadcrumb">     </div>
-																																				<div id="content" class="column">
-							<div class="section">
-							  <div class="region region-content">
-    <div id="block-system-main" class="block block-system first last odd">
-
-      
-  <div class="content">
-    
-<div class="defra-list contentSurround">
-  <!--
-	<div class="contentTitle">
-
-         
-		<div class="aside">
-
-			 Your search for Department for Environment, Food &amp; Rural Affairs legislation has returned the following results.		</div>
-	</div>
-  -->
-	<div class="defra-contents contentInner">
-    <span class="icon"></span>
-		<div id="tools">
-			<h2 class="accessibleText">Narrow results by:</h2>
-
-              {% include 'defra/facets/status.html' %}
-
-              {% include 'defra/facets/year.html' %}
-
-              {% include 'defra/facets/type.html' %}
-
-              {% include 'defra/facets/category.html' %}
-
-              {% include 'defra/facets/extent.html' %}
-
-              {% include 'defra/facets/source.html' %}
-
-              {% include 'defra/facets/regulator.html' %}
-
-              {% include 'defra/facets/subject.html' %}
-
-              {% include 'defra/facets/review.html' %}
-
 					</div>
-
-        {% include 'defra/results.html' %}
-
-        {% include 'defra/pagination.html' %}
-
-	</div>
-
-</div>
-  </div>
-
-</div>
-  </div>
-														</div>
-						</div>
-																	</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

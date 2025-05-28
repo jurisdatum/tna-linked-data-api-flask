@@ -23,19 +23,8 @@ def defra_lists():
     allowed_keys = set(sig.parameters.keys())
     filtered_args = { key: request.args[key] for key in request.args if key in allowed_keys }
     data = fetch(**filtered_args)
-    enhance_status_counts(data)
-    enhance_year_counts(data)
-    enhance_type_counts(data)
-    enhance_chapter_counts(data)
-    enhance_extent_counts(data)
-    enhance_source_counts(data)
-    enhance_regulator_counts(data)
-    enhance_subject_counts(data)
-    enhance_review_counts(data)
-    data['grouped'] = {
-        'byYear': group_year_counts(data),
-        'byReviewDate': group_review_counts(data)
-    }
+    enhance_counts(data)
+    data['grouped'] = group_counts(data)
     data['cancel_links'] = make_cancel_links(data)
     pager = pagination_data(
         current = data['query']['page'],
@@ -48,6 +37,18 @@ def defra_lists():
 
 
 # add links to counts
+
+def enhance_counts(data):
+    enhance_status_counts(data)
+    enhance_year_counts(data)
+    enhance_type_counts(data)
+    enhance_chapter_counts(data)
+    enhance_extent_counts(data)
+    enhance_source_counts(data)
+    enhance_regulator_counts(data)
+    enhance_subject_counts(data)
+    enhance_review_counts(data)
+
 
 def enhance_status_counts(data):
     add_links_to_counts(data, 'status', 'byStatus')
@@ -104,6 +105,12 @@ def add_links_to_year_counts(data, queryParam, countsKey):
 
 
 # group yearly counts
+
+def group_counts(data):
+    return {
+        'byYear': group_year_counts(data),
+        'byReviewDate': group_review_counts(data)
+    }
 
 def group_year_counts(data):
     return [list(batch) for batch in batched(data['counts']['byYear'], 12)]
