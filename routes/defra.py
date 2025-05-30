@@ -39,7 +39,7 @@ def defra_lists():
 # add links to counts
 
 def enhance_counts(data):
-    enhance_status_counts(data)
+    enhance_in_force_counts(data)
     enhance_year_counts(data)
     enhance_type_counts(data)
     enhance_chapter_counts(data)
@@ -50,12 +50,17 @@ def enhance_counts(data):
     enhance_review_counts(data)
 
 
-def enhance_status_counts(data):
-    add_links_to_counts(data, 'status', 'byStatus')
+def enhance_in_force_counts(data):
+    add_links_to_counts(data, 'inForce', 'byInForce', 'value')
+    for count in  data['counts']['byInForce']:
+        if count['value']:
+            count['label'] = 'In Force'
+        else:
+            count['label'] = 'Not In Force'
 
 
 def enhance_year_counts(data):
-    add_links_to_year_counts(data, 'year', 'byYear')
+    add_links_to_counts(data, 'year', 'byYear', 'year')
 
 
 def enhance_type_counts(data):
@@ -83,25 +88,21 @@ def enhance_subject_counts(data):
 
 
 def enhance_review_counts(data):
-    add_links_to_year_counts(data, 'review', 'byReviewDate')
+    add_links_to_counts(data, 'review', 'byReviewDate', 'year')
 
 
-def add_links_to_counts(data, queryParam, countsKey):
+def add_links_to_counts(data, queryParam, countsKey, countKey = 'id'):
     base = request.base_url + '?'
     other_params = prune_params(data['query'], queryParam)
     if other_params:
         base += urlencode(other_params) + '&'
     for count in  data['counts'][countsKey]:
-        count['link'] = base + queryParam + '=' + count['id']
-
-
-def add_links_to_year_counts(data, queryParam, countsKey):
-    base = request.base_url + '?'
-    other_params = prune_params(data['query'], queryParam)
-    if other_params:
-        base += urlencode(other_params) + '&'
-    for count in  data['counts'][countsKey]:
-        count['link'] = base + queryParam + '=' + str(count['year'])
+        value = count[countKey]
+        if isinstance(value, bool):
+            value = str(value).lower()
+        elif isinstance(value, int):
+            value = str(value)
+        count['link'] = base + queryParam + '=' + value
 
 
 # group yearly counts
@@ -123,7 +124,7 @@ def group_review_counts(data):
 
 def make_cancel_links(data):
     return {
-        'status': make_cancel_link(data['query'], 'status'),
+        'inForce': make_cancel_link(data['query'], 'inForce'),
         'year': make_cancel_link(data['query'], 'year'),
         'type': make_cancel_link(data['query'], 'type'),
         'chapter': make_cancel_link(data['query'], 'chapter'),
@@ -143,6 +144,7 @@ def make_cancel_link(query, key):
 
 
 def prune_params(query, key):
-    params = { k: v for k, v in query.items() if k != key and v is not None }
-    params = { k: v for k, v in params.items() if k != 'page' and k != 'pageSize' }
-    return params
+    return {
+        k: v for k, v in query.items()
+        if k != key and v is not None and k != 'page' and k != 'pageSize'
+    }

@@ -2,10 +2,10 @@
     <div class="title">
         <h3>Legislation by Status</h3>
     </div>
-        {% if data['query']['status'] is none %}
+        {% if data['query']['inForce'] is none %}
         <div id="openingfacet_status" class="content">
             <ul class="page status" style="display: block;">
-                {% for count in data['counts']['byStatus'] %}
+                {% for count in data['counts']['byInForce'] %}
                 <li>
                     <div class="label">
                         <a href="{{ count['link'] }}">{{ count['label'] }}</a>
@@ -19,14 +19,14 @@
         <div id="openingfacet_status" class="content">
             <ul>
                 <li class="returnLink">
-                    <a href="{{ data['cancel_links']['status'] }}">
+                    <a href="{{ data['cancel_links']['inForce'] }}">
                         <span class="accessibleText">Browse by </span>
                         <span>Any status<span>
                     </a>
                 </li>
                 <li>
                     <span class="userFunctionalElement disabled">
-                        <div class="label">{{ data['counts']['byStatus'][0]['label'] }}</div>
+                        <div class="label">{{ data['counts']['byInForce'][0]['label'] }}</div>
                     </span>
                 </li>
             </ul>
