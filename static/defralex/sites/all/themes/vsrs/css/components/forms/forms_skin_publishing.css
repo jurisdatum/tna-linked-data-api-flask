@@ -1,0 +1,24 @@
+input,
+select
+{background: url("/sites/all/themes/vsrs/images/home_form_shadow.gif") no-repeat scroll left top transparent; border-color:#677e81;}
+
+input[disabled="disabled"],
+select[disabled="disabled"],
+.form-disabled input,
+.form-disabled select
+{background-image: url("/sites/all/themes/vsrs/images/disabledFormShadowBg.gif"); border-color:#c5cfd1; color: #b6b8ba;}
+
+input.blur {color: #C6C6C6;}
+
+#main fieldset legend {color: #333;}
+
+input[type=checkbox], input[type=radio] {
+    border: none;
+    background: none;
+	margin:0;
+}
+
+label.option
+{
+	margin-right:10px;
+}

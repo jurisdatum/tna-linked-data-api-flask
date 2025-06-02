@@ -1,0 +1,78 @@
+/** Forms **/
+
+/* Global styles */
+
+form {margin: 0; padding:7px}
+form fieldset {border:none; margin:0; padding:0; width: auto; padding:7px 10px 7px 10px; clear:left;
+}
+fieldset p {padding:5px 10px 5px 10px;}
+.form-instructions{color:#000000; font: normal normal 900 1.1em/1.4em 'Arial', 'Garuda', sans-serif;}
+
+.contentForm .radio h2 {margin:0 0 20px 0; padding: 0}
+.contentForm label {display: block; height: 1.8em; float: left; padding-top: 0.35em; font: normal normal 900 1em/1.4em 'Arial', 'Garuda', sans-serif;}
+.contentForm label em {display: none;}
+.contentForm input {float: left; margin-left: 5px;}
+.contentForm div {float: left; margin-right: 0.25em}
+
+.contentForm .radio {width:100%; }
+.contentForm .radio input {float:none; display:inline; border:none; background-image:none}
+.contentForm .radio label {float:none; display:inline}
+
+.contentForm .submit {float: left; margin: 20px 0 20px 0; width:100%;}
+.contentForm .submitLeft {float: left;  display:inline}
+.contentForm .submitRight {float: right; display:inline; padding-left:0.5em}
+.submit-right {float: right!important}
+
+.contentForm .advSearch {padding-top: 0.5em; font-weight: bold; font-size: 1.2em; margin-right: 0; clear: both; float: none; text-align: right;}
+
+input {border: 1px solid #000000; padding:5px 3px; background: #fff}
+select {border: 1px solid #000000; padding:5px 3px 5px 1px; background: #fff}
+
+input[type='file'] {
+    background: none;
+    margin-right: 5px;
+    border: none; /* border style overwritten for IE <= 8 in forms_file_field_ie8_minus.css */
+    height: 28px;
+    padding:1px;
+}
+
+@media all and (min-width:0\0) and (min-resolution: .001dpcm)
+{
+    input[type='file'] {border:1px solid #666;} /* IE9 */
+}
+/* End global styles */
+
+/* Individual form styles */
+
+/*Search Legislation form*/
+.legislationForm {padding: 6px 5px 5px 10px; float: none; margin: 0}
+.legislationForm div.title {width: 20em}
+.legislationForm .title input {width: 80%;}
+.legislationForm .year{width: 9em;}
+.legislationForm .year input {width: 50%;}
+.legislationForm .number {width: 10em}
+.legislationForm .number input {width: 40%;}
+.legislationForm .type select {float: left; margin-left: 5px;}
+.legislationForm div.provision {width: 15em;}
+.legislationForm .provision input {width: 80%;}
+
+/*Enter enabling provisions form*/
+.form .extentInfoForm {width: 100%;}
+.enablingProvisions .number {width: 15em}
+.enablingProvisions .number input {width: 50%;}
+.enablingProvisions div.title {width: 30em;}
+.enablingProvisions .title input {width:80%;}
+.enablingProvisions div.provision {width: 25em;}
+.enablingProvisions .provision input {width: 70%;}
+
+/*Enter extent information form*/
+.form .extentInfoForm {width: 550px;}
+.extentInfoForm div.extentArt {width: 7em;}
+.extentInfoForm div.assigns {width: 18em;}
+.extentInfoForm .assigns select{float: left; margin-left: 5px;}
+.extentInfoForm div.extent-to {width: 20em;}
+.extentInfoForm .extent-to input {width: 80%;}
+
+/* End individual styles */
+
+/* End Forms */

@@ -1,0 +1,164 @@
+/**
+ * Editorial page elements
+ * 
+ * Style of the basic page elements
+ * 
+ * Main colour: #321141 Dark purple
+ * 
+ */
+
+/*---------------
+1. Body & basic typography
+---------------*/
+body {color: #333; background: #fff}
+textarea {}
+h1 {}
+h2, h3, h4, h5, h6, p, ul, ol, dl, table, div.contentItem, address {}
+h2 {color: #002F36;}
+h3, h4, h5 {}
+h3 {}
+em {font-style: italic;}
+strong {font-weight: bold;}
+p {}
+address {font-style: normal;}
+pre, code {}
+select {}
+
+h2 strong {}
+
+a {color: #0066CC}
+a:hover {}
+
+form button {}
+dl {}
+dt {}
+dd {}
+
+table, tr {}
+caption {}
+td, th  {background: #FFF;}
+tr.oddRow td, li.oddRow {background: #DFE8E9}
+table th a {}
+
+/*---------------
+2. Page furniture
+---------------*/
+#background {background: #01464f;}
+.siteTitle span {background: url(/sites/all/themes/vsrs/images/publishingSiteTitle.gif) no-repeat bottom left;}
+#titleBar {background: #fff;border-bottom-color: #00464F;}
+
+#header a {color: #000;}
+#primaryNav {background: #fff; border-bottom-color: #01464f;}
+
+.natArch a {}
+.natArch a span {background: url(/sites/all/themes/vsrs/images/natArchTitle.gif) no-repeat scroll 0 0 transparent;}
+ul#secondaryNav {}
+ul#secondaryNav a {font-weight: normal;}
+ul#secondaryNav li {padding-right: 8px;}
+
+#loginBar .container {}
+
+#layout2 {background: none;}
+
+/* active primary nav  */
+#primaryNav ul li.active a {background: #f4f2f5 url(/sites/all/themes/vsrs/images/activeHeaderLink.gif) no-repeat center bottom; color: #01464f;}
+#primaryNav ul,
+#primaryNav ul li {background: none;}
+ 
+.pageTitle {background: #fff;}
+#content {background: #fff;}
+
+#footer .inner {}
+#footer .container {background-color: #e1e9ea; border-top-color: #CCC}
+
+#footer ul {}
+#footer .section ul,
+#footer .section li {}
+#footer h3 {}
+
+#footer a {}
+
+/*---------------
+ * 8. Misc sections 
+ * --------------*/
+#content .blankList {}
+
+.help .content {background:#fff; border-color: #20A4D4;}
+
+.helpToLeftTop .content, 
+.helpToLeftMid .content, 
+.helpToLeftBot .content {border-right-color: #20A4D4;}
+.helpToRightTop .content, 
+.helpToRightMid .content,
+.helpToRightBot .content {border-left-color: #20A4D4;}
+.helpToMidBot .content {border-bottom-color: #20A4D4;}
+.helpToMidTop .content {border-top-color: #20A4D4;} 
+
+table th {color: #00464f; background: #e4ebec; border-left: 1px solid #fff;}
+table th.active {background: url(/sites/all/themes/vsrs/images/table-header-active.gif) repeat-x;}
+table a.sortAsc, 
+table a.sortDesc, 
+table span.sortAsc,
+table span.sortDesc 
+{background-image: url("http://www.legislation.gov.uk/images/chrome/tableSortIcons.gif");}
+
+/* Icons */
+.iconImg {background: transparent url(/sites/all/themes/vsrs/images/button-icon-sprites.png) no-repeat top left;}
+.documents .iconImg {background-position: -3px -771px;}
+
+/*
+ * Loginbar
+ */
+#loginBar {background-image: url(/sites/all/themes/vsrs/images/secure-bg.png)}
+#loginBar dd.security-level {background: url(/sites/all/themes/vsrs/images/secure-bg.png); color:white;}
+#loginBar dd.security-level.insecure {background-position: 0 -50px;}
+#loginBar dd.security-level.insecure div {background:none;}
+#loginBar dd.security-level div {background: url(/sites/all/themes/vsrs/images/lock.png);}
+
+/* Homepage */
+
+.front .ribbon img {display: block;}
+.front .ribbon {margin-bottom: 1px; margin-right: 10px; position: relative;}
+.front .ribbon ul{position: absolute; top: 240px; right: 36px; padding: 0; float: left; list-style: none; background: #543A53}
+.front .ribbon li{margin: 0; font-size: 15px; float: left;}
+.front .ribbon li span {border-right: 1px dotted #fff; padding: 0 12px; margin: 6px 0; display: block; font-weight: normal; color: #fff;}
+.front .ribbon li:last-child a {border: none;}
+.front #user-login-form {padding: 0px;}
+.front #user-login-form li {list-style: none;}
+.front #user-login-form ul {padding-left: 0;}
+.front #user-login-form, .front .ribbon{float: left;}
+.front #banner {border-bottom: 3px solid #443527;}
+.front #banner p {padding-right: 20px;}
+.front #main {margin-top: 5px;}
+.not-logged-in #primaryNav, .front #titleBar  {display: none}
+.front .bar {float:left; padding-top: 20px; margin-bottom: 10px; }
+.front .bar p {font-size: 1.2em;}
+.front #banner .message {float: left; width: 250px; margin-top: 10px;}
+.front #banner .message ul { padding-left: 13px; margin: 0; }
+.front #banner label {font-size: 14px}
+.front #banner h3.internet {color: #B80000; }
+.front #banner .background{background: #01464F url("/sites/all/themes/vsrs/images/secure-bg.png")}
+.front #banner .background.internet {background-position: 0 -50px;}
+.front #banner .bar h3{color: #fff; padding: 3px 0 3px 25px; font-size: 1.2em;background: url("/sites/all/themes/vsrs/images/lock.png") no-repeat }
+.front #banner .bar .internet h3 {background: none;}
+.front .row {margin-top: 20px;}
+.front .row h2{font-size: 1.7em;}
+.front .row .col {width: 18.3%; float: left; margin-right: 15px;}
+
+#user-login-form { width:217px;
+}
+
+#edit-pass { width:210px;}
+
+#edit-name { width:210px;}
+
+#tso-registration-information-form.reg-docUpload .s_col2 { margin-top:43px;  }
+
+#tso-registration-information-form.reg-docUpload #add-another-document { margin-bottom:20px; }
+
+ .p_one .s_col1{margin-bottom:20px;   }
+
+
+
+
+

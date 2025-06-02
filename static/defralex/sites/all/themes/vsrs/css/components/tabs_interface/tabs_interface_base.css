@@ -1,0 +1,4 @@
+#content ul.tabs-interface {background: #F9F9F9; display: block; overflow: auto; list-style: none outside none; margin: 0 auto; padding: 0; position: relative; width: 100%; border-bottom: 1px solid #ccc;}
+ul.tabs-interface li {display: block; list-style: none outside none; margin: 0; padding: 0; float: left;}
+ul.tabs-interface li a {border-right: 1px solid #C0C5C8; border-left: 1px solid #C0C5C8; color: #0F2741; font-size: 1.3em; display: block; font-weight: bold; padding: 10px; text-align: center;}
+ul.tabs-interface li.active a {background: #ccc; color: #fff;}

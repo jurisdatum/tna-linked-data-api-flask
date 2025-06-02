@@ -1,0 +1,11 @@
+.html ul.tabs {border-color: #80A2A7;  background: url("/sites/all/themes/vsrs/images/interface-bar-bg.png") repeat-x scroll left bottom #fff;}
+
+/* Default tab */
+.html ul.tabs li {background: #E5ECED; border-color: #80A2A7; border-bottom-color: transparent;}
+.html ul.tabs li a {color: #00464F;}
+
+/* Disabled tab */ 
+.html ul.tabs li.disabled {color: #666; background: #E5ECED;}
+
+/* Active tab */
+.html ul.tabs li.active {color: #00464F; background: #fff; border-color: #80A2A7; border-bottom-color: #fff;}

@@ -1,0 +1,55 @@
+.stages a {cursor: auto;}
+
+/* Allow for a static progress bar */
+.stages .arrow {padding: 0.6em 0.5em 0.65em 2em; display: block;}
+.stages .arrow .num {float: left; margin: -4px 6px 4px 0; padding: 4px 14px 4px 30px;}
+.stage_1 .arrow {padding-left: 0.5em}
+	
+/* Typography */
+.stages .arrow {text-decoration: none;}
+.stages .arrow:hover {text-decoration: none;}
+.stages .arrow .num {font-size: 1.8em;}
+
+/* Iconography */
+.stages .arrow .num { border-radius: 20px;}
+
+/* Borders */
+.stages .arrow {border: 1px solid #000; border-left: none; border-right: none;}
+.stage_1 .arrow {border-left: 1px solid #000;}
+
+/* Rework of defaults */
+#content .stages {margin-left: 0; padding: 0; font-size: 1em;}
+.stages_5 li {width: auto;}
+.stages_5 li.stage_1 {width: 18%;}
+.stages_5 li.stage_2 {width: 21%;}
+.stages_5 li.stage_3 {width: 24%;}
+.stages_5 li.stage_4 {width: 23%;}
+.stages_5 li.stage_5 {width: 14%;}
+
+.stages_4 li.stage_1 {width: 23%;}
+.stages_4 li.stage_2 {width: 26%;}
+.stages_4 li.stage_3 {width: 26%;}
+.stages_4 li.stage_4 {width: 24%;}
+
+
+/* Resizing of the arrow */
+.stages .next {height: 2.8em; margin: -0.62em -2.1em 0 0; width: 2em;}
+
+/* Resizing of the icons area */
+.stages span.stageContent .num {padding: 4px 8px 4px 20px; font-size: 1.6em; padding-left: 26px;}
+
+
+ul.defra li.stage_3
+{
+	width:16.5%;
+}
+
+ul.defra li.stage_4
+{
+	width:15.5%;
+}
+
+ul.defra li.stage_5
+{
+	width:15%!important;
+}

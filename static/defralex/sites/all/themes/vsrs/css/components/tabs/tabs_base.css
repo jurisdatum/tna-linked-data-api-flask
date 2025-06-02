@@ -1,0 +1,45 @@
+/* base tab styling */
+ul.tabs {padding: 0; margin: 0; padding: 0; float: left; clear: both; width: 100%;}
+ul.tabs li {position: relative;float:left; display: block; padding: 0px 13px 0px 0; margin: 0 0 0 5px;}
+ul.tabs li span.presentation {width: 100%; height: 5px; position: absolute; bottom: 0em; left: 0; z-index: 1000;}
+ul.tabs li a, 
+ul.tabs li span.disabled {display: block; float: left; padding: 0.6em 0 0.6em 14px;z-index: 999;}
+ul.tabs li.base {margin-left: 0;}
+
+/* Tabs for use in the System Chrome subTitleContent area */
+.subTitleContent ul.tabs {border: none; margin-top: 0; padding-top: 0;}
+.subTitleContent ul.tabs {border: none;}
+.subTitleContent ul.tabs li a, 
+.subTitleContent ul.tabs li span
+{font-size: 1.032em; font-weight: bold; line-height: 1em; padding: 0.7em; border: none;}
+.subTitleContent ul.tabs li {padding: 0; margin-top: 1px; border: none;}
+.subTitleContent ul.tabs li.active {font-size: 1em; border: 1px solid;}
+
+.subTitleContent div.tabs .tabs {clear: left; max-width: 60%;}
+
+/* Tabs that are an inline list */
+ul.inlineList {padding: 0; margin: 0; list-style-type: none; float: left;}
+ul.inlineList li {padding: 0; margin: 0; display:inline; float:left;}
+.contentTitle ul.inlineList li {margin: 0.5em; padding: 0.25em 0.25em 0.25em 0.5em; font-size:1.0em; font-weight:bold; border: 1px solid #999; color:#333; border-radius: 4px;}
+.contentTitle ul.inlineList li span{color:#FFF; padding:2px 4px; border-radius: 3px;}
+ul.inlineList li strong { padding-right:0.5em}
+ul.inlineList li a { padding:0; margin:0 0.25em; text-decoration: none;}
+ul.inlineList li a:hover {text-decoration:none}
+ul.inlineList li strong {line-height: 1.8em; padding: 0.5em 0.75em;}
+.inlineList li a strong {padding:0.5em; border-radius: 15px;}
+.inlineList li a:hover {text-decoration:none}
+ul.inlineList li a.button strong {border-radius: 0; line-height: inherit; padding: 0}
+
+	/* Within the subTitle of sysChrome */
+	.subTitleContent .inlineList li strong {margin-left: 0.25em; padding: 0.5em 12px; border: 1px solid transparent;}
+	.subTitleContent .inlineList li a strong { border-radius: 4px;}
+
+	
+/* Tabs that are an inline list for tasks */
+
+ul.inlineTask {padding: 0; margin: 0; list-style-type: none; float: left;}
+ul.inlineTask li {padding: 0; margin: 0; display:inline; float:left;}
+.contentTitle ul.inlineTask li {margin-top: 0.4em; padding:0.73em 1.5em; font-size:1.0em; font-weight:bold;color:#333;}
+.contentTitle ul.inlineTask li span{color:#AAAAAA; padding:2px 4px; }
+ul.inlineTask li strong { padding-right:0.5em}
+ul.inlineTask li strong {line-height: 1.8em; padding: 0.5em 0.75em;}

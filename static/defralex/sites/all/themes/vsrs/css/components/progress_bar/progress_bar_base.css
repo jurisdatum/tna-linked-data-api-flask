@@ -1,0 +1,67 @@
+.stages {display: block; float: left; width: 99%; list-style: none; margin: 0; padding: 0; font-size: 1.43em; font-weight: bold; margin-bottom: 1em;}
+
+/* Use to add spacing to progress bar when required */
+div.stagesBlock {margin:1% 0.75%}
+
+/* Layout */
+.stages li {float: left; position: relative;}
+.stages a {padding: 0.6em 0.5em 0.65em 2em; display: block;white-space:nowrap;}
+.stages.welshdocument a{white-space:normal}
+.stages a .num {float: left; margin: -4px 6px 4px 0; padding: 4px 14px 4px 30px;}
+.stage_1 a {padding-left: 0.5em}
+.stage_1 {z-index: 250}
+.stage_2 {z-index: 249}
+.stage_3 {z-index: 248}
+.stage_4 {z-index: 247}
+.stage_5 {z-index: 246}
+.stage_6 {z-index: 245}
+.stages a.arrow{padding-top:0.7em;cursor:pointer;}
+.stages .next {background: url(/images/participation/progress/progressDefaultArrow.gif) no-repeat bottom right; display: block; float: right; height: 2.7em;  margin: -0.65em -1.65em 0 0; width: 1.25em;}
+/* IE7 */
+*:first-child+html .stages .next {height: 2.6em; margin: -2.65em -1.2em 0 0; width: 1.65em;}
+
+/* Use uniformed width depending on number of stages */
+.stages_2 li {width: 50%}
+.stages_3 li {width: 33%}
+.stages_4 li {width: 25%}
+.stages_5 li {width: 20%}
+.stages_6 li {width: 16%}
+
+/* Typography */
+.stages a {text-decoration: none;}
+.stages a:hover {text-decoration: none;}
+.stages a .num {font-size: 1.8em;}
+
+/* Iconography */
+.stages a .num { border-radius: 20px;}
+
+/* Backgrounds */
+.stages a {background-color: #aaa}
+.stages .active a {background-color: #333}
+.stages .complete a {background-color: #333}
+.stages .disabled a {background-color: #fff}
+.stages a:hover {background-color: #666;}
+.stages a .num {background-color: #ccc;}
+.stages a {background-repeat: repeat-x; background-position: bottom left;}
+.stages .next {background-repeat: no-repeat; background-position: 100% 50%;}
+
+/* Borders */
+.stages a {border: 1px solid #000; border-left: none; border-right: none;}
+.stage_1 a {border-left: 1px solid #000;}
+
+/* Text colouring & other styling */
+.stages a {color: #333;}
+.stages a:hover {color: #fff;}
+.stages a .num {color: #111;}
+.stages .active  a {color: #fff;}
+.stages .complete  a {color: #fff;}
+
+/* Prevent styling of help boxes drawn in and override with default popup for progress bar */
+.stages .help {border: 1px solid #737175; border-radius: 5px; background: #fff; font-size: 0.8em;}
+.stages .help .icon {background: url(/images/participation/progress/helpTextTriangle.png) no-repeat 50% 50%;}
+.stages .help .content {border: none; padding: 4px;}
+.stages .help p {margin: 4px 0 4px 8px;}
+.stages .help a.close {background: none; padding: 0.15em 4px 0 0.25em; float: right; border: none;}
+.stages .help a:hover {background: none !important; padding: 0;}
+.stages .help .icon {display: block; height: 10px; position: absolute; width: 20px; left: 50%; bottom: 0; margin-bottom: -10px; margin-left: -10px; position: absolute;}
+

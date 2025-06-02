@@ -1,0 +1,139 @@
+.button {color: #00464F; font-weight: bold;}
+
+.button:focus {outline: none}
+ 
+/* Button default background images and hover */
+
+	/* Sliding right image */
+	.button {background: url(/sites/all/themes/vsrs/images/buttons-sprites.png) no-repeat 100% -350px transparent; border:none}
+	
+	/* Background left image */ 
+	.button span {background: url(/sites/all/themes/vsrs/images/buttons-sprites.png) no-repeat -139px -296px transparent;}
+	
+	/* Hover */
+	.button:hover {background-position: 100% -216px; color: #fff}
+	.button:hover span {background-position: -139px -152px; color: #fff}
+	
+/* End Button default background images and hover */
+	
+	/* Disabled */
+	.button.disabled {color: #aaa; cursor: default;}
+	.button.disabled:hover {background-position: 100% -350px; color: #aaa}
+	.button.disabled:hover span {background-position: -139px -296px; color: #aaa}
+	
+/* Additional button styles */
+	
+	/* Dark purple (selected) */
+	.button.bttn_02,
+	.button.selected 
+	{background-position: 100% -215px; color: #fff}
+	.button.bttn_02 span,
+	.button.selected span 
+	{background-position: -139px -151px; color: #fff}
+	
+	.button.bttn_02:hover,
+	.button.selected:hover
+	 {background-position: 100% -215px; color: #fff}
+	.button.bttn_02:hover span,
+	.button.selected:hover span
+	 {background-position: -139px -151px; color: #fff}
+	 
+	/* Fixed width, double sized button, temporarily uses the old style of button layout */
+	.button.bWidth150Update { background: url("/sites/all/themes/vsrs/images/activeFormButton150-large.gif") 0 0 no-repeat;}
+	.button.bWidth150Update:hover { background: url("/sites/all/themes/vsrs/images/activeFormButton150-large.gif") no-repeat 0 -40px; color: #FFF; }
+	.button.bWidth150Update span {background: none;}
+	
+	/* Smaller height button used on dashboard pages */
+	
+		/* Default colour */
+		.button.bDash {background-position: 100% -627px; color: #6D6E6D; text-shadow: 0 1px #FFF}
+		.button.bDash span {background-position: 0 -555px;}
+		
+		.button.bDash:hover {background-position: 100% -627px; color: #6D6E6D}
+		.button.bDash:hover span {background-position: 0% -555px; color: #6D6E6D;}
+	
+	/* Pattern
+	.skinName {background-position: 100% -pixels from top px}
+	.skinName span {background-position: 0% -pixels from top px}
+	
+	.skinName:hover {background-position: 100% -pixels from top px}
+	.skinName:hover span {background-position: 0% -pixels from top px} 
+	*/
+	
+	/* Continue is a green background */
+	.button.continue {background-position: 100% -414px; color: #fff}
+	.button.continue span {background-position: -139px -414px;}
+	
+	/*.button.continue:hover {background-position: 100% -216px;}
+	.button.continue:hover span {background-position: -139px -152px;} */
+
+/* Button icons*/
+
+	.button .icon
+	{line-height:16px;display:inline-block;background: transparent url(/sites/all/themes/vsrs/images/sprites-icons.png) no-repeat 0 40px;}
+	
+	/* Back arrow */
+	.button.prev .icon {background-position: 0 -557px}
+	.button.prev:hover .icon {background-position: 0 -849px}
+	
+	/* Next arrow pointing to right */
+	.button.next .icon {background-position: 100% -483px}	
+	.button.next:hover .icon {background-position: 100% -774px}
+	
+	/* Continue similar to next arrow */
+	.button.continue .icon {background-position: 100% 40px;}
+	
+	/* Previous arrow pointing to left - placeholder, add as appropriate
+	.button.prev .icon {background-position: 0 0}	
+	.button.prev:hover .icon {background-position: 0 0}
+	*/
+	
+	/* Ticks/wait  - placeholder, add as appropriate
+	.button.correct .icon {background-position: 0 0} */
+	
+	/* Stages of a document */
+	.button.ready .icon {background-position: 100% -483px}
+	.button.inProgress .icon {background-position: 100% -1519px}
+		
+	td.status a .icon,
+	td.status span .icon
+	{background: transparent url(/sites/all/themes/vsrs/images/sprites-icons.png) no-repeat 0 50px;}
+	td.status .ready .icon      {background-position: 100% 1640px}
+	td.status .status .icon      {}
+	td.status .taskSelect .icon {background-position: 100% -1462px}
+	td.status .taskComplete .icon {background-position: 100% -1058px}
+	td.status .taskNotReq .icon {background-position: 100% -1136px}
+	td.status .taskReturned .icon {background-position: 100% -1490px}
+	td.status .taskUnassign .icon {background-position: 100% -1221px}
+	td.status .taskAssign .icon {background-position: 100% -1312px}
+	td.status .taskInProgress .icon {background-position: 100% -1392px}
+	td.status .taskPending .icon {background-position: 100% -1582px}
+
+/*End Button icons*/
+
+/*CSS3 Skin*/
+	
+	/* Style 01 */
+	.bttn_01_css3 {color: #321141; font: normal normal 900 1em/1.4em 'Arial', 'Garuda', sans-serif; border: solid 1px #F8F7F9; background: transparent url('/sites/all/themes/vsrs/images/activeButtonFill-01.gif') repeat-x; -webkit-box-shadow: inset 0px 0px 2px #95889B; -moz-box-shadow: inset 0px 0px 2px #95889B; box-shadow: inset 0px 0px 2px #95889B; background: -webkit-gradient(linear, left top, left bottom, from(#F8F7F9), to(#C8C1CB)); background: -moz-linear-gradient(top,  #F8F7F9,  #C8C1CB); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F7F9', endColorstr='#C8C1CB');}
+
+	.bttn_01_css3:hover {
+		color: #FFFFFF; background-position: 0 -60px; background: -webkit-gradient(linear, left top, left bottom, from(#C6BFC9), to(#95889B)); background: -moz-linear-gradient(top,  #C6BFC9,  #95889B); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#C6BFC9', endColorstr='#95889B'); }
+	.bttn_01_css3:active {
+		color: #321141; background: -webkit-gradient(linear, left top, left bottom, from(#F8F7F9), to(#C8C1CB)); background: -moz-linear-gradient(top,  #F8F7F9,  #C8C1CB); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F7F9', endColorstr='#C8C1CB'); }
+
+	/* Style 02: Grey button */
+	.bttn_02_css3 {color: #000000; font: normal normal 900 1em/1.4em 'Arial', 'Garuda', sans-serif; border: solid 1px #FFFFFF; background: transparent url('/sites/all/themes/vsrs/images/activeButtonFill-02.gif') repeat-x; -webkit-box-shadow: inset 0px 0px 2px #95889B; -moz-box-shadow: inset 0px 0px 2px #95889B; box-shadow: inset 0px 0px 2px #95889B; background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CCCCCC)); background: -moz-linear-gradient(top,  #FFFFFF,  #CCCCCC); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CCCCCC'); }
+	
+	.bttn_02_css3:hover {color: #000000; background-position: 0 -60px; background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEEEEE)); background: -moz-linear-gradient(top,  #FFFFFF,  #EEEEEE); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE'); }
+	.bttn_02_css3:active {color: #321141; background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#C8C1CB)); background: -moz-linear-gradient(top,  #FFFFFF,  #CCCCCC); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CCCCCC'); }
+	/* End Grey button style*/
+
+	/* Modifiers that adjust aspects of the button */
+	.bttn_small {font: normal normal 900 1em/0.8em 'Arial', 'Garuda', sans-serif;}
+	/* End button size*/
+	
+/*End CSS3 Skin*/
+
+
+/* Disabled */
+

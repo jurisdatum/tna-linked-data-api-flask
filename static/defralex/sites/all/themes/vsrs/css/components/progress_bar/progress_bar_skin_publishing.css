@@ -1,0 +1,58 @@
+/* Backgrounds & colors */
+.stages {padding: 0 !important;}
+
+.stages .arrow, 
+.stages .arrow:hover, 
+.stages a, 
+.stages a:hover 
+{background-color: #fff; color: #666; background-position: 0 50%;}
+.stages .arrow .num,
+.stages a .num {color:  #666;}
+.stages .next {background-image: url(/sites/all/themes/vsrs/images/progress/defaultStageArrow.png); margin: -0.7em -2em 0 0; width: 1.6em;}
+
+.stages .active .arrow, 
+.stages .active .arrow:hover, 
+.stages .active a, 
+.stages .active a:hover 
+{background-color: #5e2e8c; background-image: url(/sites/all/themes/vsrs/images/progress/activeStageBg.png); color: #fff;}
+.stages .active .arrow .num,
+.stages .active a .num {color:  #000;}
+.stages .active .next {background-image: url(/sites/all/themes/vsrs/images/progress/activeStageArrow.png);}
+
+.stages .complete .arrow, 
+.stages .complete .arrow:hover,
+.stages .complete a, 
+.stages .complete a:hover 
+{background-color: #FAF9FB; background-image: url(/sites/all/themes/vsrs/images/progress/completeStageBg.png); color: #000}
+.stages .complete .arrow .num,
+.stages .complete a .num {color:  #000;}
+.stages .complete .next {background-image: url(/sites/all/themes/vsrs/images/progress/completeStageArrow.png);}
+
+.stages .linked a:hover{text-decoration:underline;cursor: pointer;}
+
+#layout1 .stages a:active {background-color: #b9aebe; background-image:url(/sites/all/themes/vsrs/images/progress/activeStageBg.png); color: #fff;}
+.stages a:active .num {color:  #000;}
+.stages a:active .next {background-image:  url(/sites/all/themes/vsrs/images/progress/activeStageArrow.png);}
+
+#layout1 .stages .disabled a {background-color: #fff; background-image: url(/templates/participation/chrome/img/116/progress/defaultStageBg.png); color: #666;}
+.stages .disabled a .num {color:  #666;}
+.stages .disabled a .next {background-image: url(/templates/participation/chrome/img/116/progress/defaultStageArrow.png);}
+
+/* Icons */
+.stages .arrow .num,
+.stages a .num				{background-color: #fff;} /* for IE */
+.stages .arrow .num,
+.stages a .num 		        {background-position: 6px 50%; background-repeat: no-repeat; background-color: rgba(255, 255, 255, 0.7); padding-right: 6px;}
+.stages .edits_impact .num   {background-image: url(/sites/all/themes/vsrs/images/progress/warningIcon.png); background-position: 9px 51%;}
+.stages .active   .num       {background-image: url(/sites/all/themes/vsrs/images/progress/activeIcon.png);}
+.stages .edits_accepted .num {background-image: url(/sites/all/themes/vsrs/images/progress/completeIcon.png);}
+
+/* Borders */
+.stages .arrow,
+.stages a {border-color: #888; font-size: 12px;}
+.stages .arrow:hover,
+.stages a:hover {background-color: #fff;}
+
+
+
+

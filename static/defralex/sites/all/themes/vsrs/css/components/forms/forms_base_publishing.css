@@ -1,0 +1,93 @@
+/** Forms **/
+
+/* Global styles */
+
+	form {margin: 0; padding:7px;}
+	form fieldset {border:none; margin:0; padding:0; width: auto; padding:0 10px 0.5em; clear:left;}
+	fieldset p {padding:5px 10px 5px 10px;}
+	label.option {display: inline;font-weight: normal;vertical-align: middle;}
+	label.optionbold{display: inline;font-weight: bold;vertical-align: middle;}
+	.form-instructions{color:#000000; font: normal normal 900 1.1em/1.4em 'Arial', 'Garuda', sans-serif;}
+
+	.contentForm .radio h2 {margin:0 0 20px 0; padding: 0;}
+	.contentForm label {display: block; height: 1.8em; float: left; padding-top: 0.35em; font: normal normal 900 1em/1.4em 'Arial', 'Garuda', sans-serif;}
+	.contentForm label em {display: none;}
+	.contentForm input,
+	.contentForm select {float: left; margin-left: 5px;}
+	.contentForm div {float: left; margin-right: 0.25em; margin-top: 0.5em;}
+
+	.contentForm .radio {width:100%; }
+	.contentForm .radio input {float:none; display:inline; border:none; background-image:none;}
+	.contentForm .radio label {float:none; display:inline;}
+
+	.contentForm .submit {float: left; margin: 20px 0 20px 0; width:100%;}
+	.contentForm .submit-left {float: left;  display:inline;}
+	.contentForm .submit-right {float: right; display:inline; padding-left:0.5em;}
+	.submit-right {float: right!important;}
+	.submit-right button{margin-left: 3px !important;}
+	.submit-left button{margin-right: 3px !important;}
+
+	.contentForm .advSearch {padding-top: 0.5em; font-weight: bold; font-size: 1.2em; margin-right: 0; clear: both; float: none; text-align: right;}
+
+	input {border: 1px solid #000000; padding:5px 3px; background: #fff;}
+	select {border: 1px solid #000000; padding:5px 3px 5px 1px; background: #fff; }
+
+	.form-item,
+	.form-actions
+	{margin-bottom: 1em;margin-top: 1em;}
+
+	.form-item .additional label {display: inline; font-size: 1em;margin-right: 10px;}
+	.lineform-item
+	{margin-bottom: 1em;margin-top: 1em;float:left;}
+
+/* End global styles */
+
+/* Individual form styles */
+
+	/* default form styles */
+	.contentForm div {margin-right: 0.5%;}
+	.contentForm div.title {min-width: 20em; max-width: 33%;}
+	.contentForm .title input {width: 80%;}
+	.contentForm .year{width: 9em;}
+	.contentForm .year input {width: 50%;}
+	.contentForm .number {width: 10em}
+	.contentForm .number input {width: 40%;}
+	.contentForm .type {min-width: 33%;}
+	.contentForm .type select {min-width: 80%;}
+
+	/*Search Legislation form*/
+	.legislationForm {padding: 6px 5px 5px 10px; float: none; margin: 0;}
+	.legislationForm div.title {width: 20em;}
+	.legislationForm .title input {width: 80%;}
+	.legislationForm .year{width: 9em;}
+	.legislationForm .year input {width: 50%;}
+	.legislationForm .number {width: 10em}
+	.legislationForm .number input {width: 40%;}
+	.legislationForm .type select {float: left; margin-left: 5px;}
+	.legislationForm div.provision {width: 15em;}
+	.legislationForm .provision input {width: 80%;}
+
+/* End individual styles */
+
+/* Theme overrides */
+	.form-radios {margin: 0;}
+	.form-checkboxes .form-item,
+	.form-radios .form-item
+	{margin-bottom: 0.4em;margin-top: 0.4em;}
+	
+	.form-checkboxes .form-radio
+	{
+		margin-right:2px;
+	}
+
+	/* Prevent backgrounds being applied in any browser version */
+	input.form-checkbox,
+	input.form-radio
+	{border: none !important; background: none !important;}
+
+/* End Theme overrides */
+
+.form-item-error label {color: #8C2E0B;}
+.form-item-error-radio label {color: inherit;}
+
+/* End Forms */

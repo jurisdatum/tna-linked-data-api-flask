@@ -1,0 +1,179 @@
+/* Registration */
+hr {border: none; border-top: solid 1px #b5c9cc}
+.change-link {font-size: 0.8em;}
+
+ .information .grippie {display: none;}
+
+.panel-pane {border: 1px solid #80A2A7;padding: 8px;}
+.block .content {padding: 0;}
+.block .help .content {padding: 15px;}
+.panels-flexible-column-inside {padding-right: 0}
+
+/* Title 
+.page-registration #titleBar .pageTitle {font-size: 1.2em; margin-left: 8.3em; margin-top: 0.4em; padding-left: 3em; text-align: center;}
+*/
+.page-registration.toolbar #titleBar .pageTitle {padding-left: 4em;}
+/*.page-registration-advanced-number-request #titleBar .pageTitle {padding-left: 0; margin-left: 7.3em;} */
+
+.block-system .button {margin: 0 auto;}
+.action {text-align: center;}
+
+#advanced-number-request .contentTitle .aside {width: 60%} /* IE fix */
+
+/* Advanced Number Request */
+#edit-specify .form-type-radio, #edit-specify .form-type-checkbox {float: left;}
+#edit-specify .form-item-title, #edit-specify .form-item-reason, #edit-specify .description {clear: left;}
+#edit-specify .form-type-checkboxes {margin-left: 20px;}
+#advanced-number-request #edit-specify .form-type-checkboxes {margin-left: 0px;}
+/*#edit-specify .form-item-quantity, #edit-specify .form-item-date {float:left;}*/
+#edit-specify .form-item-quantity {margin-right: 20px;}
+#edit-specify .form-type-textfield {margin-top: 2em;}
+
+/*Comment out on 24/05 8/
+/*#edit-specify .form-item-date {margin-top: 1em;}*/
+
+#replace-message { background: url("/sites/all/themes/vsrs/images/progress/warningIcon.png") no-repeat scroll 6px 50% #FABAB9;margin-bottom: 10px; font-weight: bold; padding: 1em 1em 1em 35px; clear: left; color: #990000; border: 1px solid #CC7F7F}
+#replace-message a {color: #660000}
+
+.form-type-tso-managed-file.failed {border: 1px solid #CC7F7F}
+.form-managed-file.uploaded.failed{background:#FABAB9;}
+
+#sent-back {background: #FABAB9; border: 1px solid #CC7F7F}
+#sent-back h4 {color: #990000;}
+/* JS enabled Hide/show of error messages */
+#sent-back .reason .error_content{background-color:#fff;padding:0.7em;display:block;clear:both;margin-top:0px;margin-bottom:10px;}
+#sent-back .reason h4{margin:0px;clear:none;display:block;float:left;padding:4px 0px;}
+#sent-back .reason a{cursor:pointer;}
+#sent-back .reason .ui-icon{text-decoration: none;float:left;margin-right:0.5em;}
+#sent-back .reason .readtab, .reason .closetab{float:right;color:#333333;display:block;clear:right;padding:4px 0.7em;font-weight:bold;}
+#sent-back .reason .closetab{background:#fff;margin:0px;float:right;}
+#sent-back .reason{clear:both;display:block;position:relative;overflow:auto;}
+/* Spacing adjustments */
+#registration-landing .panels-flexible-row-last {margin-top: 8px; width: 100%;}
+
+/* Hide the chrome box unless the toolbar is selected */
+#tso-registration-selection-form .contentSurround {display: none;}
+#tso-registration-selection-form.doc-selected .contentSurround {display: block;} 
+.doc-selected .contentInner span.icon {background: none;}
+
+#publication-information .message {
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;	
+}
+
+#publication-information .message h4 {margin-bottom: 10px;}
+
+#registration-confirmation .s_col1, #registration-confirmation .s_col2 {width: 48%}
+#registration-confirmation .track {padding: 10px; border: 1px solid #7FA2A7}
+#registration-confirmation .track a.button {float: right}
+#registration-confirmation .form-items h2 {margin-bottom: 20px;}
+
+#tso-registration-information-form .publication-message {margin: 10px 0; clear:left; border:1px solid #ccc; padding: 10px;}
+#publication-information .delivery_entry {margin: 8px; overflow: hidden; border-bottom: 1px solid #ccc}
+#publication-information .delivery_entry .form-type-textarea {margin-right: 20px ; width: 44%; float: left;}
+#publication-information .delivery_entry .form-type-textfield {margin-right: 20px; float: left; width: 44%}
+#publication-information .delivery_entry .form-type-textfield label {margin-right: 20px; width: auto;}
+
+#review #files-fieldset ul {list-style: none;}
+
+#edit-remove-delivery-submit { float:right;}
+
+#sent-back ul.failure li {
+    background-position: 0 -697px;
+}
+#sent-back ul li {
+    background: url("/sites/all/themes/vsrs/images/registrar-icons.png") repeat scroll 0 -735px transparent;
+    list-style: none outside none;
+    padding-left: 25px;
+}
+#sent-back ul{
+    padding-left:0px;
+}
+p + h3,p + .container-inline-date{margin-top:12px;}
+
+.form-type-tso-managed-file{height:auto;min-height:60px;}
+
+#registration-confirmation .s_col1 { margin-top:9px; }
+
+.registrar.confirm .contentInner .col1 {
+	float: left;
+	width: 330px;
+}
+
+.registrar.confirm .contentInner .col2 {
+	float: right;
+	width: 550px;
+}
+
+.registrar.confirm .contentInner .section {
+	margin-bottom: 2em;
+}
+
+.registrar.confirm .contentInner .numbers ul {
+	list-style: none;
+	margin: 0.4em 0 0.4em 4px;
+	padding: 0;
+}
+
+
+.registrar.confirm .contentInner .numbers li {
+	background: url('../../images/tick.png') no-repeat left center;
+	list-style: none;
+	padding-left: 18px;
+}
+
+.registrar.confirm .preview-page-container {
+	border: 1px solid #a0a0a0;
+	margin-bottom: 1em;
+	background: url('../../images/ajax-loader.gif') no-repeat center 50%;
+	width: 100%;
+	min-height: 300px;
+	overflow:hidden;
+}
+
+.registrar.confirm .preview-page.preview-page-loaded {
+	background: none;
+}
+
+.registrar.confirm .preview-page {
+	left: 0px; top: 0px;
+	display: none;	
+	height: 1025px;
+	width:134%;
+    margin-left:-92px;
+
+}
+
+/* Advanced Number Request Css ~*/
+
+#advanced-number-request .container-inline-date,#edit-specify .form-item-quantity{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+  	margin-right: 3em;
+	vertical-align:top;
+}
+
+#advanced-number-request .container-inline-date{
+	padding-top:15px;
+}
+
+#advanced-number-request .container-inline-date .date-padding {
+    float: left;
+    padding: 0px;
+}
+
+#advanced-number-request .container-inline-date #edit-date{
+	margin : -20px auto auto auto;
+}
+
+#advanced-number-request .container-inline-date #edit-date .form-item-edit-date-datepicker-popup-0 label {
+    display: none;
+}
+
+/* End of Advanced Number Request  -- -*/
+
+
+

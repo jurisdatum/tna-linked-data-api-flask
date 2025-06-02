@@ -1,0 +1,291 @@
+/**
+ * Editorial page elements
+ *
+ * Style of the basic page elements
+ *
+ * Main styled colour: #00464F Dark green
+ *
+ */
+
+/*---------------
+1. Body & basic typography
+---------------*/
+body {color: #333; background: #fff}
+textarea {font-family: 'Arial','Garuda',sans-serif; font-size: 1em; margin-top: 1em;}
+.form-type-textarea textarea {display: inline;}
+h1 {}
+h2, h3, h4, h5, h6, p, ul, ol, dl, table, div.contentItem, address {}
+h2 {color: #002F36; margin: 0 0 0.5em; font-weight: 400;}
+h3, h4, h5 {}
+h3 {}
+em {font-style: italic;}
+strong {font-weight: bold;}
+p {}
+address {font-style: normal;}
+pre, code {font-size: 1.2em;}
+select {margin-right: 20px;}
+tbody {border: none;}
+
+h2 strong {font-size: 1em; font-weight: 700}
+
+a {line-height: 1.4em; text-decoration: none; color: #069;}
+a:hover {text-decoration: underline;}
+
+form button {margin:0; padding: 0; font: normal normal normal 1em/1.4em 'Arial', 'Garuda', sans-serif;}
+.form-item .description {font-size: 0.9em}
+dl {display: block;}
+dt {font-weight: bold; float: left; clear: left; margin-right: 0.5em; line-height:1.4em;}
+dd {line-height:1.4em; margin-bottom: 0.5em; padding-left: 120px; display: block; min-height: 1.4em; color:#00464f; font-weight:bold;}
+
+table, tr {border: none; border-collapse: collapse; width: 100%;}
+caption {text-align: left; margin-bottom: 0.5em;}
+td, th  {border: none; padding: 0.5em; text-align: left; background: #FFF;}
+tr.oddRow td, li.oddRow {background: #DFE8E9}
+table th a {}
+
+	/* Text margins */
+	.html p,
+	.html ul,
+	.html ol,
+	.html dl {margin-top: 1em;}
+
+    .html table {margin-top: 0;}
+
+	/* Font-sizes */
+	.html h1 {}
+	.html h2 {font-size: 1.29em;}
+	.html h3,
+	.html legend {font-size: 1.166em; line-height: 1.25em; font-weight: bold;}
+	.html h4 {}
+	.html h5 {}
+	.html h6 {}
+	.html p {margin: 1em 0 0;}
+	.html ul,
+	.html ol {font-size: 1.0833em; line-height: 1.5em;}
+
+	.html ul ul,
+	.html ol ul,
+	.html ul ol,
+	.html ol ol,
+	.html dd ul,
+	.html dd ol {font-size: 1em;}
+
+	/* Margins + padding */
+	.html ul {margin-left: 0; padding-left: 26px;}
+	.html p:first-child {margin-top: 0;}
+	.html h2 {margin-bottom: 0.25em;}
+	.html h2 + p,
+	.html h2 + ul,
+	.html h2 +ol,
+	.html h3 + p,
+	.html h3 + ul,
+	.html h3 +ol,
+	.html h4 + p,
+	.html h4 + ul,
+	.html h4 +ol,
+	.html p + ul {margin-top: 0.25em;}
+
+	li{margin: 0 0 0.25em;}
+
+a {text-decoration: none; font-size: 1em;}
+.html a {font-weight: bold; }
+
+
+/*---------------
+2. Page furniture
+---------------*/
+#background {background: #01464f; min-width: 980px;}
+.siteTitle span {background: url(/sites/all/themes/vsrs/images/publishingSiteTitle.gif) no-repeat bottom left;}
+#titleBar {border-top: 5px solid #023253; height: 40px; overflow: auto}
+#titleBar h1 {font-size: 1.8em; padding: 0; padding-left: 1em; float:left; line-height: 1.8em;}
+#oldHeader {display: none;}
+
+#primaryNav {min-width: 980px; background: #fff; border-bottom: 4px solid #01464f;}
+
+/*.natArch {display: block;float: right;height: 35px;margin: 18px 8px 0 0;overflow: hidden;position: relative;width: 215px;}*/
+
+.natArch span {background: url(/sites/all/themes/vsrs/images/natArchTitle.gif) no-repeat scroll 0 0 transparent;height: 100%;left: 0;position: absolute;top: 0;width: 100%;}
+
+ul#secondaryNav {padding: 5px;clear: right;float: right;margin: 0;text-align: right;font-size: 0.9em;}
+
+#loginBar dd {padding-left: 0px}
+#loginBar dd.security-level {padding-left: 40px;}
+body #loginBar .login {width:75%}
+body #loginBar dd.username {text-overflow:ellipsis; text-align: right; color:white; overflow: hidden; }
+#loginBar .container {padding-left: 10px; padding-right: 10px;} /* Don't overwrite the base top and bottom margins */
+#userDetails {float:right;}
+#userDetails h2 {padding: 0; margin: 0; text-align: right;}
+
+#layout2 {background: none; border: none;}
+
+/* active primary nav  */
+#primaryNav ul li.active a {background: #f4f2f5 url(/sites/all/themes/vsrs/images/activeHeaderLink.gif) no-repeat center bottom; color: #01464f;}
+#primaryNav ul,
+#primaryNav ul li {background: none; padding: 0; padding-right: 2px}
+#primaryNav ul {width: 100%;}
+
+.pageTitle {background: #fff;}
+#content {min-height: 18em; background: #fff;}
+
+#footer {
+    background: none repeat scroll 0 0 #F6FAFD;
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 970px;
+}
+#footer div p {
+    color: #66677C;
+    margin: 0;
+    padding: 0 1%;
+}
+#footer div p a {
+    color: #66677C;
+}
+#footer .inner {padding: 10px 60px;}
+#footer .container {background-color: #e1e9ea; border-top: 1px solid #CCCCCC;}
+
+#footer ul {list-style: none;}
+#footer .section ul,
+#footer .section li {list-style: none; margin: 0; padding: 0;}
+#footer h3 {margin-bottom: 0.75em;}
+
+#footer a {font-weight: normal;}
+
+#main-wrapper {margin-bottom: 0.5em;}
+
+
+/*---------------
+ * 8. Misc sections
+ * --------------*/
+.helpItem { float: right; }
+
+.section .content p
+{padding-left: 0; padding-right: 0;}
+
+#content .blankList {list-style: none; padding-left: 0;}
+
+.js .help .close {padding: 4px 6px !important}
+.block .help .content {background: #fff;}
+#content .help .icon {background: url(/sites/all/themes/vsrs/images/triangle.png) no-repeat 0 0 !important; width: 12px; height: 10px; display:block; position: absolute; margin-left: 0 !important;}
+
+.helpToLeftTop .content,
+.helpToLeftMid .content,
+.helpToLeftBot .content {border-right: 3px solid #000;}
+.helpToRightTop .content,
+.helpToRightMid .content,
+.helpToRightBot .content {border-left: 3px solid #000;}
+.helpToMidBot .content {border-bottom: 3px solid #000;}
+.helpToMidTop .content {border-top: 3px solid #000;}
+
+/* Pointer styles - added to XHTML by JS */
+/* Use of !important to overwrite any predexisting styles when injected by DOM */
+.helpToLeftTop {padding-right: 8px;}
+.js #content .helpToLeftTop .icon {top: 12.5px; right: 0; background-position: -40px 0 !important;}
+
+.helpToLeftMid {padding-right: 8px;}
+.js #content .helpToLeftMid .icon {top: 50%; right:0; background-position: -40px 0 !important; margin-top: -6px;}
+
+.helpToLeftBot { padding-right: 8px;}
+.js #content .helpToLeftBot .icon {}
+
+.helpToRightTop { padding-left: 8px;}
+.js #content .helpToRightTop .icon {top: 12.5px; left: 0; background-position: -26px 0 !important;}
+
+.helpToRightMid {padding-left: 8px;}
+.js #content .helpToRightMid .icon {top: 50%; left:0; background-position: -26px 0 !important; margin-top: -6px;}
+
+.helpToRightBot {padding-left: 8px;}
+.js #content .helpToRightBot .icon {}
+
+.helpToMidBot {padding-bottom: 8px;}
+.js #content .helpToMidBot .icon {bottom: 0 !important; right: 152px; background-position: -15px 0 !important;}
+
+.LegSnippet div.helpToMidTop,
+.helpToMidTop {padding-top: 8px; background-color: transparent;}
+.js #content .helpToMidTop .icon {top: 0; right: 144px;}
+
+/*
+ * Panel titles
+ */
+.html h2.pane-title {font-size: 1.3em; padding: 4px 0;}
+
+/*---------------
+ * 9. The theme defaults bring in the same classes as the legislation site and cause a conflicts
+ * This area fixes them.
+ * --------------*/
+.section .pane-content p,
+.section .pane-content ul,
+.section .pane-content ol {padding: 0; margin-bottom: 0;}
+
+.section .pane-content ul,
+.section .pane-content ol {padding-left: 1.75em}
+
+#block-system-main {padding: 0;}
+
+.right {float:right;}
+.prevPagesNextNav {text-align: center;}
+.prevPagesNextNav li {display: inline; padding: 5px;}
+.prevPagesNextNav li.currentPage {font-weight: bold;}
+
+.breadcrumb {padding: 7px;}
+
+.form-managed-file  button{float: right;}
+
+.count, .count .value {border-radius: 3px; font-weight: bold;}
+.count {border: 1px solid #ccc; float: left; margin-right: 0.3em; font-size: 17px; padding: 0.3em;}
+.count .value {color: #fff; display: inline-block; background: #00464F; padding: 0.2em 0.5em; margin-left: 0.5em;}
+.hidden {display: none;}
+
+#feedback {
+    background: url("/sites/all/themes/vsrs/images/feedback_publishing.png") repeat scroll 0 0 transparent;
+    height: 133px;
+    position: absolute;
+    right: 0;
+    top: 350px;
+    width: 30px;
+    z-index: 100001;
+}
+
+#feedback a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+ dd.security-level
+ {
+	 color:white!important;
+ }
+
+ #header .privacypolicy { float: right; position:relative; right:-212px; top:59px; margin-left:10px;  color: #424240; margin-left:10px;} #header .privacypolicy a {font-weight:normal; color: #424240;  font-size: 0.9em; font:'Arial','Garuda',sans-serif;}
+
+
+ .page-validation-confirmation #main #content { padding-bottom:7px;}
+  .page-validation-confirmation #main-wrapper { margin-bottom:0px;}
+
+  .section-validation .comingsoon { text-align:center; float:left; width:89%; font-size:14px; color:#818588; font-weight:bold;}
+ .section-validation .greentext{ color:#063444; font-weight:bold;}
+ .page-validation .pane-block-1 ul {margin-top:5px!important;}
+.validationbeta{color:#f70000;}
+
+#form-filter select
+{
+	margin-right:0;
+}
+
+#form-filter button,
+#archive-controls input[type=button]
+{
+	height: 28px;
+	padding: 0 10px;
+	font-size:12px;
+	background:url("/sites/all/themes/vsrs/images/home_form_shadow.gif") no-repeat left top;
+	border: 1px solid #677e81;
+	cursor: pointer;
+}

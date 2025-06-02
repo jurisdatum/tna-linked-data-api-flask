@@ -18,130 +18,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
   <title>DefraLex | Legislation.gov.uk</title>
   <style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/modules/system/system.base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/system/system.menus.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/system/system.messages.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/system/system.theme.css?su6sqd");
+@import url("{{ url_for('static', filename='defralex/modules/system/system.base.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/system/system.menus.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/system/system.messages.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/system/system.theme.css') }}");
 </style>
 <style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.core.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.theme.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.autocomplete.css?su6sqd");
+@import url("{{ url_for('static', filename='defralex/misc/ui/jquery.ui.core.css') }}");
+@import url("{{ url_for('static', filename='defralex/misc/ui/jquery.ui.theme.css') }}");
+@import url("{{ url_for('static', filename='defralex/misc/ui/jquery.ui.autocomplete.css') }}");
 </style>
 <style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/modules/comment/comment.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/field/theme/field.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/node/node.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/search/search.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/modules/user/user.css?su6sqd");
+@import url("{{ url_for('static', filename='defralex/modules/comment/comment.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/field/theme/field.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/node/node.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/search/search.css') }}");
+@import url("{{ url_for('static', filename='defralex/modules/user/user.css') }}");
 </style>
 <style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/modules/ctools/css/ctools.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/pages/defralex-lists.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/pages/defralex-stage.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/jquery/jquery.ui.datepicker.vsrs.css?su6sqd");
+@import url("{{ url_for('static', filename='defralex/sites/all/modules/ctools/css/ctools.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/pages/defralex-lists.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/pages/defralex-stage.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/jquery/jquery.ui.datepicker.vsrs.css') }}");
 </style>
 <style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/html-reset.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_skin_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/screen.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/website.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/defralex.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/command_button/command_button_base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/command_button/command_button_skin_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/forms/forms_base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/forms/forms_base_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/forms/forms_skin_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_base_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_skin_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_skin_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/pages/registration.css?su6sqd");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/html-reset.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_skin_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/screen.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/website.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/defralex.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/command_button/command_button_base.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/command_button/command_button_skin_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/forms/forms_base.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/forms/forms_base_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/forms/forms_skin_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_base.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_base_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_skin_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_skin_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/pages/registration.css') }}");
 </style>
 
-<!--[if lte IE 7]>
 <style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base_IE.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base_publishing_IE.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/command_button/command_button_base_IE.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/command_button/command_button_base_publishing_IE.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/forms/forms_base_publishing_IE7.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_base_publishing_IE.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base_IE7.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base_publishing_IE7.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/ie7.css?su6sqd");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/tabs/tabs_base.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/tabs/tabs_base_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/tabs/tabs_skin_publishing.css') }}");
+@import url("{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/pages/registration-information.css') }}");
 </style>
-<![endif]-->
-
-<!--[if lte IE 6]>
-<style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_base_IE6.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/page_setup/page_setup_skin_publishing_IE6.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/ie6.css?su6sqd");
-</style>
-<![endif]-->
-
-<!--[if IE 7]>
-<style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/command_button/command_button_skin_publishing_IE.css?su6sqd");
-</style>
-<![endif]-->
-
-<!--[if IE 6]>
-<style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/progress_bar/progress_bar_base_publishing_IE6.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base_publishing_IE6.css?su6sqd");
-</style>
-<![endif]-->
-
-<!--[if IE 8]>
-<style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/system_chrome/system_chrome_base_publishing_IE8.css?su6sqd");
-</style>
-<![endif]-->
-
-<!--[if gt IE 7]>
-<style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/ie8.css?su6sqd");
-</style>
-<![endif]-->
-
-<!--[if lte IE 7]>
-<link type="text/css" rel="stylesheet" href="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/pages/registration-information-IE7.css?su6sqd" media="all" />
-<![endif]-->
-<style type="text/css" media="all">
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/tabs/tabs_base.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/tabs/tabs_base_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/tabs/tabs_skin_publishing.css?su6sqd");
-@import url("https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/pages/registration-information.css?su6sqd");
-</style>
-<link type="text/css" rel="stylesheet" href="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/tabs_interface/tabs_interface_base.css?su6sqd" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/components/tabs_interface/tabs_interface_skin_publishing.css?su6sqd" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/css/pages/home.css?su6sqd" media="all" />
-  <script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/jquery.js?v=1.4.4"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/jquery-extend-3.4.0.js?v=1.4.4"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.4.4"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/jquery.once.js?v=1.2"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/drupal.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.core.min.js?v=1.8.7"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.widget.min.js?v=1.8.7"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.position.min.js?v=1.8.7"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.position-1.13.0-backport.js?v=1.8.7"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/misc/ui/jquery.ui.autocomplete.min.js?v=1.8.7"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/minpagination.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/imgReplace.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/modules/tso_defralex/js/defralexlists.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/chrome.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/delayTimer.js?su6sqd"></script>
-<script type="text/javascript" src="/replace/ui/ui/minified/jquery.ui.autocomplete.min.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/modules/tso_registration/js/jquery.hint.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/survey.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/script.js?su6sqd"></script>
-<script type="text/javascript" src="https://www.legislation.gov.uk/defralex/sites/all/themes/vsrs/js/leg-header.js?su6sqd"></script>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/tabs_interface/tabs_interface_base.css') }}" media="all" />
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/components/tabs_interface/tabs_interface_skin_publishing.css') }}" media="all" />
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/css/pages/home.css') }}" media="all" />
+  <script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/jquery.js') }}?v=1.4.4"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/jquery-extend-3.4.0.js') }}?v=1.4.4"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/jquery-html-prefilter-3.5.0-backport.js') }}?v=1.4.4"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/jquery.once.js') }}?v=1.2"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/drupal.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/ui/jquery.ui.core.min.js') }}?v=1.8.7"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/ui/jquery.ui.widget.min.js') }}?v=1.8.7"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/ui/jquery.ui.position.min.js') }}?v=1.8.7"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/ui/jquery.ui.position-1.13.0-backport.js') }}?v=1.8.7"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/misc/ui/jquery.ui.autocomplete.min.js') }}?v=1.8.7"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/minpagination.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/imgReplace.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/modules/tso_defralex/js/defralexlists.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/chrome.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/delayTimer.js') }}"></script>
+<script type="text/javascript" src="/replace/ui/ui/minified/jquery.ui.autocomplete.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/modules/tso_registration/js/jquery.hint.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/survey.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='defralex/sites/all/themes/vsrs/js/leg-header.js') }}"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 jQuery.extend(Drupal.settings, {"basePath":"\/defralex\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"vsrs","theme_token":"yRiF9Romz8R5AB7TKpcEQL2NWEQMvPfwit1mP8lUEmQ","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.position-1.13.0-backport.js":1,"misc\/ui\/jquery.ui.autocomplete.min.js":1,"sites\/all\/themes\/vsrs\/js\/minpagination.js":1,"sites\/all\/themes\/vsrs\/js\/imgReplace.js":1,"sites\/all\/themes\/vsrs\/js\/chrome.js":1,"sites\/all\/themes\/vsrs\/js\/delayTimer.js":1,"\/replace\/ui\/ui\/minified\/jquery.ui.autocomplete.min.js":1,"sites\/all\/modules\/tso_registration\/js\/jquery.hint.js":1,"sites\/all\/themes\/vsrs\/js\/script.js":1,"sites\/all\/themes\/vsrs\/js\/leg-header.js":1,"sites\/all\/themes\/vsrs\/js\/survey.js":1,"sites\/all\/modules\/tso_defralex\/js\/defralexlists.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/vsrs\/css\/pages\/defralex-lists.css":1,"sites\/all\/themes\/vsrs\/css\/pages\/defralex-stage.css":1,"sites\/all\/themes\/vsrs\/css\/jquery\/jquery.ui.datepicker.vsrs.css":1,"sites\/all\/themes\/vsrs\/css\/html-reset.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_base_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/screen.css":1,"sites\/all\/themes\/vsrs\/css\/website.css":1,"sites\/all\/themes\/vsrs\/css\/defralex.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/command_button_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/command_button_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/command_button_base_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/forms\/forms_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/forms\/forms_base_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/forms\/forms_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/system_chrome\/system_chrome_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/system_chrome\/system_chrome_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/progress_bar\/progress_bar_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/progress_bar\/progress_bar_base_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/progress_bar\/progress_bar_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_base_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/pages\/registration.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_base_IE.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_base_publishing_IE.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/command_button_base_IE.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/command_button_base_publishing_IE.css":1,"sites\/all\/themes\/vsrs\/css\/components\/forms\/forms_base_publishing_IE7.css":1,"sites\/all\/themes\/vsrs\/css\/components\/progress_bar\/progress_bar_base_publishing_IE.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_base_IE7.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_base_publishing_IE7.css":1,"sites\/all\/themes\/vsrs\/css\/ie7.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_base_IE6.css":1,"sites\/all\/themes\/vsrs\/css\/components\/page_setup\/page_setup_skin_publishing_IE6.css":1,"sites\/all\/themes\/vsrs\/css\/ie6.css":1,"sites\/all\/themes\/vsrs\/css\/components\/command_button\/command_button_skin_publishing_IE.css":1,"sites\/all\/themes\/vsrs\/css\/components\/progress_bar\/progress_bar_base_publishing_IE6.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_base_publishing_IE6.css":1,"sites\/all\/themes\/vsrs\/css\/components\/system_chrome\/system_chrome_base_publishing_IE8.css":1,"sites\/all\/themes\/vsrs\/css\/ie8.css":1,"sites\/all\/themes\/vsrs\/css\/pages\/registration-information-IE7.css":1,"sites\/all\/themes\/vsrs\/css\/components\/tabs\/tabs_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/tabs\/tabs_base_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/components\/tabs\/tabs_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/pages\/registration-information.css":1,"sites\/all\/themes\/vsrs\/css\/components\/tabs_interface\/tabs_interface_base.css":1,"sites\/all\/themes\/vsrs\/css\/components\/tabs_interface\/tabs_interface_skin_publishing.css":1,"sites\/all\/themes\/vsrs\/css\/pages\/home.css":1}}});

@@ -1,0 +1,3 @@
+#content ul.tabs-interface {background: #fff url(/sites/all/themes/vsrs/images/navBg.gif) repeat-x bottom left; border-bottom-color: #E0E0E0}
+ul.tabs-interface li a {border-right-color: #fff; border-left-color: #E0E0E0}
+ul.tabs-interface li.active a {background: #01464F}

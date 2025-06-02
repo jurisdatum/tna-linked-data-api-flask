@@ -1,0 +1,49 @@
+/* Overrides */
+.sysChrome #content {padding: 0; width: 100%; float: left;}
+.sysChrome #content .padding {padding: 7px; overflow: auto;}
+.sysChrome .contentSurround {margin: 0; width: 100%;}
+
+/* Use special column styles */
+.sysChrome .s_col1 {width: 57.5%;}
+.sysChrome .s_col2 {width: 37.5%;}
+.sysChrome .s_span2col {width:95%;}
+
+.sysChrome .s_6 {width: 48.5%;}
+	
+/* Plain boxes */
+.sysChrome .info {padding: 10px 0;}
+
+/* Boxes that float above the contentSurround, sometimes inside a viewport */
+.sysChrome .blocks .block {border: 1px solid #CCC; list-style: none;}
+.sysChrome .blocks .block h2 {min-height: 0;}
+
+.sysChrome .blocks .block .content {height: 150px;}
+.sysChrome .blocks {clear:left; padding-left: 0; width: 1000px;} /* Creates a viewport window */
+.sysChrome .blocks .block h2 {min-height: 42px;	}
+
+.sysChrome .blocks .submit-right {clear:both;}
+
+/* Title */
+.sysChrome .contentTitle {padding-left: 20px;}
+.sysChrome .contentTitle h2 {display: inline-block; margin: 0 40px 0 0; padding: 8px; max-width: 75%;}
+.sysChrome .contentTitle span {display: inline-block; font-size: 1.25em; padding: 8px;}
+
+/* Make form elements have the same layout without the need to add classnames */
+	
+/* Inset blocks */
+.sysChrome .contentInner fieldset {border: 1px solid #000; margin: 0 0 20px 0; padding: 17px 10px;}	
+.sysChrome .contentInner fieldset .fieldset-wrapper {position: relative;}
+.sysChrome .contentInner legend {float: left; width: 100%; white-space: normal;margin: 0 10px 10px 0;padding: 0;}
+
+.pdf-download {float:right; font-size: 1.2em; padding: 10px; padding-left: 40px; background: url("/sites/all/themes/vsrs/images/pdf.png") no-repeat; }
+.pdf-download-list {padding-left: 20px; padding-bottom: 10px; background: url("/modules/file/icons/application-pdf.png") no-repeat; }
+.word-download-list {padding-left: 20px; padding-bottom: 10px; background: url("/modules/file/icons/x-office-document.png") no-repeat; }
+.xml-download-list {padding-left: 20px; padding-bottom: 10px; background: url("/modules/file/icons/text-html.png") no-repeat; }
+
+
+#defralex-lists-management .sysChrome .contentInner fieldset { margin: 0 0 14px!important; }
+
+.form-items button
+{
+	margin-right:3px !important;
+}

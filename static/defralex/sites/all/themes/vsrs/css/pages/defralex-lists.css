@@ -1,0 +1,193 @@
+/* Defra */
+body.page-defralex-lists .contentInner {padding:0px}
+.defra-list table {border-left: 0px !important; margin-top: 0;}
+.defra-list th {background: #fff;}
+.defra-list .results {float:left; width: 748px;}
+.defra-list .right {float:right;}
+
+.defra-list .legType {color: #333333;}
+
+/*#tools .section {border-bottom: 1px dotted #DDDDDD; float:left;}*/
+#tools #miniPageNav {padding: 0;}
+#tools #miniPageNavCurrent {font-size: 0.9em; font-weight: bold;}
+#tools #miniPageNav {clear: left; width: 100%;}
+#tools #miniPageNav li {padding: 3px; width: auto; float:left;}
+#tools .section .content {clear:left;}
+#tools ul li {list-style: none; padding-left: 0;}
+#tools ul {padding-left: 10px; float:left;}
+#tools .section .title h3 {color: #333333; float: left; font-size: 1.0833em; margin: 0; padding: 0;}
+#tools .section ul.page li {clear: left; float: left; width: 94%; }
+#tools .section ul.page .sub-item { margin-left: 15px; }
+#tools .section ul .sub-item a { font-weight: normal; color: #2790CE; }
+#tools .section ul.page li a { /*width:100%;*/  word-wrap: break-word; -ms-word-wrap: break-word; word-break: break-word; -webkit-hyphens: auto;  -moz-hyphens: auto;  hyphens: auto; }
+
+#tools .section ul.year li {clear: none; width: 85px;}
+#tools .section ul.year a {/* width:90%; */}
+#tools {width: 200px; float:left;}
+#tools ul li.returnLink {
+    border: 0 none;
+    width: 175px;
+}
+
+.sysChrome .contentTitle .aside {
+	width: 44% !important;
+}
+
+#tools ul li.returnLink a {
+    background: url("/sites/all/themes/vsrs/images/iconSprites.gif") no-repeat scroll -5px -2588px transparent;
+    color: #006193;
+    font-weight: bold;
+    padding-left: 15px;
+    width: 180px;
+}
+
+.prevNext {text-align: center;}
+.prevNext a {padding-left: 10px;}
+
+
+#year
+{
+	//min-height:154px;
+}
+.year
+{
+
+//display:block;
+	
+
+ //padding-left:6px;
+ //padding-right:6px;
+//padding-top:20px;
+//border-top:none!important;
+
+
+}
+
+#tools ul
+{
+	padding-top:14px;
+	padding-bottom:14px;
+}
+
+#tools
+{
+	padding-left:20px;
+}
+
+#tools #miniPageNav 
+{
+	padding-bottom:14px;
+}
+.content .title
+{
+	float:left;
+	padding-top:8px;
+	border:none!important;
+}
+
+#tools .section ul.page li a
+{
+	font-weight:normal!important;
+	color:#2790CE;
+}
+
+
+
+
+.results td a { color:#00496B; font-weight:normal; }
+
+thead{background: url("/sites/all/themes/vsrs/images/chrome/elements-bg.png") repeat-x scroll left top #FFFFFF;
+    border-color: #80A2A7;}
+thead th { background:none!important;}
+
+ #titleBar #heading{
+    border-bottom: 1px solid #C6C6C6;
+}
+#titleBar #heading {
+    border-top: 5px solid #023253;
+    font-size: 1.92em;
+    font-weight: normal;
+    margin: 0;
+    padding: 16px 18px;
+    width:937px;
+    overflow:hidden;
+    line-height:0.8em;
+}
+#titleBar {
+    height:auto!important;
+    overflow:hidden!important;
+}
+
+
+#tools .section ul {
+     width:171px;
+    float:left;
+}
+
+/**/
+
+/*.page-defralex-lists #tools .section .title h3 { width: 155px;}*/
+.page-defralex-lists h3 a{text-decoration: none; font-size: 1.0833em; color: #ccc;}
+.page-defralex-lists h3 a.expandCollapseLink.close{ color: #333; background: url(../../images/chrome/arrow-open.png) no-repeat 0px 4px;}
+#tools .section {width: 183px;}
+.page-defralex-lists h3 a.expandCollapseLink {display: block; padding-left: 16px; background: url(../../images/chrome/arrow-close.png) no-repeat 0px 4px;}
+
+.page-defralex-lists #tools .section .title { padding: 4px 5px 4px 0px; }
+
+.help-icon { text-align: right}
+
+.help-icon img {margin-top: 3px;}
+#tools .section.close { border-top: 3px solid #0066CC; float: left;}
+#tools .section {border-top: 3px solid #CCC; float:left;}
+
+#tools .section  div.label a{ 
+	word-wrap: break-word;
+}
+
+#tools .section .extent  li {margin-bottom: 5px;}
+
+#tools .section .extent div.label a{ 
+	/*background: #663366;
+	color: #FFFFFF;
+	border-radius: 37px; 
+		-moz-border-radius: 37px; 
+		-webkit-border-radius: 37px; 
+	border: 2px solid #663366;
+	width: 100px;
+	display: inline;
+	float: left;
+	text-align: center;*/
+}
+
+#tools .section .extent div.label div{ width: 80px; text-align: center; }
+#tools .section .extent div.label a{color: #FFFFFF; text-decoration: none;}
+
+#tools .section .extent div.data-count{ display: inline; float: left;}
+#tools .section li a { text-decoration: none; word-wrap: break-word;}
+
+
+#tools .section a.helpItem,
+#tools .section  a.expandCollapseLink {display: block; float: left; text-align: left; font-weight: bold; padding-right: 2px; padding-top: 0px;}
+
+.defra-pagination ul li{display: inline; list-style: none;}
+.defra-pagination ul li.next-last{padding-left: 10px;}
+.defra-pagination ul li.active a{ color: #494949; font-weight: bold;}
+
+div#defraBannerLogo {
+    float:left;
+    width:210px;
+    padding-top: 5px;
+}
+
+div#defraBannerText {
+    float:left;
+    width:730px;
+    padding-top: 5px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+div#defraBannerText p {
+    color: #666;
+    font-size: 1.15em;
+}

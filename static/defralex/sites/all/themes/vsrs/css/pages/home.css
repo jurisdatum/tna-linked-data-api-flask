@@ -1,0 +1,18 @@
+.page-homepage .pane-quicktabs-homepage-tabs {padding: 0 0 16px 0;} /* Even out block heights */
+.page-homepage ul.tabs-interface li {width: 25%;}
+.page-homepage .quicktabs_main {padding: 8px;}
+.page-homepage #cas-login-form {padding: 0;}
+
+.page-homepage .panel-pane
+{min-height: 20em;}
+
+
+/* Column layout tidying */
+.page-homepage .panels-flexible-2-middle {padding-left: 8px;}
+.page-homepage .panel-pane {margin: 8px 0;}
+
+/* Remove titlebar */
+.page-homepage #titleBar {display: none;}
+
+/* Neaten the column */
+.page-homepage #content {min-height: 22em;}

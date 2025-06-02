@@ -1,0 +1,236 @@
+#edit-categorisation .form-item {display: block; float:left; width:65px;}
+
+/* Categorisation styles */
+#edit-categorisation {min-height: 200px; position:relative;}
+#edit-categorisation .form-item {display: block; float: left; margin: 0 0.8em 0 0; width: 7.5em; text-align: right;}
+#list1,#list2,#list3,#list4 {clear:both;}
+#edit-categorisation .fieldset-wrapper>.form-item label {width: 20%; display: inline-block;}
+#edit-categorisation select {margin: 5px 0 0;  min-width: 360px; max-width: 360px; overflow: hidden;}
+
+#edit-categorisation hr {border: none;} /* CMS adds in <hr> remove from view */
+
+	/* Checkboxes underneath select elements are in an equal column throughout design */
+	#edit-categorisation-fillinfolater,
+	#edit-details-fillinfolater,
+	#edit-revoke-fillinfolater { padding-left: 8em; padding-top: 1em;}
+	#edit-revoke-fillinfolater { border-top: 1px solid #CCCCCC; }
+
+/* Defralex details */
+#edit-details-fieldset .form-text {margin-top: 0.4em} /* equal spacing with the radio buttons */
+#edit-details-fieldset label {margin-top: 0.25em;}
+#edit-details-fieldset .fieldset-wrapper > label,
+#edit-details-fieldset hr + label {margin-top: 0.25em; margin-bottom: 0.25em; font-size: 1.1em;}
+
+	/* Regulator/delivery body checkboxes*/
+	#edit-reg-del-body label {margin-top: 0;}
+
+/* Revoke information */
+#edit-specify a.preview {float: right;}
+.leg-year {clear:left;}
+.leg-year, .leg-title, .leg-number {float:left; color: #00464F; font-weight: bold; margin-right: 8px;}
+.leg-year, .leg-number {width: 55px;}
+.leg-url, .leg-type {float:left; margin-right: 5px; display: none !important;}
+#edit-revoke-information .legislation-item-container .legislation-item .form-item {margin: 0.25em 8px 0 0}
+
+.legislation-item-container { width:100%;}
+
+#edit-extent-information 
+{
+	padding-bottom:10px;
+	padding-top:10px;
+	float:left;
+	width:100%;
+}
+
+
+.extent-information
+{
+	height:17px;
+	padding-top:10px;
+}
+
+.information .form-item-eureference 
+{
+	clear:both;
+	display:block; /* please don't put !important; as this needs to be invisible sometimes */
+	margin-top:5px;
+	
+}
+
+
+.edit-key-legislative-contents
+{
+	padding-top:20px;
+}
+
+.edit-reg-del-body
+{
+	padding-top:20px;
+}
+
+#edit-key-legislative-contents
+{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+
+.Policyarea,.Level3,.Level2,.Level1
+{
+	padding-top:12px;
+}
+
+label.edit-extent-information
+{
+	padding-top:10px;
+}
+
+#overlay {z-index: 1000; background: #fff; position: absolute; height: 100px; width: 100px;}
+
+#message-container {width: 100%; z-index: 20000; }
+.message {background: #70F982; color: #000; padding: 10px; font-size: 1.1em; font-weight: bold;}
+.message.error {background: #F76F6F;}
+
+#edit-parent-act .fieldset-wrapper {margin-bottom: 10px; /*border-bottom: 1px dotted #ccc; */}
+
+#edit-revoke-information .fieldset-wrapper {margin-bottom: 10px; }
+
+#bundle-id {display: none;}
+.button.delete {color: #660000;}
+.content fieldset a.button {margin: 8px 0; float: left; clear: left}
+.content  .legislation-item-container a.button {margin-right: 0}
+.legislation-item-container {margin-bottom: 10px; float: left; margin-top: 10px; overflow: auto; }
+.legislation-item-container .legislation-item {overflow: hidden; clear: left;}
+.legislation-item a, .legislation-item button {float:left;}
+a.preview {float:left; display: none;}
+a.add {float: right;}
+input.legislation-item-container {margin-left: 0; float: left;}
+.legislation-item-container label {float: left; margin-top: 6px; margin-right: 10px}
+.information .form-item,
+.information .form-actions {margin-bottom: .8em; margin-top: 0}
+
+.spinner {float: left; width: 20px; height: 24px; margin: 12px 3px;}
+
+.fieldset-wrapper {position: static !important}
+/*.add-to-list {display: none;} */
+
+/* move to autocomplete css */
+.ui-menu .ui-menu-item a {
+	font-weight: normal;
+}
+
+#edit-parent-act
+{
+	width: auto;
+}
+
+#edit-legislation-source
+{
+	clear:both;
+	padding-top:10px;
+	padding-bottom:10px;
+	
+}
+.extent-information { float:left;}
+
+#edit-extent-information
+{
+	padding-bottom:10px;
+}
+
+#titleBar h1 a {padding-left: 20px; font-size: 0.6em;}
+
+body.page-defralex-management #titleBar h1 a  { font-size: 0.8em;}
+
+.page-registration-submission hr { clear:both;margin-top: 0px !important; margin-bottom: 0px !important; }
+.page-registration-submission .form-item-edit-eureference { margin-top: 0 !important; }
+.page-registration-submission #edit-reg-del-body { margin-bottom: 1em; }
+.page-registration-submission #edit-key-legislative-contents .form-type-checkbox { width: 49%; vertical-align: top; }
+.page-registration-submission #edit-reg-del-body .form-type-checkbox { padding-top: 5px; width: 49%; height: 2em; vertical-align: top; }
+.page-registration-submission #edit-reg-del-body .form-type-checkbox label { display: block; position: relative; top: -1.5em; width: 88%; left: 25px; }
+.defra-list #edit-reg-del-body .form-type-checkbox label { display: block; position: relative; top: -1.5em; width: 88%; left: 25px; }
+
+
+#edit-categorisation select {width:360px; }
+
+#edit-revoke-add {width: 90%;display: inline-block;}
+
+#edit-revoke-information
+{
+	min-height:197px;
+}
+
+#edit-categorisation
+{
+	min-height:120px;
+	
+}
+
+
+#defralex-lists-management .sysChrome .contentInner
+{
+	
+	padding: 0 7px 20px!important;
+	float:left!important;
+}
+
+#defralex-lists-management .p_two 
+
+{
+    float:right;
+	margin-right:14px!important;
+	
+}
+
+#defralex-lists-management .p_one
+{
+	margin-left:-4px;
+	margin-right:12px;
+}
+
+#defralex-lists-management .sysChrome .contentInner fieldset 
+{
+	    margin: 0 0 15px!important;
+}
+
+.defra-list #tools
+{
+	padding-top:47px;
+	    background: url("/sites/all/themes/vsrs/images/chrome/elements-bg.png") repeat-x scroll left top #FFFFFF;
+            padding-left:0px;
+}
+
+.defra-list #results thead { background-color: #EBF0F2; }
+
+
+#edit-parent-act 
+{
+	width:505px!important;
+}
+
+#edit-revoke-fillinfolater { clear:both; }
+#edit-revoke-add-dummy { display:none; }
+
+	
+/* Management input boxes hidden  */
+
+
+.managementbox { background:#EEF2F4;}
+.managementbox {border:none;}
+
+
+
+#edit-details-fieldset .pirlabel { clear:both;}
+#edit-details-fieldset #reviewdate { padding-bottom:15px;}
+#edit-details-fieldset .fieldset-wrapper { margin:0px;}
+#pirdate,#sunsetdate,#reviewdate { margin-top:0.6em; margin-bottom:0.6em; }
+#edit-details-fieldset label.origin-extent { margin-top:1.5em;}
+.form-type-checkbox { float:left; }
+#edit-key-legislative-contents.form-checkboxes label {   float: left;     margin-left: 5px; margin-top:0px;    width: 88%;}
+
+#edit-key-legislative-contents.form-checkboxes .form-checkbox.key_legislative_contents { float:left;}
+
+#edit-key-legislative-contents .form-item {float:left; min-height:3.5em;}
+#edit-origin-information { float:left; width:100%; margin-bottom:10px;}
+#defralex-lists-management .form-type-checkbox { min-height:40px; height:auto;}
+

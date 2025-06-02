@@ -1,0 +1,81 @@
+/* Base class - use to add button styling.
+ * The default element is a button, additional elements, such as <a>, <input>, etc.
+ * are detected through selectors
+ **/
+
+	/* Set margins */
+	.button {border: 0; padding: 0; cursor: pointer; min-width: 54px; }
+	.button span {display: block; white-space: nowrap;}
+	a.button,
+	span.button {display: inline-block;}
+	
+	/* Browser specific targetting (aside from IE) */
+		
+		/* overrides extra padding in Firefox */
+		.button::-moz-focus-inner {border: none;}
+		
+		/* Safari and Google Chrome only - fix margins  */
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+			button.button span {margin-top: -1px;}
+		}	
+	
+	/* Default look and feel */	
+			
+		/* Controls the size of the button */
+		.button span {padding: 8px 0 10px 15px; margin-right: 15px; line-height:18px;}
+
+	/* Additional classes that restrict to a fixed width*/
+	.fButton {text-align: center;}
+	.bWidth80 {width:80px}
+	.bWidth150 {width:150px}
+	
+	/* Icon layout - only add spacing for the icon when a class is added along with the .button class */
+	.button.next .icon {padding-right: 15px;}
+	.button.prev .icon {padding-left: 15px;}	
+	
+	.ready .icon,
+	.inProgress .icon,
+	.taskComplete .icon,
+	.taskNotReq .icon,
+	.taskUnassign .icon,
+	.taskAssign .icon,
+	.taskInProgress .icon,
+	.taskReturned .icon,
+	.taskPending .icon,
+	.taskComplete .icon {padding-right: 20px; white-space:nowrap}
+	
+	.button .taskComplete .icon,
+	.button .taskNotReq .icon,
+	.button .taskUnassign .icon,
+	.button .taskAssign .icon,
+	.button .taskInProgress .icon,
+	.button .taskReturned .icon,
+	.button .taskPending .icon,
+	.button.ready .icon,
+	.button.inProgress .icon,
+	.button.taskComplete .icon,
+	.button.taskNotReq .icon,
+	.button.taskUnassign .icon,
+	.button.taskAssign .icon,
+	.button.taskInProgress .icon,
+	.button.taskReturned .icon,
+	.button.taskPending .icon {padding-right: 18px; white-space:nowrap}
+
+/* [alpha stage] Alternative button style = Rounded buttons using CSS3, use this class instead of .button */
+.button_css3 
+{display: inline-block; outline: none; cursor: pointer; text-align: center; text-decoration: none; padding: .5em 2em .55em; 
+text-shadow: 0 1px 1px rgba(0,0,0,0); -webkit-border-radius: .25em; -moz-border-radius: .25em; border-radius: .25em; 
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); box-shadow: 0 1px 2px rgba(0,0,0,.2);}
+
+.button_css3:hover {text-decoration: none;}
+.button_css3:active {position: relative; top: 1px;}
+/* End Rounded buttons using CSS3 */
+
+/* inline list fix */
+ul.inlineList li a.button:hover strong {background-color:  transparent; color: #06c}
+ul.inlineList li a.button strong {background-color:  transparent; color: #666}
+
+/* Temporary IE fix @TODO move into IE file later */
+*:first-child+html button.button span {margin-top: -1px; margin-bottom: -3px;}
+
+

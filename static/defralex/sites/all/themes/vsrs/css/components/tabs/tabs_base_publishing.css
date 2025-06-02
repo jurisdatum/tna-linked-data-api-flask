@@ -1,0 +1,15 @@
+.html ul.tabs {border-bottom: 1px solid transparent; padding: 0; padding-top: 10px; margin-top: 0;}
+.html ul.tabs li {border: 1px solid transparent; border-bottom: none; margin-top: 0.4em; font-size: 1.1em;}
+ul.tabs li a {padding: 0;}
+
+/* Regular/disabled tabs */
+ul.tabs li .tab
+{font-size: 1em; font-weight: bold; line-height: 1.4em; font-size: 1em; padding: 0.5em 0 0.4em 14px; display: block; float: left;}
+
+/* Active tab */
+ul.tabs li.active {margin-top: 1px; margin-bottom: -1px; font-size: 1.25em; }
+ul.tabs li.active span.tab {padding: 0.5em 35px;} 
+
+/* Interface tabs */
+.interface ul.tabs li {margin-left: 18px;}
+.interface ul.tabs li .tab {padding: 0.5em 25px 0.5em 35px;}

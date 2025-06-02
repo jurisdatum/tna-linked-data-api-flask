@@ -1,0 +1,22 @@
+#content.sysChrome {background: #fff;}
+
+.sysChrome .contentSurround {border-color: #7FA2A7;}
+
+.sysChrome .content {background: none; border-color: #7FA2A7;}
+
+.sysChrome .legTitle {color: #00252A;}
+.sysChrome .legType {color: #CECCD0}
+
+.sysChrome .contentTitle {border-color: #7FA2A7; background-color: #EBF0F2}
+
+.sysChrome .contentInner {background: #fff url(/sites/all/themes/vsrs/images/chrome/elements-bg.png) repeat-x top left; border-color: #80A2A7;}
+.sysChrome .contentInner span.icon {background: url(/sites/all/themes/vsrs/images/chrome/sysChrome-contentInner-arrowIcon.png) no-repeat top left;}
+
+.sysChrome .contentInset,
+.sysChrome .contentInner fieldset
+ {border-color: #CBD9DB; background-color: #EEF2F4;}
+
+
+/* Boxes above the content surround */
+.sysChrome .blocks .block {border-color: #80A2A7}
+.sysChrome .make-selection.blocks .block {border-color: #80A2A7;}

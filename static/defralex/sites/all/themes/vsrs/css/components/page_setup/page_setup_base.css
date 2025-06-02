@@ -1,0 +1,581 @@
+/*
+ * Base CSS for legislation sites
+ */
+
+/*---------------
+1. Body & basic typography
+---------------*/
+body {font: normal normal normal 75%/1.5em 'Arial', 'Garuda', sans-serif; margin: 0; background: #fff}
+
+#preloadBg {display: none;}
+
+/* reset margins and padding on the following items */
+ul#primaryNav, ul#secondaryNav, ul#bookmarks, ul.linkList, ol.linkList, img, div 
+{margin: 0; padding: 0;}
+ul.accessibleLinks {margin-bottom: 0; margin-top: 0;}
+img {border: 0;}
+/* end of margin reset */
+
+ul {margin:0.5em 0;}
+h1 {font-size: 2.1em;  line-height: 1.2em; margin:0 0 0.5em 0;}
+h2, h3, h4, h5, h6, p, ul, ol, dl, table, div.contentItem, address {margin-bottom: 0.25em;}
+h2 {font-size: 1.3em; font-weight: bold; margin: 0.5em 0 0.25em 0; line-height: 1.4em; font-weight: 900}
+h3, h4, h5 {font-weight: 600; margin: 0; line-height: 1.2em;}
+h3 {font-size: 1em;}
+em {font-style: italic;}
+strong {font-weight: bold;}
+p {}
+address {font-style: normal;}
+pre, code {font-size: 1.2em;}
+
+h2 strong {font-weight: 800; font-size: 1.15em;}
+
+a {line-height: 1.4em; text-decoration: none; color: #069;}
+a:hover {text-decoration: underline;}
+
+form button {margin:0; padding: 0; font: 1em/1.5em 'Arial','Garuda',sans-serif; font-weight: bold;}
+dl {display: block;}
+dt {font-weight: bold; float: left; clear: left; margin-right: 0.5em; line-height:1.4em;}
+dd {line-height:1.4em; margin-bottom: 0.5em;}
+
+table, tr {border: none; border-collapse: collapse; width: 100%;}
+caption {text-align: left; margin-bottom: 0.5em;}
+td, th  {border: none; padding: 0.5em; text-align: left; background: #FFF;}
+tr.oddRow td, li.oddRow {background: #F1F1F1}
+table th a {color: #494949;}
+
+del {text-decoration: line-through;}
+
+
+/*---------------
+2. Page furniture
+---------------*/
+
+/* Setting page furniture */
+#header {background: #FFF; /* this needs to be set for IE*/ min-height:7.5em; display: block; width:970px; margin: 0 auto;}
+#background {height: 22em; display: block; clear: left;}
+#layout1 { background: #fff; display: block;}
+#layout2 {margin: 0 auto; background: #fff;  height: 100%; width: 970px; display: block; background: #fff; margin-top: -22em; min-height: 22em; border: 1px solid #fff; border-top: 0;}
+#content {min-height: 16.1em}
+#interfaceOptionsNonJs,
+#footer {clear: both; width: 970px; margin: 0 auto;}
+#loginBar {width: 100%; min-width: 970px; background: #4a4a4a url(/images/participation/chrome/loginBarBg.gif) repeat-x bottom left;}
+/* end of setting page furniture */
+
+/* Begin accessible links */
+.accessibleLinks li a, .accessibleText, #interfaceOptionsNonJs h2 {position: absolute !important; left: -999em; float: left; overflow: hidden; }
+.accessibleLinks a:focus, .accessibleLinks a:active {margin-left: 18px; width: 958px; position: static; text-align: center; padding: 10px 0; background: #FFF36F; display: block; color: #000; float: left; border: 1px solid #FFB82F; font-weight: bold;} 
+.accessibleLinks li { margin: 0; display: inline; float: left; width: inherit;}
+/* End accessible links */
+
+#header .siteTitle {display: block; height: 88px; width: 295px; overflow: hidden; position: relative; margin: 0; float: left;}
+.siteTitle span {display: block; position: absolute; left: 0; top: 0; height: 100%; width: 100%;}
+
+/* Primary navigation */
+#primaryNav {background: #FFF url(/images/chrome/navBg.gif) repeat-x bottom left; clear: both; width: 100%; min-width: 972px; border-top: 1px solid #424240; float: left; border-bottom: 1px solid #fff;}
+#primaryNav .container {position: relative; float: none; margin: 0 auto;width: 970px; margin: 0 auto; display: block;}
+#primaryNav ul {display: block; margin: 0; margin-left: -1px; padding: 0; float: left; width: 973px; background: url(/images/chrome/navDivider.gif) no-repeat bottom left;}
+#primaryNav ul li 	{background: url(/images/chrome/navDivider.gif) no-repeat bottom right; list-style: none; margin: 0; padding-right: 2px; float: left;} /* removed display:inline to prevent FF3.0 from misaligning first element */
+#primaryNav ul li a	{color: #0D2840; font-weight: bold; text-decoration:none; font-size: 1.15em; line-height: 2em;}
+#primaryNav ul li#quickSearch a.active {border-top: 2px solid #CCC; color: #000;}
+#primaryNav a {float:left;text-decoration:none; padding:5px 12px 4px 13px;}
+#primaryNav a span {float:left;display:block; cursor: pointer }
+#primaryNav li#quickSearch {float: right;}
+#primaryNav li#quickSearch a {background: url(/images/chrome/navDivider.gif) no-repeat bottom left;}
+.js #primaryNav li#quickSearch a span {background: url("/images/chrome/iconSprites.gif") no-repeat right -398px; padding-right: 22px;}
+.js #primaryNav li#quickSearch a.close span {background-position: right -298px}
+
+/*
+ * Login bar
+ */
+#loginBar .login {float:right; width: 50%;}
+#loginBar .login dl {float: right;}
+#loginBar .login dd {margin-left: 1.5em;}
+#loginBar a {color: #fff; }
+#loginBar {width: 100%; min-width: 970px; background: #4a4a4a repeat-x bottom left;}
+#loginBar dd.security-level { position: relative;}
+#loginBar dd.security-level.insecure {background-position: 0 -25px;}
+#loginBar dd.security-level div {width: 21px; height: 27px; position:absolute; top: 5px; left: 15px; z-index: 2000;}
+#loginBar .container {float: none; width: 970px; margin: 0 auto; font-weight: bold; color: #fff; font-size: 1.16em; overflow: hidden;}
+#loginBar dl {margin: 0; display:inline;}
+#loginBar dd {display: inline-block; margin: 0; padding: 3px 10px 3px 40px; }
+#loginBar .insecure dd.security-level {padding: 3px 30px;}
+
+
+#loginBar dd.username {float: left; margin-right: 20px;}
+#loginBar dd.logout {}
+
+
+/* Search bar */
+#contentSearch { background: #DEDEDE; float: left; overflow: auto; padding: 6px 10px 5px 10px; float: none; margin: 0 auto; border-bottom: 1px solid #CCC}
+/* NOTE: the title is for accessibility only, not dependent on JS */
+#contentSearch h2 {position: absolute; left: -5000px;}
+#contentSearch label {display: block; height: 1.8em; float: left; padding-top: 0.35em;}
+#contentSearch label em {display: none;}
+#contentSearch input {width: 50%; float: left; margin-left: 5px;}
+#contentSearch div {float: left; margin-right: 0.25em}
+#contentSearch div.title {width: 31%;}
+#contentSearch .title input {width: 83%;}
+#contentSearch .type select {float: left; margin-left: 5px;}
+#contentSearch .process {width: 33%;}
+#contentSearch #process{min-width: 82%;}
+#contentSearch .year{width: 11%;} 
+#contentSearch .number {width: 15%;}
+#contentSearch .submit {float: right;}
+#contentSearch .advSearch {padding-top: 0.5em; font-weight: bold; font-size: 1.2em; margin-right: 0; clear: both; float: none; text-align: right;}
+#contentSearch .advSearch {display: none} /* Temp hide until required */
+#contentSearch .advSearch a {color: #03395D; background:transparent url(/images/chrome/iconSprites.gif) no-repeat scroll right -3946px; margin-right: 12px; padding-right:10px;}
+input {border: 1px solid #7B85AD; padding:5px 3px; background: #fff url(/images/chrome/home_form_shadow.gif) no-repeat top left;}
+select {border: 1px solid #7B85AD; padding:5px 3px 5px 1px; background: #fff url(/images/chrome/home_form_shadow.gif) no-repeat top left;}
+/* end of search bar */
+
+/* Footer begin */
+#footer {position: relative;}
+#footer .container {padding: 10px 0;}
+#footer .altFormats {width: 39%; position: absolute; right: 0; top: 10px; padding-right: 6px;}
+.altFormats p {text-align: right}
+.altFormats ul {float: right; list-style: none; padding: 0 6px 0 0; font-size: 0.95em; margin: 0;}
+.altFormats li {float: right; margin: 0; padding: 0 0 0 10px;}
+/* end of footer */
+
+/* Default non-JS element widths */
+.interfaceOptionsHeader {width: 966px; margin: 0 auto;}
+/* end of Default non-JS element widths */
+
+/*---------------
+3. Block/grid layout 
+
+   - based on a 960px grid layout
+---------------*/
+
+/* Sections begin 
+   .section defaults to a curved corner if the appropriate spans are available. If not then a normal square corner is applied.
+*/
+
+/* section styles */
+.section  {margin-top: 5px; display: block; margin: 0; margin: 0; padding: 0 0 0 0;}
+.section .title {padding: 4px 5px 4px 7px; margin:0; color: #023A5B; display: block;}
+.section .title h2 {color: #023A5B;} /* Homepage only */
+
+#tools.section .title h2, 
+#tools .section .title h3 {margin: 0; padding: 0; font-size: 1.15em; color: #333; display: inline;}
+.section .content {padding-top: 4px;}
+.section p, .section ul, .section ol {padding: 0 10px; margin: 0 0 10px 0;}
+.section p.advSearch {padding: 0 12px; }
+.section {padding: 0 1px;}
+#search .info, 
+#browse .info,
+.searchResults .info {background: #fff url("/images/chrome/navBgShadow.png") repeat-x left bottom; padding: 10px;}
+/* sub sections */
+.content .title {border-top: 1px dotted #CCC}
+.content .section {border: none; margin-bottom: 0;}
+.content .section ul {margin: 0}
+/* end sub sections */
+/* end of section styles */
+
+/* positioning issues */
+.container {float: left;margin: 0; padding: 0; width: 100%;}
+.p_one 	{clear: both; float: left;}
+.p_two  {float: left;}
+.p_three{float: right;}
+/* end of positioning issues */
+
+/** COLUMN DEFINITIONS 
+ *  100% grid with 1% margin each side
+ *  Each column has 0.9% marg + 6.45 % width + 0.9% width
+ *  When adding cols together use additional 0.08% margin in case borders were added to give width of 8.33%
+ *  Two cols width are therefore 8.33% (in case of borders) plus 8.25% minus column gutter    
+ */
+.p_one, .p_two {margin-right: 0.75%;}
+.p_one {margin-left: 0.5%;}
+.p_three {margin-right: 0.5%}
+.p_last {margin-right: 0} /* the last column should have no margin */
+.s_1  {width: 7.25%}
+.s_2  {width: 15.58%} /* 8.33(n-1) + 8.25 - 1 */
+.s_3  {width: 23.91%}
+.s_4  {width: 32.24%}
+.s_5  {width: 40.57%}
+.s_6  {width: 50.1%} /* round the larger columns up to narrow the gap for 2 columns */
+.s_7  {width: 58.43%}
+.s_8  {width: 66.76%}
+.s_9  {width: 75.09%}
+.s_10 {width: 83.42%}
+.s_11 {width: 91.75%}
+.s_12 {width: 99%}
+/* end of column definitions */
+
+/* Legislation UI removed from stylesheet as has planned rework */
+
+/* General layouts */
+.pageTitle, 
+#content {background: #FFFFFF; margin: 0; padding: 10px;}
+#content .innerContent {margin: 10px;} /* use this pattern to prevent box expanding */
+/* End of general layouts */
+
+/* Definition List layouts */
+
+.defList {width:auto; margin:0; padding:0 0.5em 0 0.5em}
+.defList div dt, .defList div dd {padding-bottom:0.5em; vertical-align:top}
+.dl_2Col div {width:50%}
+.dl_3Col div {width:33%}
+.dl_4Col div {width:25%}
+.dl_5Col div {width:20%}
+
+/* End of Definition List layouts */
+
+/*---------------
+4. UI view
+
+Removed from basic CSS sheet for layout purposes. Split between layout and colouring.
+---------------*/
+
+
+/*---------------
+5. JS Elements 
+   - based on a 960px grid layout
+---------------*/
+
+/* Modal Windows */
+.modWin {width: 600px; border: 5px solid #006599; background: #FAFAFA; margin-top: 30px; clear: both; margin-left: auto; margin-right: auto;}
+.js .modWin {display: none;}
+.modWin .title {padding: 1em 30px 0 30px;}
+.modWin .content {padding: 0 30px 1.5em 30px; margin: 0 0 0 0; background: url(/images/chrome/navBgShadow.png) no-repeat bottom left;}
+.modWin h3 {font-size: 1.7em; font-weight: bold; color: #666;}
+.modWin p {font-size: 1.2em;color: #666; line-height: 1.6em;}
+.modWin .interface {float: none;}
+.modWin .interface ul {width: 100%;}
+.modWin li.cancel {float:left; margin-left: 10px;}
+
+.modWin li.continue {float: right;}
+.modWin .interface .userFunctionalElement {padding: 4px 8px;}
+
+/* Individual modal window styles */
+.pdfWarningTitle {margin-left: -12px;}
+.pdfWarningTitle h3 {background: url(/images/chrome/iconSprites.gif) no-repeat 5px -1000px; padding-left: 60px; min-height: 55px; }
+.webWarningTitle h3 {background: url(/images/chrome/iconSprites.gif) no-repeat 0 -1950px; padding-left: 60px; min-height: 55px; }
+.openingWholeWarningTitle h3 {background: url(/images/chrome/iconSprites.gif) no-repeat 0 -700px; padding-left: 60px; min-height: 55px; }
+.openingWholeWithoutSchedulesWarningTitle h3 {background: url(/images/chrome/iconSprites.gif) no-repeat 0 -801px; padding-left: 60px; min-height: 55px; }
+.openingSchedulesOnlyWarningTitle h3 {background: url(/images/chrome/iconSprites.gif) no-repeat 0 -900px; padding-left: 60px; min-height: 55px; }
+/* end of modal windows */
+
+/*---------------
+7. Misc. ID & Class typography
+---------------*/
+
+.plainList {list-style: none; padding: 0; margin-left: 0; clear: left;}
+.plainList li {list-style: none;}
+
+/* Header items {*/
+#header h1 {line-height: 1.2em; margin: 10px 10px 20px 10px; display: block; float: left;}
+/* end of header items */
+
+.sci h1 {padding: 8px 9px 0 11px;}
+
+.searchResults dt {font-weight: bold; display: inline; float: none; clear: none;}
+.searchResults dd {display: inline;}
+
+/* Help icons */
+a.helpItem {padding-left: 0.25em;}
+a.helpItem img {vertical-align: middle; margin-bottom: 1px;}
+
+ul#legSubNav .help a {background:none}
+ul#legSubNav .help span {background:none}
+ul#legSubNav .helpItem {right: 0px; background:none; padding: 0; display:block; float:left}
+ul#legSubNav li a.helpItem {border: none; background: none; padding: 0.65em 0.5em 0 0.5em;}
+
+#legSubNav #enTab a.helpItem img {right: -5px;}
+
+#tools .helpItem {margin-left: 0.35em;}
+/* end of help icons */
+
+/* Begin misc classes */
+p.advSearch {text-align: right;}
+.jsHiddenText {display: inherit}
+.jsShownText  {display: none;}
+.js .jsHiddenText {display: none;}
+.js .jsShownText {display: inherit;}
+.htabs a {border-bottom: 1px solid #CCC}
+.htabs a:hover {background: #fff; color: #069; text-decoration: underline}
+.legResources .htabs li {margin-bottom: -1px; }
+.legResources .htabs .active,
+.htabs .active {background: #fff; border-bottom: 1px solid #FFF}
+/* end misc classes */
+
+/* Link list layout */
+ul.linkList, ol.linkList {margin-bottom: 1em;}
+ul.linkList li, ol.linkList li {list-style: none; margin: 0; padding: 0 0 0.35em 0;}
+ul.linkList li a, ol.linkList li a {display: inline;}
+/* End of link list layout */
+
+/* View more links */
+ul.linkList li.viewMoreLink, ol.linkList li.viewMoreLink, p.viewMoreLink {border: 0; font-weight: bold; padding-top: 1em;}
+p.viewMoreLink {clear: left;padding-bottom:0.75em;padding-top:0;}
+/* End of view more links */
+
+/* special case content item */
+.noBorder {border: 0;}
+.noBorder ul.linkList {padding: 0;}
+/* end of special case content item */
+
+/*---------------
+8. Misc. Sections
+These sections are large enough to contain their own subsection but are not generic to one section of the site.
+---------------*/
+.subscribe a .background {background: url(/images/chrome/iconSprites.gif) no-repeat 100% -4547px; padding-right: 16px; display: block;}
+
+ul.docLinks li {background: url(/images/chrome/iconSprites.gif) no-repeat -6px -4150px; padding-left: 16px;}
+span.pageLinkIcon {background: transparent url(/images/chrome/iconSprites.gif) no-repeat 100% -3546px; height: 12px; width: 8px; display:inline-block}
+
+/* Table sorting - asc arrows points up, desc arrow points down */
+table a.sortAsc, 
+table a.sortDesc, 
+table span.sortAsc,
+table span.sortDesc   {background: url(/images/chrome/tableSortIcons.gif) no-repeat 0 2px; padding-left: 16px;}
+/*table span.sortAsc:hover,  !IMPORTANT DO NOT USE THIS RULE - causes massive rendering hit to IE 7 & 8*/
+table a.sortAsc:hover{background-position: 0 -98px; color: #069}
+table a.sortAsc:hover, table a.sortAsc.active:hover, table a.sortDesc.active {background-position: 0 -98px; color: #069}
+table a.sortDesc:hover, table a.sortDesc.active:hover, table a.sortAsc.active {background-position:0 -298px; color: #069}
+table a.sortAsc {background-position: 0 -198px;}
+table span.active {background-position: 0 -98px; color: #069}
+
+/*
+.userFunctionalElement {color: #666; font-weight: bold; border: 1px solid #E5E5E5; border-bottom: 1px solid #fff; padding:1px 12px 2px; position: relative; text-decoration: none; display: inline-block; text-align: center; margin-right: 9px; min-width: 3.5em; font-family: "Gill Sans / Gill Sans MT", sans-serif; margin-bottom: 0;  background:transparent url(/images/chrome/interfacebuttonSprites.gif) no-repeat scroll -1px -211px;}
+a.userFunctionalElement {cursor: pointer; cursor: hand; line-height: 1.5em;}
+.userFunctionalElement .btl, .userFunctionalElement .btr, .userFunctionalElement .bbl, .userFunctionalElement .bbr {position: absolute;  width: 8px;  height: 8px; margin: -1px;}
+.btl {background: url(/images/chrome/interfacebuttonSprites.gif) no-repeat 0 -211px;  top:    0px;  left:  0px;}
+.btr {background: url(/images/chrome/interfacebuttonSprites.gif) no-repeat 100% -211px;  top:    0px;  right: 0px;}
+.bbl {background: url(/images/chrome/interfacebuttonSprites.gif) no-repeat 0px -273px;  bottom: 0px;  left:  0px;}
+.bbr {background: url(/images/chrome/interfacebuttonSprites.gif) no-repeat -293px -273px;  bottom: 0px;  right: 0px;}
+a.userFunctionalElement:hover {text-decoration: underline}
+*/
+
+/* For blue links - all should be navigational */
+a.userFunctionalElement.nav {border: 1px solid #006599; background: url(/images/chrome/interfacebuttonSprites.gif) no-repeat -1px -71px !important;}
+.userFunctionalElement.nav .btl {background-position: 0px -70px}
+.userFunctionalElement.nav .btr {background-position: -293px -70px}
+.userFunctionalElement.nav .bbl {background-position: 0px -132px}
+.userFunctionalElement.nav .bbr {background-position: -293px -132px}
+
+/* To turn the links white when active */
+a.userFunctionalElement.close {background: #fff; color: #069}
+.interface .userFunctionalElement.active,
+.interface .userFunctionalElement.close 
+{border: 1px solid #069; background: #FFF url(/images/chrome/interfacebuttonSprites.gif) no-repeat -1px -141px !important;}
+.interface .userFunctionalElement.active .btl,
+.interface .userFunctionalElement.close .btl {background-position: 0px -140px}
+.interface .userFunctionalElement.active .btr,
+.interface .userFunctionalElement.close .btr {background-position: -293px -140px}
+.interface .userFunctionalElement.active .bbl,
+.interface .userFunctionalElement.close .bbl {background-position: 0px -202px}
+.interface .userFunctionalElement.active .bbr,
+.interface .userFunctionalElement.close .bbr {background-position: -293px -202px}
+
+button.userFunctionalElement span {display: none;}
+button.userFunctionalElement {background:#676767 url(/images/chrome/grey_button.gif) repeat-x bottom left;font-size: 1.2em; color: #fff; padding: 0.25em; border: none;}
+
+/*.interface .userFunctionalElement.active.nav {background:url(/images/chrome/interfacebuttonSprites.gif) no-repeat scroll -1px -424px transparent !important; border:1px solid #069;}
+.interface .userFunctionalElement.active.nav .btl{background-position: 0 -423px;}
+.interface .userFunctionalElement.active.nav .btr{background-position: 100% -423px;}
+.interface .userFunctionalElement.active.nav .bbl{background-position: 0 -486px;}
+.interface .userFunctionalElement.active.nav .bbr{background-position: -293px -486px;}*/
+/* button link end */
+
+/* Help aside */
+.helpAside {text-align: right;}
+
+/* Begin help boxes */
+/* reset font-sizes based on where help items are loaded */
+#layout1 #layout2 #tools .help {font-size: 96.5%;}
+
+/* Default is for a help item with arrow pointing up */
+.help {z-index:1000; text-align: left; width:500px; margin: 10px auto;}
+.js .help {position: absolute; width: 300px; margin: 0;}
+.help .content {background:#fff; border: 1px solid #20A4D4; padding: 15px; clear:both;}
+.help .close, 
+.help .icon {display: none;}
+.js .help .close {padding: 2px !important;float: right !important; margin: -15px -15px 0 0 !important; display: block;}
+.js .help .icon {background: url(/images/chrome/triangle.png) no-repeat 0 0 !important; width: 12px; height: 10px; display:block; position: absolute;}
+#statusWarning p.intro span.icon {padding: 0; display: block;}   
+
+#layout1 #layout2 .help ul {margin: 0; padding: 0 1.5em; list-style: disc outside;}
+#layout1 #layout2 .help ul * {float: none; background: none; font-weight: normal; padding: 0; line-height: 1.5em; list-style: disc outside; display:list-item}
+#layout1 #layout2 .help ul li {color: #494949}
+
+/* Pointer styles - added to XHTML by JS */
+/* Use of !important to overwrite any predexisting styles when injected by DOM */
+.helpToLeftTop {padding-right: 8px;}
+.js .helpToLeftTop .icon {top: 12.5px; right: 0; background-position: -40px 0 !important;}
+
+.helpToLeftMid {padding-right: 8px;}
+.js .helpToLeftMid .icon {top: 50%; right:0; background-position: -40px 0 !important; margin-top: -6px;}
+
+.helpToLeftBot { padding-right: 8px;}
+.js .helpToLeftBot .icon {}
+
+.helpToRightTop { padding-left: 8px;}
+.js .helpToRightTop .icon {top: 12.5px; left: 0; background-position: -26px 0 !important;}
+
+.helpToRightMid {padding-left: 8px;}
+.js .helpToRightMid .icon {top: 50%; left:0; background-position: -26px 0 !important; margin-top: -6px;}
+
+.helpToRightBot {padding-left: 8px;}
+.js .helpToRightBot .icon {}
+
+.helpToMidBot {padding-bottom: 8px;}
+.js .helpToMidBot .icon {bottom: 0 !important; right: 152px; background-position: -15px 0 !important;}
+
+.LegSnippet div.helpToMidTop,
+.helpToMidTop {padding-top: 8px; background-color: transparent;}
+.helpToMidTop .icon {top: 0; right: 144px;}
+.LegSnippet .helpToMidTop .content {font-size: 1.2em;}
+
+
+/* Create the typographic layout and overwrite any defaults carried over from the DOM injection */
+#layout1 #layout2 .help p {margin:0; font-weight:normal; padding: 0; line-height: 1.5em;}
+#layout1 #layout2 .help p + p {margin-top: 1em;} /* ignored by IE 6, slightly different looking typography */
+#layout1 #layout2 .help p b {font-size: 1em; color: #000; margin-bottom: 0.75em; margin-right: 0.25em;}
+#layout1 #layout2 .help h3 {font-size: 1.1em; color: #000; margin-bottom: 0.75em; display: block; float: none;}
+.help dl {margin-top: 0;}
+.help dd {margin: 0;}
+.help dd + dt, .help dd {margin-top: 1em;}
+.help dt {color: #000; margin-right: 0.3em;}
+/* end of help boxes */
+
+/* Modal windows */
+#printModalWin {display: none; width: 250px; background: #fff; position: absolute; }
+#modalBg {background: #000;position: absolute; height: 400px; width: 400px; display: none; top: 0; left: 0; opacity: 0.8;}
+#previewImgWin {text-align:center;}
+#previewImgWin iframe {border: 0; margin-top: 40px; border:2px solid #069; margin-top:3em;}
+#previewImgWin .title {font-size:1.6em;margin:0.25em 0.45%;padding:0;position:absolute;}
+#previewImgWin .closeLink {margin:5px;position:absolute;right:0;}
+/* end of Modal windows */
+
+/* link bgs - use the #layout1 to overide cascading where needed */
+#layout1 a.pdfLink {background: url(/images/chrome/iconSprites.gif) no-repeat 0px -1320px; padding-left: 23px; padding-top: 5px; padding-bottom: 5px}
+#layout1 a.htmLink {background: url(/images/chrome/iconSprites.gif) no-repeat 0 -1443px;  padding-left: 23px}
+/* end of link bgs */
+
+/* View PDF versions of Leg */
+#viewLegContents .downloadPdfVersion {margin-top: 1.5em; text-align: center; margin: 0 auto;}
+#viewLegContents .downloadPdfVersion a.pdfLink {padding-top: 0.25em; line-height: 3em; font-weight: bold; background: none;}
+#viewLegContents .downloadPdfVersion a.pdfLink:hover {text-decoration: none;} /* removed to stop icon link errors */
+#viewLegContents .downloadPdfVersion a.pdfLink img.imgIcon {margin-bottom: -10px; margin-left: -10px; margin-right: 5px;}
+#viewLegContents .downloadPdfVersion a.pdfLink img.pdfThumb {display: block; margin: 0 auto; width: 440px;}
+
+#viewLegContents .downloadPdfVersion span {display: block; width: 500px; text-align: center; margin:0 auto;}
+#viewLegContents .downloadPdfVersion span a.pdfLink {width: 220px; display: block; float: left; background: none;}
+#viewLegContents .downloadPdfVersion span a.pdfLink img.pdfThumb {width: 220px; float: left;}
+/* end of view PDF versions of Leg */
+
+/* Icon images - allows CSS sprites (has issues in IE6) */
+.iconImg {display: inline-block; height: 20px; margin-bottom: -3px; margin-right: 0.25em; width: 14px; background: #ccc  no-repeat top left;}
+a.iconImg {border: none;}
+
+/*---------------
+9. Z-Axis amendments
+All z-axis orders are contained in this section for easy updates.
+---------------*/
+.modWin {z-index: 4000 !important}
+#modalBg {z-index: 3999}
+.interfaceOptions {z-index:50;}
+
+#contentSearch {z-index: 38990}
+ul#navTabs li.active {z-index: 25}
+ul#navTabs li {z-index: 24}
+
+/* .LegExtentRestriction {background: #501b68; border-radius: 4px; color: #fff; font-size: 0.8em;}
+
+input[disabled="disabled"] {background: #EBEBE4;}
+
+h2.subTitle {font-size: 1.7em; margin: 0 0 0.5em;}
+ */
+
+/* A clickable element */
+.uiClickable {cursor: pointer;}
+
+.delivery_heading { font-weight:bold; }
+
+.view-id-main_si_headings.view-display-id-page {
+    padding: 20px;    
+}
+
+.view-id-main_si_headings.view-display-id-attachment {
+    padding: 15px 0 5px 59px;
+    font-size: 18px;    
+    border-top: 1px dashed #000;
+}
+
+.view-id-main_si_headings > .view-content > .views-summary > a {
+    padding: 0 5px;
+    font-weight: normal;    
+}
+
+.view-id-main_si_headings > .view-content > .views-summary:first-child > a {
+   padding: 0 5px 0 0;  
+}
+
+td.views-field-field-welsh {
+   border-left: 2px solid #ccc;
+}
+
+.view-main-si-headings > .view-filters {
+    border-top: 1px dashed #000;
+    margin-top: 10px;
+}
+
+#views-exposed-form-main-si-headings-page {
+    margin-left: -5px;
+}
+
+.heading-anchor {
+    font-size: 18px; 
+    background: #e4ebec;
+    padding-left: 20px;
+    color: #00464F;
+}
+
+.si-headings-col1 {
+    width: 6%;
+}
+
+.si-headings-col2 {
+    width: 47%;
+}
+
+.si-headings-col3 {
+    width: 41%;
+    border-left: 2px solid #ccc;
+}
+
+.si-headings-col4 {
+    width: 6%;
+    border: none;
+}
+
+.si-headings-highlight {
+    color: #f22;
+}
+
+.si-headings-highlight.larger {
+    font-size: 18px;
+}
+
+.page-main-si-headings.toolbar toolbar-drawer {
+    padding-top: 0;
+}
+/*
+.main-si-headings-header.fixed {
+    position: fixed;
+    top: 0;
+    padding-top: 5px;
+    background-color: #fff;  
+    border-bottom: 2px solid #ccc;
+}
+
+.anchor-offset {
+  display: block;
+  height: 207px;
+  margin-top: -207px; 
+  visibility: hidden;
+}
+*/

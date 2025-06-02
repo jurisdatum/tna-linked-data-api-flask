@@ -1,0 +1,59 @@
+/* Gives the application the inset line styles */
+#layout1 #content.sysChrome {padding: 0; width: 100%; float: left;}
+.sysChrome .contentSurround {border: 1px solid #000; border-top: none; clear: left; float: left; width: 98.5%; margin: 0 .75% .75%}
+
+/* Column rearrangement - compensate for smaller column area */
+.sysChrome .p_two {float: right; margin-right: 0.75%;}
+.sysChrome .p_one {clear: left;}
+
+.sysChrome .s_4 {width: 30.24%;}
+.sysChrome .s_8 {width: 64.76%;}
+.sysChrome .s_12 {width: 100%;}
+
+/* The legislation title */
+.sysChrome .legTitle {font-size: 1.8em; margin: 15px 10px;}
+.sysChrome .legType {}
+
+/* Title, usually with arrow pointing down to the content */
+.sysChrome .contentTitle {border-top: 1px solid #ccc;}
+.sysChrome .contentTitle h1 {font-size: 1.4em; margin: 0; padding: 12px 20px 10px;}
+.sysChrome .contentTitle .inlineList, .sysChrome .contentTitle .inlineTask {margin-top: 0.3em;}
+
+/* Inner content, falls beneath the title */
+.sysChrome .contentInner {padding: 0 20px 20px 20px; border-top: 1px solid #000;}
+.sysChrome .contentInner > span.icon {display: block; width: 103px; height: 24px; margin-top: -1px; margin-bottom: 0px;  margin-left: 25px;}
+
+/* Inset block */
+.sysChrome .contentInset,
+.sysChrome .contentInner fieldset 
+{border: 1px solid #000; margin: 0 0 20px 0; padding: 17px 10px;}
+.sysChrome .contentInset h2,
+.sysChrome .contentInner fieldset h2 
+{font-size: 1.25em; margin: 0}
+
+/* Next/previous button navigation */
+.sysChrome .submit {clear: both;list-style: none outside none;margin: 0;overflow: hidden;padding: 0;}
+.sysChrome .submit .prev {float: left;}
+.sysChrome .submit .next {float: right; margin-right: 0}
+
+/* subTitleContent */
+#content.sysChrome .subTitleContent {margin: 0; padding: 0; border: 1px solid #ccc; border-bottom: none; float: left; width: 98.8%; padding: 0.5%;}
+#content.sysChrome .contentSurround form.subTitleContent { padding: 1%; }
+#content.sysChrome .subTitleContent .section {border: 1px solid #ccc; clear: left; float: left; margin-right: 5px; padding: 1px 0 4px 4px; min-height: 2.8em; min-width: 30%;}
+#content.sysChrome .subTitleContent button[type="submit"],
+#content.sysChrome .subTitleContent input[type="submit"] {margin-top: 0.15em; float: left;}
+#content.sysChrome .subTitleContent button.mgmnt,
+#content.sysChrome .subTitleContent input.mgmnt
+{margin-top: 0.3em;}
+
+#content.sysChrome .subTitleContent dl {float: left; margin-top: 0.5em; margin-left: 9px;}
+#content.sysChrome .subTitleContent dt {font-weight: bold; display: inline; float: none;}
+#content.sysChrome .subTitleContent dd {display: inline; float: none; margin-left: 0.5em; margin-right: 2em;}
+	
+	/* Asides float right */
+	#content.sysChrome .subTitleContent .aside {float: right;}
+	#content.sysChrome .subTitleContent .aside.inlineList {padding: 4px 0;}
+	
+#content.sysChrome .subTitle .contentInner {clear: left; border-top: 1px solid #ccc;}
+
+.sysChrome .contentTitle.taskTitle{background-color:#192D60; margin-top: 1em;}

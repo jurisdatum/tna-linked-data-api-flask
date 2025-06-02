@@ -1,0 +1,3 @@
+/* CSS skin for UI datepicker skin */
+.ui-datepicker-trigger {background: url("/sites/all/themes/vsrs/images/PITDatePicker.gif") repeat scroll 0 0 transparent;
+    border: none; cursor: pointer; display:inline-block; margin-bottom: -5px; margin-left: 10px;}

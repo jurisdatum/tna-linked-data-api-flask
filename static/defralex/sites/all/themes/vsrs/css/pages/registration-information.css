@@ -1,0 +1,294 @@
+
+#edit-addresses-fieldset textarea {background: transparent; border:none; resize: none;}
+
+#edit-metadata dt{width: 140px;}
+#edit-metadata .form-item-made {clear:left}
+#edit-metadata .form-type-radio {float:left}
+#edit-metadata .form-disabled input, #edit-metadata .form-disabled label {color: #000;}
+#edit-metadata .form-type-textfield{float: left; width: 140px;}
+#edit-metadata .form-type-radio {width: 100px;}
+#edit-metadata #edit-local-general, #edit-metadata #edit-printed-non {clear: left;}
+
+#edit-metadata .form-item-edit-title, #edit-metadata .form-item-edit-title input {width: 100%;}
+#edit-numbers .form-type-checkbox {display: block;}
+
+
+/* Forms */
+.information .fieldset-wrapper {clear: left; margin-left: 10px; margin-right: 10px;}
+
+#edit-territorial-extent {padding: 0;}
+
+#edit-si-or-order, 
+#edit-parliamentary-control, 
+#edit-printed-non 
+{border: medium none;}
+
+.information .form-item {display: inline-block;}
+.information .form-type-radio {margin-right: 20px;}
+.form-item-edit-printed-non-0 {width: 80px;}
+
+#registration-information .form-item-territorial-extent {width: 120px; margin-right: 0;border-bottom: 0;}
+
+#edit-si-or-order, 
+#edit-parliamentary-control, 
+#edit-printed-non 
+{border: none;}
+
+.spinner {position: relative; width: 20px; height: 10px; display:inline-block; }
+#tso-registration-information-form .spinner {position: relative; width: 20px; height: 10px; display:inline-block; right: 200px;}
+
+#registration-information #edit-associated-fieldset label.margin {margin-top: 10px;}
+#publication-information .form-type-textfield  {display: block;}
+/*#publication-information .form-type-textfield label, #publication-information .form-type-select label {display:inline-block;}*/
+#publication-information .form-type-textfield label { }
+
+a.button.edit {position: absolute; right: 20px; top: 0;}
+
+#edit-si-class .form-item {display: block;}
+#edit-si-class input{float: left; }
+#edit-si-class label{padding-left: 20px; display: block;}
+
+.form-item-territorial-extent {float: left;}
+
+#review dt {width: 150px;}
+#review dd {padding-left: 150px;}
+#review .numbers-requested dd {padding-left: 200px;}
+
+#review ul.numbers-requested {
+    list-style: none outside none;
+    margin: 0 !important;
+    padding: 0;
+    display:inline;
+}
+
+
+#review a.button {position: absolute; top:-40px; right: 0px;}
+#review .contentInner fieldset {background: transparent}
+/* #review .crest {position:absolute; left: 260px; top: 100px; width: 430px; height: 500px; background: url(/sites/all/themes/vsrs/images/registration/watermark-crests-england.jpg) no-repeat; z-index: 1} */
+
+#review .contentInner {position: relative; background: url(/sites/all/themes/vsrs/images/registration/watermark-crests-england.jpg) #EBF0F2 no-repeat;}
+#review .contentInner.ssi{position: relative; background: url(/sites/all/themes/vsrs/images/registration/crest_3.jpg) #EBF0F2 no-repeat!important; }
+#review .contentInner.sdsi{position: relative; background: url(/sites/all/themes/vsrs/images/registration/crest_3.jpg) #EBF0F2 no-repeat!important; }
+#review .contentInner.smb{position: relative; background: url(/sites/all/themes/vsrs/images/registration/crest_3.jpg) #EBF0F2 no-repeat!important; }
+#review .contentInner.wsi{position: relative; background: url(/sites/all/themes/vsrs/images/registration/crest_1.jpg) #EBF0F2 no-repeat!important; }
+#review .contentInner.wdsi{position: relative; background: url(/sites/all/themes/vsrs/images/registration/crest_1.jpg) #EBF0F2 no-repeat!important; }
+#review .contentInner.wmb{position: relative; background: url(/sites/all/themes/vsrs/images/registration/crest_1.jpg) #EBF0F2 no-repeat!important; }
+.sysChrome #review  .contentInner legend {margin-bottom: 25px;}
+
+#review textarea {float: left;}
+#review .stamp {width: 135px; height: 135px; float: right; background: url(/sites/all/themes/vsrs/images/registration/stamp.jpg) -135px 0 no-repeat}
+#review .ssistamp {width: 135px; height: 135px; float: right; background: url(/sites/all/themes/vsrs/images/registration/ScotStamp.jpg) -135px 0 no-repeat; }
+#review .certify {margin-top: 20px; width: 300px; float: right}
+#review .certify p {margin: 0; margin-left: 25px; }
+#review .certify .form-type-checkbox {margin: 0; float: left}
+#review .s_col1, #review .s_col1 {width: 47%; clear: none}
+
+.LegExtentRestriction {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    margin-right: 5px;
+    padding: 2px 1.25em 3px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block !important
+}
+.LegExtentRestriction {
+    background: url("/sites/all/themes/vsrs/images/chrome/extentBg.gif") no-repeat scroll left top;
+    color: #FFFFFF;    
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.LegExtentRestriction .btl, .LegExtentRestriction .btr, .LegExtentRestriction .bbl, .LegExtentRestriction .bbr {
+    height: 10px;
+    margin: 0;
+    position: absolute;
+    width: 10px;
+}
+.LegExtentRestriction .btr {
+    background: url("/sites/all/themes/vsrs/images/chrome/extentBg.gif") no-repeat scroll -290px 0 transparent;
+    right: 0;
+    top: 0;
+}
+.LegExtentRestriction .bbl {
+    background: url("/sites/all/themes/vsrs/images/chrome/extentBg.gif") no-repeat scroll 0 -90px transparent;
+    bottom: 0;
+    left: 0;
+}
+.LegExtentRestriction .bbr {
+    background: url("/sites/all/themes/vsrs/images/chrome/extentBg.gif") no-repeat scroll -290px -90px transparent;
+    bottom: 0;
+    right: 0;
+}
+
+
+.information .form-item-any-number-requests-missed {overflow: hidden; display: block; clear: left;}
+.information .form-item-any-number-requests-missed label, .information .form-item-any-advanced-numbers-missed label {float:left; }
+.information .form-item-any-advanced-numbers-missed {display: block;}
+#edit-any-advanced-numbers-missed .form-type-radio label, #edit-any-number-requests-missed .form-type-radio label {float: none;}
+#edit-any-number-requests-missed .form-type-radio {margin-top: 0; clear: none; }
+#edit-any-number-requests-missed, #edit-any-advanced-numbers-missed {float: right}
+#edit-number-requests-missed .form-item {float: left;}
+.numbers  {margin: 0 -20px; padding: 10px; clear: left; background: #F1E0C3}
+.numbers .form-item {margin: 5px}
+.numbers select {margin: 0}
+.grouping {clear:left;}
+.numbers .plus, 
+.numbers .minus {height: 32px; width: 40px; display: block; cursor: pointer; background: url("/sites/all/themes/vsrs/images/plus.jpg") no-repeat scroll center center transparent}
+.numbers .minus {background: url("/sites/all/themes/vsrs/images/cross-icon.jpg") no-repeat scroll center center transparent}
+#edit-metadata .numbers .form-type-radio {width: auto}
+#numbers-missed {margin: 0 20px;}
+#numbers-missed select, #numbers-missed span, #numbers-missed input, #numbers-missed label {float:left}
+#numbers-missed .form-item {display: block;}
+#numbers-missed input {clear:left; display: block; margin-left: 0 !important}
+.numbers-requested {clear:left;}
+.numbers-requested dd,.numbers-requested dt {display:block; float: left; margin-left: 0;}
+.numbers-requested dd {padding-left: 0; width: 200px;}
+.numbers-requested dd ul {padding: 0; margin: 0; list-style: none}
+
+/* Make relative so that refresh button can be positioned correctly */
+#registration-information .contentTitle {position: relative;}
+#registration-information .contentTitle #refresh span {font-size: 1em; padding: 8px 0 10px 15px;}
+#refresh {z-index: 1000; display: none; position: absolute; font-weight: bold; border: 1px solid #000; background: #fff; font-size: 1em; width: 43%;}
+#refresh a {float:right}
+
+
+/* refresh panel on the review page */
+#review-refresh {z-index: 1000; display: none;   position: absolute; font-weight: bold; border: 1px solid #000; background: #fff; font-size: 1em; width: 100%; }
+#review-refresh span {font-size: 1em; padding: 8px 0 10px 15px;  }
+#review-refresh a { float:right;  }
+
+
+
+.sysChrome .content .contentTitle h2 {width: auto; margin-right: 0px;}
+
+#defralex-lists-management .content .contentTitle h2 { padding-top:13px; padding-bottom:13px;}
+.defra-list .contentTitle .aside {
+	font-size: 1.3em; 
+	color: #666666;
+	font-weight: 600;
+	line-height: 1.4em; 
+	padding: 0px 10px 8px 0;
+}
+.defra-list .contentTitle .aside span { padding: 0.45em 0.5em; }
+
+#defralex-lists-management .form-type-checkbox 
+{
+	width:50%;
+	float:left;
+	height:40px;
+}
+
+#defralex-lists-management #edit-key-legislative-contents, #edit-reg-del-body
+{
+	float:left;
+	display:block;
+	width:505px;
+}
+#review .form-type-checkbox label.option { display: block; position: relative; top: -1.5em; width: 88%; left: 25px; }
+
+#defralex-lists-management .form-type-radio
+{
+	
+	padding-right:20px;
+	float:left;
+}
+#defralex-lists-management #edit-update-button {     float: right;
+    margin-bottom: 20px;
+    margin-right: -344px; }
+
+#defralex-lists-management #eu-ref-container
+{
+	clear:both;
+}
+
+#defralex-lists-management #edit-legislation-source
+{
+	float:left;
+}
+
+#defralex-lists-management  hr
+{
+	clear:both;
+	margin-top:0px!important; margin-bottom:0px!important;
+}
+
+
+#edit-categorisation select { display:none; min-width:360px; width:360px!important;  height: 35px;  line-height:35px; vertical-align:middle;}
+#edit-categorisation option { display:block; line-height:35px;vertical-align:middle; }
+
+
+
+ .legislation-item-container-radio { float:left;
+ margin-top:5px; padding-right:10px;
+ }
+
+#edit-revoke-information .form-radio
+ {
+	 float:left!important;  margin-top:5px; padding-right:10px;}
+	 
+#publication-information.information .fieldset-wrapper { margin-left:0px!important;}
+#publication-information.information .container-inline-date .date-padding{padding-left:0px!important;}
+ #publication-information .delivery_entry { margin-left:0px!important;}
+  #tso-registration-information-form.reg-docUpload #sent-back {margin-bottom:0px; width:100%;}
+ #tso-registration-information-form.reg-docUpload .sentback {  float:right; width:100%;}
+   #tso-registration-information-form.reg-docUpload #messages { float:right; width:300px;}
+ #tso-registration-information-form.reg-docUpload .s_col2 {width:100%;}
+ 
+ .class2warningmessage { background: none repeat scroll 0 0 #F1E0C3; height: 28px;padding-top: 15px; font-weight: bold;padding-left: 10px; margin-left:25px; float:left; width:91%; }
+ .ukdraftnegative{ margin-left:-21px!important; margin-top:10px!important; }
+.affirmative{ margin-left:15px; }
+#edit-si-class .disabledclassseventitle { clear:both;}
+#registration-information #edit-class p b { margin-left:5px;}
+
+.classofsitext {float: left; width: 91%; padding-top:1px; }
+	
+	#registration-information #edit-class strong { float:left; padding-right:3px; padding-top:1px;}
+#edit-si-class .form-type-radio { float:left;   width: 100%; margin:3px;} 
+
+.ukdraftclass4 { clear:both;}
+
+
+/* Numbers REquested Class2  */ 
+#edit-metadata .class2message { margin-left:10px; margin-right:10px;}
+.form-item-number-requests-preselected{  width:100%; float:left; position:relative; padding-top:21px;}
+label[for=edit-number-requests-preselected] { float:left; width:170px;}
+.form-item-number-requests-preselected .numberspreselected{ margin-left:12px;}
+
+.deselecthelptext { float:left; position:absolute; bottom:0px;}
+#edit-number-requests-preselected { float:left; }
+#edit-number-requests-preselected .form-type-checkbox { display:block;}
+.numberspreselected {  margin-right:10px;}
+.numbersrequestedtitle { float:left; width:133px; margin-right:10px;  font-weight:bold; }
+.numbersrequestedandnumbers { float:left; width:500px; }
+
+#numbers-missed .form-type-textfield { width:auto; margin-right:20px; min-width:175px;}
+
+#publication-information #publshing-message {width:45%; /*margin-bottom:10px; margin-left:59px; margin-top: 30px; */}
+
+#publication-information #edit-remove-delivery-submit {  float:right;}
+#publication-information #edit-add-delivery-button { float:left;}
+#publication-information .freecopies { padding-left:10px; }
+
+
+.delivery-addr-btn, #publication-information #publshing-message {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+  	margin-right: 3em;
+	margin-top:20px;
+	vertical-align:top;
+}
+
+.delivery-addr-btn {
+	clear:both;
+	float:left;
+}
+
+#publication-information #publshing-message {
+	float:right;
+}
+
+#publication-information #edit-add-delivery-button { margin-top:0px !important; }
+
+
+#registration-information .notifications .content  .info { padding-top:17px;}
