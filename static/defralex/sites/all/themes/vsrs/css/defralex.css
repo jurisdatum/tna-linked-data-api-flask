@@ -14,9 +14,9 @@
 #main-wrapper .section {border: 0}
 
 #titleBar {background: none; border: none}
-div#defraBannerLogo {margin: 30px 0 15px 0; height: 135px; width: 310px; box-sizing: border-box; background: url('/images/defralex.png') no-repeat 10px 0; background-size: 85%; border-left: 4px solid rgba(72,160,73,1)}
+div#defraBannerLogo {margin: 30px 0 15px 0; height: 175px; width: 310px; box-sizing: border-box; background: url('/static/images/defralex.png') no-repeat 10px 0; background-size: 85%; border-left: 4px solid rgba(72,160,73,1)}
 div#defraBannerLogo img {width: 1px; height: 1px; opacity: 1%}
-div#defraBannerText {width: 940px; padding: 20px 0 0 0}
+div#defraBannerText {width: 940px; padding: 30px 0 0 0}
 div#defraBannerText p {margin: 7px 0 10px 0}
 div#defraBannerText p:first-of-type {font-weight: 500; color: rgba(30,30,30,1)}
 

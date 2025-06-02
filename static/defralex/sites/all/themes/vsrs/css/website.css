@@ -786,7 +786,7 @@
 	.legResources .printPdf p {visibility: hidden; position: relative}
 	.legResources .printPdf p p {visibility: visible; position: relative}
 	.plainView #layout1 #header {height: auto; overflow: auto; border-bottom: 1px solid}
-	.plainView #layout1 #header h2 {; padding: 10px 10px 0 10px}
+	.plainView #layout1 #header h2 { padding: 10px 10px 0 10px}
 	.plainView #layout1 #header a {margin: 0; padding: 21px 10px}
 	.plainView #layout2 h1 {width: 1250px}
 	#leg.plainView #content:before {display: none}
@@ -1095,7 +1095,7 @@
 	.modWin h3:before {
 		background: url("/images/chrome/iconSprites.gif") no-repeat -4px -1954px}
 	#footer .copyrightstatement:before {
-		background: url("/images/ogl.png") no-repeat 0 0; background-size: 53%}
+		background: url("https://www.legislation.gov.uk/images/ogl.png") no-repeat 0 0; background-size: 53%}
 	#per.home .welcome ul#countryLeg li a#welcome, #per.home .welcomecy ul#countryLeg li a#welcomecy, #per.home .uk ul#countryLeg li a#uk, #per.home .ukcy ul#countryLeg li a#ukcy, #per.home .scotland ul#countryLeg li a#scotland, #per.home .scotlandcy ul#countryLeg li a#scotlandcy, #per.home .wales ul#countryLeg li a#wales, #per.home .walescy ul#countryLeg li a#walescy, #per.home .ni ul#countryLeg li a#ni, #per.home .nicy ul#countryLeg li a#nicy, #per.home .eu ul#countryLeg li a#eu, #per.home .eucy ul#countryLeg li a#eucy {
 		background-image: none}
 
@@ -1677,7 +1677,7 @@
 	#leg.toc .legEmToc .interface .next .userFunctionalElement:after, #leg.toc .legEmContent .interface .next .userFunctionalElement:after, #leg.toc .legEnToc .interface .next .userFunctionalElement:after, #leg.toc .legEnContent .interface .next .userFunctionalElement:after {margin: 6px 0 0 8px}
 
 /* redesigned legislation logo */
-	#per.home #layout1 #header h1, #layout1 #header h2:not(.plainView #layout1 #header h2) {margin: 8px 0 0 0; background: url("/images/uk-govt-crest.png") no-repeat 0 0; background-size: 69px; width: 18em}
+	#per.home #layout1 #header h1, #layout1 #header h2:not(.plainView #layout1 #header h2) {margin: 8px 0 0 0; background: url("https://www.legislation.gov.uk/images/uk-govt-crest.png") no-repeat 0 0; background-size: 69px; width: 18em}
 	#per.home #layout1 #header h1 {font-size: 1.3em; font-weight: 300}
 	#doc h2 {font-size: 1.3em}
 	#per.home #layout1 #header h1 a, #layout1 #header h2 a {color: transparent; padding: 0 70px 35px 85px}
