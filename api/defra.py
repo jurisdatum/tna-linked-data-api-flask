@@ -5,8 +5,9 @@ from urllib.parse import urlencode
 from api.api import get_json
 
 
-def fetch(*, inForce=None, type=None, year=None, chapter=None, extent=None, source=None,
-          regulator=None, subject=None, review=None, page=None, pageSize=None) -> dict:
+def fetch(*, inForce=None, isCommencementOrder=None, isRevocationOrder=None, type=None, year=None,
+          chapter=None, extent=None, source=None, regulator=None, subject=None, review=None,
+          page=None, pageSize=None) -> dict:
     params = {k: v for k, v in locals().items() if v is not None}
     url = '/defra/items?' + urlencode(params)
     results = get_json(url)

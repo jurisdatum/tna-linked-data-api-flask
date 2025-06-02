@@ -12,6 +12,18 @@
                         <span>({{ count['count'] }})</span>
                     </div>
                 </li>
+                {% if count['value'] %}
+                <li class="sub-item">
+                    <div class="label">
+                        <a href="{{ data['exclude_comm_orders_link'] }}">Exclude Commencement Orders</a>
+                    </div>
+                </li>
+                <li class="sub-item">
+                    <div class="label">
+                        <a href="{{ data['exclude_rev_orders_link'] }}">Exclude Revocation Orders</a>
+                    </div>
+                </li>
+                {% endif %}
                 {% endfor %}
             </ul>
         </div>
@@ -29,6 +41,48 @@
                         <div class="label">{{ data['counts']['byInForce'][0]['label'] }}</div>
                     </span>
                 </li>
+                {% if data['counts']['byInForce'][0]['value'] %}
+                {% if data['query']['isCommencementOrder'] is not none %}
+                <li class="returnLink">
+                    <a href="{{ data['cancel_links']['isCommencementOrder'] }}">
+                        <span class="accessibleText">Browse by </span>
+                        <span>Any status<span>
+                    </a>
+                </li>
+                <li>
+                    <span class="userFunctionalElement disabled">
+                        <div class="label">Exclude Commencement Orders</div>
+                    </span>
+                </li>
+                {% endif %}
+                {% if data['query']['isRevocationOrder'] is not none %}
+                <li class="returnLink">
+                    <a href="{{ data['cancel_links']['isRevocationOrder'] }}">
+                        <span class="accessibleText">Browse by </span>
+                        <span>Any status<span>
+                    </a>
+                </li>
+                <li>
+                    <span class="userFunctionalElement disabled">
+                        <div class="label">Exclude Revocation Orders</div>
+                    </span>
+                </li>
+                {% endif %}
+                {% if data['query']['isCommencementOrder'] is none %}
+                <li style="margin-left: 15px">
+                    <div class="label">
+                        <a href="{{ data['exclude_comm_orders_link'] }}">Exclude Commencement Orders</a>
+                    </div>
+                </li>
+                {% endif %}
+                {% if data['query']['isRevocationOrder'] is none %}
+                <li style="margin-left: 15px">
+                    <div class="label">
+                        <a href="{{ data['exclude_rev_orders_link'] }}">Exclude Revocation Orders</a>
+                    </div>
+                </li>
+                {% endif %}
+                {% endif %}
             </ul>
         </div>
         {% endif %}

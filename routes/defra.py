@@ -26,6 +26,8 @@ def defra_lists():
     enhance_counts(data)
     data['grouped'] = group_counts(data)
     data['cancel_links'] = make_cancel_links(data)
+    data['exclude_comm_orders_link'] = make_exclude_comm_orders_link(data)
+    data['exclude_rev_orders_link'] = make_exclude_rev_orders_link(data)
     pager = pagination_data(
         current = data['query']['page'],
         total = pages_needed(data['counts']['total'], data['query']['pageSize']),
@@ -105,6 +107,19 @@ def add_links_to_counts(data, queryParam, countsKey, countKey = 'id'):
         count['link'] = base + queryParam + '=' + value
 
 
+def make_exclude_comm_orders_link(data):
+    params = prune_params(data['query'], 'inForce')
+    params['inForce'] = 'true'
+    params['isCommencementOrder'] = 'false'
+    return request.base_url + '?' + urlencode(params)
+
+def make_exclude_rev_orders_link(data):
+    params = prune_params(data['query'], 'inForce')
+    params['inForce'] = 'true'
+    params['isRevocationOrder'] = 'false'
+    return request.base_url + '?' + urlencode(params)
+
+
 # group yearly counts
 
 def group_counts(data):
@@ -125,6 +140,8 @@ def group_review_counts(data):
 def make_cancel_links(data):
     return {
         'inForce': make_cancel_link(data['query'], 'inForce'),
+        'isCommencementOrder': make_cancel_link(data['query'], 'isCommencementOrder'),
+        'isRevocationOrder': make_cancel_link(data['query'], 'isRevocationOrder'),
         'year': make_cancel_link(data['query'], 'year'),
         'type': make_cancel_link(data['query'], 'type'),
         'chapter': make_cancel_link(data['query'], 'chapter'),
@@ -138,6 +155,9 @@ def make_cancel_links(data):
 def make_cancel_link(query, key):
     base = request.base_url
     params = prune_params(query, key)
+    if key == 'inForce':
+        params.pop('isCommencementOrder', None)
+        params.pop('isRevocationOrder', None)
     if not params:
         return base
     return base + '?' + urlencode(params)
@@ -145,6 +165,7 @@ def make_cancel_link(query, key):
 
 def prune_params(query, key):
     return {
-        k: v for k, v in query.items()
+        k: str(v).lower() if isinstance(v, bool) else v
+        for k, v in query.items()
         if k != key and v is not None and k != 'page' and k != 'pageSize'
     }
